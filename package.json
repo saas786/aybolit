@@ -1,15 +1,16 @@
 {
-  "name": "aybolit-workspace",
+  "name": "@conversionxl/cxl-core",
   "private": true,
-  "description": "Web Components library built with LitElement",
-  "author": "Serhii Kulykov <serguey.kulikov@gmail.com>",
-  "license": "MIT",
+  "version": "0.1.0",
+  "author": "CXL",
+  "license": "UNLICENSED",
   "scripts": {
     "argos": "argos upload test/visual/screenshots/chrome --token $ARGOS_TOKEN || true",
     "build": "yarn build-styling",
     "build-styling": "node packages/sass-render/bin/sass-render.js -s 'packages/*/scss/*.scss'",
     "deploy-storybook": "yarn --cwd packages/storybook storybook-to-ghpages",
     "dist": "lerna run dist",
+    "npm-publish": "lerna publish from-package",
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint *.js packages --ignore-path .gitignore",
     "lint:scss": "stylelint packages/**/*.scss",
@@ -82,7 +83,6 @@
       "git add"
     ],
     "*.scss": [
-      "stylelint --syntax=scss",
       "prettier --single-quote=false --write",
       "git add"
     ]

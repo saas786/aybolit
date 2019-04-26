@@ -1,0 +1,131 @@
+@import "./utils/mixins";
+
+:host {
+  position: relative;
+  display: grid;
+  grid-template-areas: "nav sidebar content";
+  grid-template-columns: 67px 315px auto;
+
+  background: #f6f6f6;
+  height: 100%;
+  min-height: 100%;
+}
+
+:host([sidebarsize="small"]) {
+  grid-template-columns: 250px auto;
+}
+
+[part="icon-nav"] {
+  grid-area: nav;
+  height: 100%;
+}
+
+[part="sidebar"] {
+  grid-area: sidebar;
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  flex-direction: column;
+}
+
+[part="content"] {
+  grid-area: content;
+  position: relative;
+}
+
+[part="content"][page-visible] {
+  display: block !important;
+}
+
+[part="sidebar"][page-visible] {
+  display: flex !important;
+}
+
+// TODO: Add theme for layout tabs and move styles to cxl-lumo-styles package
+vaadin-tabs {
+  grid-area: tabs;
+  border-bottom: 1px solid var(--lumo-contrast-10pct);
+  box-shadow: none;
+  display: none;
+}
+
+vaadin-tabs vaadin-tab {
+  font-size: var(--lumo-font-size-s);
+  box-shadow: none;
+}
+
+vaadin-tabs vaadin-tab::before,
+vaadin-tabs vaadin-tab::after {
+  width: 80%;
+}
+
+[part="header"] {
+  grid-area: header;
+  padding: var(--lumo-space-m);
+  border-bottom: 1px solid var(--lumo-contrast-10pct);
+  display: none;
+}
+[part="header"] h3 {
+  line-height: 30px;
+  font-size: 18px;
+  margin: 0;
+  font-weight: 500;
+  padding-left: var(--lumo-space-m);
+}
+[part="header"] .logo {
+  text-decoration: none;
+  color: #1a1a1a;
+  margin-right: var(--lumo-space-m);
+  flex: 0 auto;
+}
+[part="header"] .logo .cxl {
+  font: italic 900 1.6rem Roboto, sans-serif;
+  text-transform: none;
+}
+[part="header"] .logo .cxl span {
+  color: var(--lumo-primary-text-color);
+  font-style: normal;
+}
+
+#sidebar {
+  .sidebar-header {
+    padding: var(--lumo-space-m);
+  }
+}
+
+@include respond-below(small) {
+  :host {
+    grid-template-areas: "header" "tabs" "sidebar" "content" "nav";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto 1fr auto;
+    margin-left: 0;
+    min-height: 100vh;
+  }
+
+  vaadin-tabs {
+    display: block;
+  }
+
+  [part="header"] {
+    display: flex;
+  }
+
+  [part="content"],
+  [part="sidebar"] {
+    display: none;
+  }
+}
+
+@include respond-below(medium) {
+  #sidebar {
+    .sidebar-header {
+      display: none;
+    }
+  }
+}
+
+@include respond-between(small, medium) {
+  :host {
+    margin-left: 0;
+  }
+}

@@ -1,17 +1,19 @@
 {
-  "name": "@conversionxl/cxl-lumo-styles",
+  "name": "@conversionxl/cxl-institute",
   "version": "0.1.0",
   "author": "CXL",
   "license": "UNLICENSED",
   "main": "src/index.js",
   "dependencies": {
+    "@conversionxl/cxl-lumo-styles": "^0.1.0",
+    "@conversionxl/cxl-ui": "^0.1.0",
     "@pika/pack": "^0.3.0",
     "@pika/plugin-build-web": "^0.3.0",
     "@pika/plugin-bundle-web": "^0.3.0",
     "@pika/plugin-standard-pkg": "^0.3.0",
     "@polymer/iron-icon": "^3.0.1",
-    "@polymer/iron-iconset-svg": "^3.0.1",
-    "@vaadin/vaadin-lumo-styles": "^1.4.2",
+    "@vaadin/vaadin-button": "^2.1.5",
+    "@vaadin/vaadin-details": "^1.0.1",
     "lit-element": "^2.1.0"
   },
   "@pika/pack": {
