@@ -12,6 +12,7 @@
   "dependencies": {
     "@vaadin/vaadin-lumo-styles": "^1.5.0",
     "@polymer/iron-icon": "^3.0.1",
-    "@polymer/iron-iconset-svg": "^3.0.1"
+    "@polymer/iron-iconset-svg": "^3.0.1",
+    "sass-mq": "^5.0.0"
   }
 }
