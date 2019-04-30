@@ -11562,6 +11562,11 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
+sass-mq@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/sass-mq/-/sass-mq-5.0.0.tgz#7e8a8eb0f289591b3521549266f0ff923772809d"
+  integrity sha512-GCN6wGY+l4n10mASeMe2vqISvEEFjv6/NVcywaMU9saZgzw+DKM+fUUAnv07LlxXvDdnHSRf5jGJ10u/iF1BKA==
+
 sass@^1.17.3:
   version "1.18.0"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.18.0.tgz#f34371c31e268e555c2ac8e43d2b64d194e7d090"

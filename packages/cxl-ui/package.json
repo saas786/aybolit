@@ -1,7 +1,7 @@
 {
   "name": "@conversionxl/cxl-ui",
   "version": "0.1.0",
-  "author": "CXL <leho@conversionxl.com>",
+  "author": "CXL <paul@conversionxl.com>",
   "license": "SEE LICENSE IN LICENSE.md",
   "main": "src/index.js",
   "repository": {
@@ -12,6 +12,7 @@
   "dependencies": {
     "lit-element": "^2.0.1",
     "lit-html": "^1.0.0",
-    "@conversionxl/cxl-lumo-styles": "^0.1.0"
+    "@conversionxl/cxl-lumo-styles": "^0.1.0",
+    "@conversionxl/cxl-core": "^0.1.0"
   }
 }

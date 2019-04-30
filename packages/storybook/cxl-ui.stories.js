@@ -1,4 +1,5 @@
 import '@conversionxl/cxl-ui';
+
 import { storiesOf } from '@storybook/polymer';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { html } from 'lit-html';
@@ -16,12 +17,12 @@ storiesOf('CXL UI', module)
 
     return `
       <cxl-lesson-card>
-        <p slot="lesson-image" style="background-image: url('${lesson_image}');"></p>
-        <span slot="lesson-highlighted-title">${lesson_title_highlighted}</span><p slot="lesson-title">${lesson_title}</p>
-        <small slot="type">Lesson</small>
-        <small slot="lesson-length">${lesson_length}</small>
-        <small slot="lesson-instructor">${lesson_instructor}</small>
-        <p slot="lesson-description">${lesson_description}</p>
+        <p class="entry__header-lesson-thumbnail" slot="entry__header" style="background-image: url('${lesson_image}');"></p>
+        <span class="entry__header-lesson-title-highlighted" slot="entry__header">${lesson_title_highlighted}</span>
+        <h5 class="entry__header-lesson-title" slot="entry__header">${lesson_title}</h5>
+        <br />
+        <small class="entry__header-lesson-specs" slot="entry__header">Lesson | ${lesson_length} | ${lesson_instructor}</small>
+        <p class="entry__content-lesson-content" slot="entry__content">${lesson_description}</p>
       </cxl-lesson-card>
     `
   })
@@ -31,13 +32,14 @@ storiesOf('CXL UI', module)
     const testimonial_content = text('Content', 'Our flagship training program. Learn conversion research, start using a systematic way to get more wins and bigger wins through optimization and testing. Our flagship training program. ');
     const testimonial_customer_name = text('Customer name', 'Chris Kershaw');
     const testimonial_customer_company = text('Customer company', 'Managing Director - Sweden, at Trollweb Solutions');
+
     return `
       <cxl-testimonial-card>
-        <p slot="testimonial-customer-image" style="background-image: url('${testimonial_customer_image}');"></p>
-        <img slot="testimonial-company-image" src="${testimonial_company_image}" />
-        <p slot="testimonial-content">"${testimonial_content}"</p>
-        <small slot="testimonial-customer-name">${testimonial_customer_name}</small>
-        <small slot="testimonial-customer-company">${testimonial_customer_company}</small>
+        <p class="entry__header-user-thumbnail" slot="entry__header" style="background-image: url('${testimonial_customer_image}');"></p>
+        <img class="entry__header-company-thumbnail" slot="entry__header" src="${testimonial_company_image}" />
+        <p class="entry__content" slot="entry__content">"${testimonial_content}"</p>
+        <small class="entry__header-user-name" slot="entry__footer">${testimonial_customer_name}</small>
+        <small class="entry__header-user-company" slot="entry__footer">${testimonial_customer_company}</small>
       </cxl-testimonial-card>
     `
   })
@@ -50,10 +52,10 @@ storiesOf('CXL UI', module)
 
     return `
       <cxl-banner-card>
-        <p slot="banner-image" style="background-image: url('${banner_image}');"></p>
-        <p slot="banner-title">${banner_title}</p>
-        <small slot="banner-description">${banner_description}</small>
-        <a slot="banner-link" href="${banner_link_url}">${banner_link_label}</a>
+        <p class="entry__header-banner-thumbnail" slot="entry__header" style="background-image: url('${banner_image}');"></p>
+        <h5 class="entry__header-banner-title" slot="entry__header">${banner_title}</h5>
+        <small class="entry__content-banner-content" slot="entry__content">${banner_description}</small>
+        <a class="entry__footer-banner-more-link" slot="entry__footer" href="${banner_link_url}">${banner_link_label}</a>
       </cxl-banner-card>
     `
   })
@@ -68,15 +70,11 @@ storiesOf('CXL UI', module)
 
     return `
       <cxl-course-card>
-        <p slot="course-image" style="background-image: url('${course_image}');"></p>
-        <p slot="course-title">${course_title}</p>
-        <p slot="course-instructor">${course_instructor}</p>
-        <small slot="course-description">${course_description}</small>
-        <small slot="course-duration">${course_duration}</small>
-        <small slot="course-type">${course_type}</small>
-        <small slot="course-category">${course_category}</small>
+        <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
+        <h5 class="entry__header-course-title" slot="entry__header">${course_title}</h5>
+        <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
+        <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
+        <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
       </cxl-course-card>
     `
   })
-
-
