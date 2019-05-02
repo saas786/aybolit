@@ -19,7 +19,7 @@ storiesOf('CXL UI', module)
       <cxl-lesson-card>
         <p class="entry__header-lesson-thumbnail" slot="entry__header" style="background-image: url('${lesson_image}');"></p>
         <span class="entry__header-lesson-title-highlighted" slot="entry__header">${lesson_title_highlighted}</span>
-        <h5 class="entry__header-lesson-title" slot="entry__header">${lesson_title}</h5>
+        <h2 class="entry__header-lesson-title" slot="entry__header">${lesson_title}</h2>
         <br />
         <small class="entry__header-lesson-specs" slot="entry__header">Lesson | ${lesson_length} | ${lesson_instructor}</small>
         <p class="entry__content-lesson-content" slot="entry__content">${lesson_description}</p>
@@ -53,7 +53,7 @@ storiesOf('CXL UI', module)
     return `
       <cxl-banner-card>
         <p class="entry__header-banner-thumbnail" slot="entry__header" style="background-image: url('${banner_image}');"></p>
-        <h5 class="entry__header-banner-title" slot="entry__header">${banner_title}</h5>
+        <h2 class="entry__header-banner-title" slot="entry__header">${banner_title}</h2>
         <small class="entry__content-banner-content" slot="entry__content">${banner_description}</small>
         <a class="entry__footer-banner-more-link" slot="entry__footer" href="${banner_link_url}">${banner_link_label}</a>
       </cxl-banner-card>
@@ -71,10 +71,95 @@ storiesOf('CXL UI', module)
     return `
       <cxl-course-card>
         <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
-        <h5 class="entry__header-course-title" slot="entry__header">${course_title}</h5>
+        <h2 class="entry__header-course-title" slot="entry__header">${course_title}</h2>
         <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
         <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
         <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
       </cxl-course-card>
     `
+  })
+  .add('cxl-catalog', () => {
+    const course_image = text('Featured image', 'https://conversionxli.warmpress.com/wp-content/uploads/_conversionxli/2018/12/measuring-quality-win-rate.jpg');
+    const course_title = text('Title', 'A/B testing mastery');
+    const course_instructor = text('Instructor', 'Ton Wesseling');
+    const course_description = text('Description', 'Our flagship training program. Learn conversion research, start using a systematic way to get more wins and bigger wins through optimization and testing.');
+    const course_duration = text('Duration', '2 hours');
+    const course_type = text('Type', 'Course');
+    const course_category = text('Category', 'Analytics');
+
+    return `
+      <cxl-catalog style="--lumo-data-grid-items: 5; --lumo-data-grid-column-size: 250px;">
+        <h1 slot="entry__header">CXL Catalog</h1>
+          <cxl-course-card slot="entry__content">
+            <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
+            <h2 class="entry__header-course-title" slot="entry__header">${course_title}</h2>
+            <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
+            <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
+            <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
+          </cxl-course-card>
+          <cxl-course-card slot="entry__content">
+            <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
+            <h2 class="entry__header-course-title" slot="entry__header">${course_title}</h2>
+            <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
+            <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
+            <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
+          </cxl-course-card>
+          <cxl-course-card slot="entry__content">
+            <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
+            <h2 class="entry__header-course-title" slot="entry__header">${course_title}</h2>
+            <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
+            <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
+            <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
+          </cxl-course-card>
+          <cxl-course-card slot="entry__content">
+            <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
+            <h2 class="entry__header-course-title" slot="entry__header">${course_title}</h2>
+            <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
+            <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
+            <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
+          </cxl-course-card>
+          <cxl-course-card slot="entry__content">
+            <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
+            <h2 class="entry__header-course-title" slot="entry__header">${course_title}</h2>
+            <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
+            <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
+            <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
+          </cxl-course-card>
+          <cxl-course-card slot="entry__content">
+            <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
+            <h2 class="entry__header-course-title" slot="entry__header">${course_title}</h2>
+            <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
+            <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
+            <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
+          </cxl-course-card>
+          <cxl-course-card slot="entry__content">
+            <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
+            <h2 class="entry__header-course-title" slot="entry__header">${course_title}</h2>
+            <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
+            <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
+            <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
+          </cxl-course-card>
+          <cxl-course-card slot="entry__content">
+            <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
+            <h2 class="entry__header-course-title" slot="entry__header">${course_title}</h2>
+            <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
+            <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
+            <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
+          </cxl-course-card>
+          <cxl-course-card slot="entry__content">
+            <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
+            <h2 class="entry__header-course-title" slot="entry__header">${course_title}</h2>
+            <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
+            <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
+            <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
+          </cxl-course-card>
+          <cxl-course-card slot="entry__content">
+            <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
+            <h2 class="entry__header-course-title" slot="entry__header">${course_title}</h2>
+            <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
+            <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
+            <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
+          </cxl-course-card>
+      </cxl-catalog>
+      `
   })
