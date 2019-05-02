@@ -1,11 +1,11 @@
-import lumoVaadinButton from '../styles/vaadin-button-css.js';
+import lumoVaadinTabs from '../styles/vaadin-tabs-css.js';
 
 const $template = document.createElement('template');
 
 $template.innerHTML = `
-<dom-module id="cxl-lumo-button" theme-for="vaadin-button">
+<dom-module id="cxl-lumo-tabs" theme-for="vaadin-tabs">
   <template>
-    <style>${lumoVaadinButton}</style>
+    <style>${lumoVaadinTabs}</style>
   </template>
 </custom-style>`;
 

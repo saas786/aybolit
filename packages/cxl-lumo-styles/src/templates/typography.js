@@ -5,6 +5,9 @@ const $template = document.createElement('template');
 
 $template.innerHTML = `
 <custom-style>
+  <style include="lumo-typography"></style>
+</custom-style>
+<custom-style>
   <style>${lumoTypography}</style>
 </custom-style>`;
 
