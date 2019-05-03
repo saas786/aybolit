@@ -1,4 +1,4 @@
-@import "./utils/mixins";
+@import "./utils/mq";
 
 :host {
   background: var(--lumo-tint-20pct);
@@ -9,7 +9,7 @@
   min-height: 100%;
   position: relative;
 
-  @include respond-below(small) {
+  @include mq($until: tablet) {
     grid-template-areas: "header" "tabs" "sidebar" "content" "nav";
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto 1fr auto;
@@ -17,7 +17,7 @@
     min-height: 100vh;
   }
 
-  @include respond-between(small, medium) {
+  @include mq(tablet, desktop) {
     margin-left: 0;
   }
 }
@@ -35,7 +35,7 @@
   grid-area: sidebar;
   overflow: auto;
 
-  @include respond-below(small) {
+  @include mq($until: tablet) {
     display: none;
   }
 }
@@ -44,7 +44,7 @@
   grid-area: content;
   position: relative;
 
-  @include respond-below(small) {
+  @include mq($until: tablet) {
     display: none;
   }
 }
@@ -61,7 +61,7 @@
   display: none;
   grid-area: tabs;
 
-  @include respond-below(small) {
+  @include mq($until: tablet) {
     display: flex;
   }
 }
@@ -78,7 +78,7 @@
     padding-left: var(--lumo-space-m);
   }
 
-  @include respond-below(small) {
+  @include mq($until: tablet) {
     display: flex;
   }
 }
@@ -104,7 +104,7 @@
     padding: var(--lumo-space-m);
   }
 
-  @include respond-below(medium) {
+  @include mq($until: desktop) {
     .sidebar-header {
       display: none;
     }

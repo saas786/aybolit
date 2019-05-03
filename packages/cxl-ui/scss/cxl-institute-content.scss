@@ -1,4 +1,4 @@
-@import "./utils/mixins";
+@import "./utils/mq";
 
 :host {
   background: #fff;
@@ -20,11 +20,11 @@
 
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-  @include respond-below(small) {
+  @include mq($until: tablet) {
     height: auto;
   }
 
-  @include respond-below(medium) {
+  @include mq($until: desktop) {
     border-radius: 0;
   }
 }
@@ -58,7 +58,7 @@
     max-width: 35em;
   }
 
-  @include respond-below(medium) {
+  @include mq($until: desktop) {
     padding: var(--lumo-space-m) var(--lumo-space-m);
   }
 }

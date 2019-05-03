@@ -1,4 +1,4 @@
-@import "@conversionxl/cxl-ui/scss/utils/mixins";
+@import "@conversionxl/cxl-ui/scss/utils/mq";
 @import "@conversionxl/cxl-ui/scss/cxl-theme";
 
 body,
@@ -9,7 +9,7 @@ html {
 body {
   background: var(--lumo-tint-20pct);
 
-  @include respond-below(small) {
+  @include mq($until: tablet) {
     background: var(--lumo-base-color);
   }
 }
@@ -66,7 +66,7 @@ body {
     padding: 0;
   }
 
-  @include respond-below(small) {
+  @include mq($until: tablet) {
     // TODO: add responsive styles after final WP markup
   }
 }
@@ -100,15 +100,15 @@ body {
     margin: 0 auto;
     width: 100%;
 
-    @include respond-below(largehd) {
+    @include mq($until: wide) {
       height: 400px;
     }
 
-    @include respond-below(medium) {
+    @include mq($until: desktop) {
       height: 300px;
     }
 
-    @include respond-below(small) {
+    @include mq($until: tablet) {
       height: 250px;
     }
   }

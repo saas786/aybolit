@@ -1,4 +1,4 @@
-@import "@conversionxl/cxl-ui/scss/utils/mixins";
+@import "@conversionxl/cxl-ui/scss/utils/mq";
 
 :host([theme~="cxl-institute-layout-tabs"]) [part="tabs"] {
   border-bottom: 1px solid var(--lumo-contrast-10pct);
