@@ -7,16 +7,16 @@ html {
 }
 
 body {
-  background: var(--lumo-tint-20pct);
+  background: var(--lumo-base-color);
 
-  @include mq($until: tablet) {
-    background: var(--lumo-base-color);
+  @include mq($from: tablet) {
+    background: var(--lumo-tint-20pct);
   }
 }
 
 .menu {
   &--institute-icon-nav {
-    background: #ebebeb;
+    background: var(--lumo-shade-10pct);
     border-right: 3px solid var(--lumo-primary-color);
     display: flex;
     flex-direction: column;
@@ -96,20 +96,20 @@ body {
   object,
   embed {
     display: flex;
-    height: 500px;
+    height: 250px;
     margin: 0 auto;
     width: 100%;
 
-    @include mq($until: wide) {
+    @include mq($from: wide) {
+      height: 500px;
+    }
+
+    @include mq($from: desktop, $until: wide) {
       height: 400px;
     }
 
-    @include mq($until: desktop) {
+    @include mq($from: tablet, $until: desktop) {
       height: 300px;
-    }
-
-    @include mq($until: tablet) {
-      height: 250px;
     }
   }
 }

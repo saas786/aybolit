@@ -2,30 +2,28 @@
 
 :host {
   background: #fff;
-  border-bottom-left-radius: var(--lumo-border-radius-l);
-
-  border-top-left-radius: var(--lumo-border-radius-l);
+  border-radius: 0;
   bottom: 0;
   box-shadow: -4px 1px 15px -8px var(--lumo-shade-50pct);
-
   display: flex;
   flex-direction: column;
-
-  height: 100vh;
+  height: auto;
   left: 0;
   overflow: hidden;
   position: absolute;
   right: 0;
   top: 0;
 
+  // For sidebar toggle
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-  @include mq($until: tablet) {
-    height: auto;
+  @include mq($from: tablet) {
+    height: 100vh;
   }
 
-  @include mq($until: desktop) {
-    border-radius: 0;
+  @include mq($from: tablet) {
+    border-bottom-left-radius: var(--lumo-border-radius-l);
+    border-top-left-radius: var(--lumo-border-radius-l);
   }
 }
 
@@ -51,14 +49,14 @@
   flex: 1 1 auto;
   flex-direction: column;
   overflow: auto;
-  padding: var(--lumo-space-xl) var(--lumo-space-m);
+  padding: var(--lumo-space-m) var(--lumo-space-m);
 
   &[media-size="large"] {
     margin: 0 auto;
     max-width: 35em;
   }
 
-  @include mq($until: desktop) {
-    padding: var(--lumo-space-m) var(--lumo-space-m);
+  @include mq($from: tablet) {
+    padding: var(--lumo-space-xl) var(--lumo-space-m);
   }
 }

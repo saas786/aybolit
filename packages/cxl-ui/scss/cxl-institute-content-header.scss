@@ -1,13 +1,13 @@
 @import "./utils/mq";
 
 :host {
-  border-bottom: 1px solid var(--lumo-shade-20pct);
-  display: flex;
-  flex-direction: row;
-  padding: var(--lumo-space-m);
+  display: none;
 
-  @include mq($until: tablet) {
-    display: none;
+  @include mq($from: tablet) {
+    border-bottom: 1px solid var(--lumo-shade-20pct);
+    display: flex;
+    flex-direction: row;
+    padding: var(--lumo-space-m);
   }
 }
 
