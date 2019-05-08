@@ -70,11 +70,11 @@ storiesOf('CXL UI', module)
 
     return `
       <cxl-course-card>
-        <p class="entry__header-course-thumbnail" slot="entry__header" style="background-image: url('${course_image}');"></p>
-        <h2 class="entry__header-course-title" slot="entry__header">${course_title}</h2>
-        <p class="entry__header-course-instructor" slot="entry__header">${course_instructor}</p>
-        <small class="entry__content-course-content" slot="entry__content">${course_description}</small>
-        <small class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</small>
+        <p class="entry__header-course-thumbnail" slot="entry__header-thumbnail" style="background-image: url('${course_image}');"></p>
+        ${course_title}
+        <p class="entry__header-course-instructor" slot="entry__header-instructor">${course_instructor}</p>
+        <p class="entry__content-course-content" slot="entry__content">${course_description}</p>
+        <p class="entry__footer-course-specs" slot="entry__footer">${course_duration} | ${course_type} | ${course_category}</p>
       </cxl-course-card>
     `
   })
