@@ -4,19 +4,24 @@
   padding: calc( 2 * var(--lumo-padding) );
   width: 750px;
 
-  .entry__header {
+  header {
     display: grid;
     grid-auto-columns: max-content;
     grid-template-areas:
       "entry__header-lesson-thumbnail entry__header-lesson-title-highlighted entry__header-lesson-title entry__header-lesson-title"
       "entry__header-lesson-thumbnail entry__header-lesson-specs entry__header-lesson-specs entry__header-lesson-specs";
 
-    ::slotted(.entry__header-lesson-thumbnail) {
+    h2 {
+      align-self: end;
+      margin: 0 0 calc( 0.25 * var(--lumo-margin) );
+    }
+
+    .lesson-thumbnail {
       align-self: center;
       border-radius: var(--lumo-border-radius-round);
       grid-area: entry__header-lesson-thumbnail;
-      height: var(--lumo-card-thumbnail-size);
-      width: var(--lumo-card-thumbnail-size);
+      height: calc( 1.5 * var(--lumo-card-thumbnail-size) );
+      width: calc( 1.5 * var(--lumo-card-thumbnail-size) );
       margin: 0 calc( 2 * var(--lumo-margin) ) 0 0;
       -webkit-background-size: cover;
       background-size: cover;
@@ -24,27 +29,28 @@
       vertical-align: middle;
     }
 
-    ::slotted(.entry__header-lesson-title-highlighted) {
+    ::slotted([slot=entry-title-highlighted]) {
       align-self: end;
       color: var(--lumo-primary-color);
       font-weight: bold;
       grid-area: entry__header-lesson-title-highlighted;
 
       &:after {
-        content: ': ';
+        content: ':';
         white-space: pre;
       }
     }
 
-    ::slotted(.entry__header-lesson-title) {
+    ::slotted([slot=entry-title]) {
       align-self: end;
       font-weight: bold;
       grid-area: entry__header-lesson-title;
       margin: 0;
     }
 
-    ::slotted(.entry__header-lesson-specs) {
+    .lesson-specs {
       grid-area: entry__header-lesson-specs;
+      margin: 0;
     }
 
     ::slotted(h2) {
@@ -52,8 +58,8 @@
     }
   }
 
-  .entry__content {
-    ::slotted(.entry__content-lesson-content) {
+  .content {
+    p {
       border-top: 1px solid var(--lumo-contrast-30pct);
       margin: calc( 1.5 * var(--lumo-margin) ) 0 0;
       padding: calc( 1.5 * var(--lumo-padding) ) 0 0;
@@ -69,15 +75,15 @@
       width: 250px;
     }
 
-    .entry__header {
+    header {
       display: block;
 
-      ::slotted(.entry__header-lesson-title-highlighted) {
+      ::slotted([slot=entry-title-highlighted]) {
         display: inline-block;
         margin: var(--lumo-margin) 0 0;
       }
 
-      ::slotted(.entry__header-lesson-title) {
+      ::slotted([slot=entry-title]) {
         display: inline-block;
       }
     }
