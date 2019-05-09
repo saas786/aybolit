@@ -51,7 +51,7 @@
   overflow: auto;
   padding: var(--lumo-space-m) var(--lumo-space-m);
 
-  &[media-size="large"] {
+  &[media-size="wide"] {
     margin: 0 auto;
     max-width: 35em;
   }
