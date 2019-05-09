@@ -16,13 +16,12 @@ storiesOf('CXL UI', module)
     const lesson_description = text('Description', 'Our flagship training program. Learn conversion research, start using a systematic way to get more wins and bigger wins through optimization and testing. Our flagship training program. Learn conversion research, start using a systematic way to get more wins and bigger wins through optimization and testing.');
 
     return `
-      <cxl-lesson-card>
-        <p class="entry__header-lesson-thumbnail" slot="entry__header" style="background-image: url('${lesson_image}');"></p>
-        <span class="entry__header-lesson-title-highlighted" slot="entry__header">${lesson_title_highlighted}</span>
-        <h2 class="entry__header-lesson-title" slot="entry__header">${lesson_title}</h2>
-        <br />
-        <small class="entry__header-lesson-specs" slot="entry__header">Lesson | ${lesson_length} | ${lesson_instructor}</small>
-        <p class="entry__content-lesson-content" slot="entry__content">${lesson_description}</p>
+      <cxl-lesson-card thumbnail="${lesson_image}">
+        <span slot="lesson-thumbnail"></span>
+        <span slot="entry-title-highlighted">${lesson_title_highlighted}</span>
+        <span slot="entry-title">${lesson_title}</span>
+        <span slot="lesson-specs">Lesson | ${lesson_length} | ${lesson_instructor}</span>
+        ${lesson_description}
       </cxl-lesson-card>
     `
   })
