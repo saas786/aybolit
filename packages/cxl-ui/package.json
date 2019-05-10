@@ -10,9 +10,10 @@
     "directory": "packages/cxl-ui"
   },
   "dependencies": {
-    "lit-element": "^2.0.1",
-    "lit-html": "^1.0.0",
+    "@conversionxl/cxl-core": "^0.1.0",
     "@conversionxl/cxl-lumo-styles": "^0.1.0",
-    "@conversionxl/cxl-core": "^0.1.0"
+    "@vaadin/vaadin-dialog": "^2.2.1",
+    "lit-element": "^2.0.1",
+    "lit-html": "^1.0.0"
   }
 }
