@@ -9,41 +9,24 @@ storiesOf('Layouts', module)
   .add('cxl-institute-layout', () => {
     return html`
       <cxl-institute-layout>
-        <nav class="menu menu--institute-icon-nav" slot="icon-nav">
-          <h3 class="menu__title screen-reader-text">cxl-2019/institute-icon-nav</h3>
+        <cxl-icon-nav slot="icon-nav">
+          <cxl-icon-nav-item href="#">
+            <iron-icon class="icon size-l" icon="cxl:nav-trainings"></iron-icon>
+          </cxl-icon-nav-item>
+          <cxl-icon-nav-item href="#">
+            <iron-icon class="icon size-l" icon="cxl:nav-roadmap"></iron-icon>
+          </cxl-icon-nav-item>
+          <cxl-icon-nav-item href="#">
+            <iron-icon class="icon size-l" icon="cxl:nav-discover"></iron-icon>
+          </cxl-icon-nav-item>
+          <cxl-icon-nav-item
+            href="https://conversionxli.warmpress.com/my-account/"
+            position="bottom"
+          >
+            <iron-icon class="icon size-l" icon="lumo:user"></iron-icon>
+          </cxl-icon-nav-item>
+        </cxl-icon-nav>
 
-          <ul class="menu__items">
-            <li id="menu-item-1031803" class="menu__item has-children ">
-              <a href="#" class="menu__link">TOP</a>
-              <ul class="menu__sub-menu">
-                <li id="menu-item-1031802" class="menu__item ">
-                  <a href="https://conversionxli.warmpress.com/practitioners/" class="menu__link"
-                    ><strong>C<em>XL</em></strong></a
-                  >
-                </li>
-                <li id="menu-item-1031801" class="menu__item ">
-                  <a class="menu__link">cxl:nav-trainings</a>
-                </li>
-                <li id="menu-item-1031804" class="menu__item ">
-                  <a class="menu__link">cxl:nav-roadmap</a>
-                </li>
-                <li id="menu-item-1031805" class="menu__item ">
-                  <a href="#" class="menu__link">cxl:nav-discover</a>
-                </li>
-              </ul>
-            </li>
-            <li id="menu-item-1031806" class="menu__item has-children ">
-              <a class="menu__link">BOTTOM</a>
-              <ul class="menu__sub-menu">
-                <li id="menu-item-1031808" class="menu__item ">
-                  <a href="https://conversionxli.warmpress.com/my-account/" class="menu__link"
-                    >lumo:user</a
-                  >
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
         <!-- Sidebar -->
         <h3 slot="sidebar-header">Training Manager</h3>
         <div class="sidebar-content" slot="sidebar-content">

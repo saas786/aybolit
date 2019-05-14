@@ -15,12 +15,6 @@
     grid-template-areas: "nav sidebar content";
     grid-template-columns: 67px 315px auto;
   }
-
-  @include mq($until: tablet, $and: "(orientation: landscape)") {
-    grid-template-areas: "nav header" "nav tabs" "nav sidebar" "nav content";
-    grid-template-columns: auto calc(100% - 67px);
-    grid-template-rows: 59px 50px;
-  }
 }
 
 :host([sidebarsize="small"]) {
@@ -55,10 +49,6 @@
 
   @include mq($from: tablet) {
     display: flex;
-  }
-
-  @include mq($until: tablet, $and: "(orientation: landscape)") {
-    min-height: 100vh;
   }
 }
 
