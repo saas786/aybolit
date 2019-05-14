@@ -26,5 +26,9 @@ $mq-static-breakpoint: desktop;
 // to this list, ordered by width. For example: (mobile, tablet, desktop).
 $mq-show-breakpoints: (mobile, mobilelandscape, tablet, desktop, wide);
 
+// Wrap width
+$wrap_desktop: 960px;
+$wrap_wide: 1152px;
+
 // With eyeglass:
 @import "sass-mq";
