@@ -6,18 +6,17 @@
   font-size: var(--lumo-font-size-xs);
 }
 
-:host([item-type="link"]) [part="item"] {
-  font-size: var(--lumo-font-size-s);
-}
-
 ::slotted(a) {
   color: var(--lumo-contrast-90pct);
 
   flex: 1;
+  font-size: var(--lumo-font-size-s);
+  font-weight: 500;
+  line-height: var(--lumo-line-height-s);
   padding: var(--lumo-space-s);
   padding-bottom: var(--lumo-space-s);
   padding-left: var(--lumo-space-m);
-  padding-right: 0;
+  padding-right: var(--lumo-space-m);
   text-decoration: none;
 }
 

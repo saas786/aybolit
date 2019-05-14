@@ -114,3 +114,9 @@
     }
   }
 }
+
+// TODO: These get overwritten by lumo styles
+::slotted([part="sidebar-header"]) {
+  margin-bottom: 0;
+  margin-top: 0.25em;
+}
