@@ -9,23 +9,15 @@ storiesOf('Layouts', module)
   .add('cxl-institute-layout', () => {
     return html`
       <cxl-institute-layout>
-        <cxl-icon-nav slot="icon-nav">
-          <cxl-icon-nav-item href="#">
-            <iron-icon class="icon size-l" icon="cxl:nav-trainings"></iron-icon>
-          </cxl-icon-nav-item>
-          <cxl-icon-nav-item href="#">
-            <iron-icon class="icon size-l" icon="cxl:nav-roadmap"></iron-icon>
-          </cxl-icon-nav-item>
-          <cxl-icon-nav-item href="#">
-            <iron-icon class="icon size-l" icon="cxl:nav-discover"></iron-icon>
-          </cxl-icon-nav-item>
-          <cxl-icon-nav-item
-            href="https://conversionxli.warmpress.com/my-account/"
-            position="bottom"
-          >
-            <iron-icon class="icon size-l" icon="lumo:user"></iron-icon>
-          </cxl-icon-nav-item>
-        </cxl-icon-nav>
+        <vaadin-list-box theme="cxl-icon-top-nav" slot="icon-nav-top">
+          <cxl-icon-nav-item href="#" icon="cxl:nav-trainings"></cxl-icon-nav-item>
+          <cxl-icon-nav-item href="#" icon="cxl:nav-roadmap"></cxl-icon-nav-item>
+          <cxl-icon-nav-item href="#" icon="cxl:nav-discover"></cxl-icon-nav-item>
+        </vaadin-list-box>
+
+        <vaadin-list-box theme="cxl-icon-bottom-nav" slot="icon-nav-bottom">
+          <cxl-icon-nav-item href="#" icon="lumo:user"></cxl-icon-nav-item>
+        </vaadin-list-box>
 
         <!-- Sidebar -->
         <h3 slot="sidebar-header" part="sidebar-header">Training Manager</h3>

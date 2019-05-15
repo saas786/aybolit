@@ -1,0 +1,32 @@
+@import "@conversionxl/cxl-ui/scss/utils/mq";
+
+:host([theme="cxl-icon-top-nav"]) {
+  display: flex;
+  width: 75%;
+
+  [part="items"] {
+    flex-direction: row;
+  }
+
+  @include mq($from: tablet) {
+    width: 100%;
+
+    [part="items"] {
+      flex-direction: column;
+    }
+  }
+}
+
+:host([theme="cxl-icon-bottom-nav"]) {
+  margin-top: auto;
+  width: 25%;
+
+  ::slotted(cxl-icon-nav-item) {
+    width: 100%;
+  }
+
+  @include mq($from: tablet) {
+    margin-top: auto;
+    width: 64px;
+  }
+}

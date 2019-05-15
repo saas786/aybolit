@@ -1,5 +1,6 @@
 // Import the LitElement base class and html helper function
 import { LitElement, html } from 'lit-element';
+import '@vaadin/vaadin-item';
 import cxlThemeStyles from '../styles/cxl-theme-css.js';
 import cxlIconNavItemStyles from '../styles/cxl-icon-nav-item-css.js';
 
@@ -9,7 +10,7 @@ class CXLIconNavItemElement extends LitElement {
       href: {
         type: String
       },
-      position: {
+      icon: {
         type: String
       }
     };
@@ -21,11 +22,9 @@ class CXLIconNavItemElement extends LitElement {
 
   render() {
     return html`
-      <li>
-        <a href="${this.href}">
-          <slot></slot>
-        </a>
-      </li>
+      <a href="${this.icon}">
+        <iron-icon class="icon size-l" icon="${this.icon}"></iron-icon>
+      </a>
     `;
   }
 }

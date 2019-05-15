@@ -2175,6 +2175,19 @@
     "@vaadin/vaadin-material-styles" "^1.1.0"
     "@vaadin/vaadin-themable-mixin" "^1.2.1"
 
+"@vaadin/vaadin-list-box@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vaadin/vaadin-list-box/-/vaadin-list-box-1.1.0.tgz#0188e97ff23bd0fd25be1c24f5dded29225c95a5"
+  integrity sha512-IC+L6VH+155K8rOEWu9BL1tdfnvBWYFcJb0Kty/l5FLmlxUJ2HIhaMSghgtbOsv19stLGTiV9BTAboBszGQ+Hg==
+  dependencies:
+    "@polymer/polymer" "^3.0.0"
+    "@vaadin/vaadin-element-mixin" "^2.0.0"
+    "@vaadin/vaadin-item" "^2.1.0"
+    "@vaadin/vaadin-list-mixin" "^2.1.0"
+    "@vaadin/vaadin-lumo-styles" "^1.1.0"
+    "@vaadin/vaadin-material-styles" "^1.1.0"
+    "@vaadin/vaadin-themable-mixin" "^1.2.1"
+
 "@vaadin/vaadin-list-mixin@^2.1.0":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@vaadin/vaadin-list-mixin/-/vaadin-list-mixin-2.2.1.tgz#09b059f45b3062db2494093744a2768c0f772112"
