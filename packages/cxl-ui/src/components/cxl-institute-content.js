@@ -21,8 +21,8 @@ class CXLInstituteContentElement extends LitElement {
     return html`
       <slot name="content-header"></slot>
       <slot name="content-video"></slot>
-      <div class="wrap">
-        <div part="content" media-size="wide">
+      <div part="content" media-size="wide">
+        <div class="wrap">
           <slot></slot>
         </div>
       </div>

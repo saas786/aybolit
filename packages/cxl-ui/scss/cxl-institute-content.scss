@@ -1,5 +1,7 @@
 @import "./utils/mq";
 
+$max-width-content-width: 35em;
+
 :host {
   background: #fff;
   border-radius: 0;
@@ -39,27 +41,20 @@
   left: -250px;
 }
 
-.wrap {
-  height: auto;
-  max-width: none;
-  overflow: auto;
-  padding: 0;
-  width: 100%;
-}
-
 [part="content"] {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
   overflow: auto;
-  padding: var(--lumo-space-m) var(--lumo-space-m);
+  padding: var(--lumo-space-m) 0;
 
   &[media-size="wide"] {
-    margin: 0 auto;
-    max-width: 35em;
+    > .wrap  {
+      max-width: $max-width-content-width;
+    }
   }
 
   @include mq($from: tablet) {
-    padding: var(--lumo-space-xl) var(--lumo-space-m);
+    padding: var(--lumo-space-xl) 0;
   }
 }
