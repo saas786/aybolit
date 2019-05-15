@@ -14,19 +14,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.sub-title {
-  margin-top: var(--lumo-space-tall-l);
-  text-align: center;
-}
-
-.flex {
-  display: flex;
-}
-
-strong {
-  color: var(--lumo-primary-text-color);
-}
-
 .align {
   &-left {
     text-align: left;
@@ -51,11 +38,9 @@ strong {
 
   @include mq($from: desktop) {
     max-width: $wrap_desktop;
-    width: $wrap_desktop;
   }
 
   @include mq($from: wide) {
     max-width: $wrap_wide;
-    width: $wrap_wide;
   }
 }

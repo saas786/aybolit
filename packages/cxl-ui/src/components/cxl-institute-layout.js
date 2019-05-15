@@ -17,7 +17,7 @@ class CXLInstituteLayoutElement extends LitElement {
   render() {
     return html`
       <!-- Visible on mobile -->
-      <header id="header" part="header">
+      <header part="mobile-header">
         <a href="/" class="logo">
           <span class="cxl">C<span>XL</span></span>
         </a>
@@ -39,17 +39,17 @@ class CXLInstituteLayoutElement extends LitElement {
         <slot name="icon-nav"></slot>
       </div>
 
-      <div id="sidebar" part="sidebar">
-        <div class="sidebar-header">
+      <div part="sidebar">
+        <header>
           <slot name="sidebar-header"></slot>
-        </div>
+        </header>
 
         <slot name="sidebar-content"></slot>
       </div>
 
-      <div id="content" part="content" page-visible>
+      <main part="content" page-visible>
         <slot></slot>
-      </div>
+      </main>
     `;
   }
 
@@ -59,7 +59,7 @@ class CXLInstituteLayoutElement extends LitElement {
 
   changeTab(tab) {
     this.shadowRoot.querySelector('[page-visible]').removeAttribute('page-visible');
-    this.shadowRoot.getElementById(tab).setAttribute('page-visible', '');
+    this.shadowRoot.querySelector('[part=' + tab + ']').setAttribute('page-visible', '');
   }
 }
 

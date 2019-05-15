@@ -2,7 +2,7 @@
   "name": "cxl-workspace",
   "private": true,
   "author": "CXL",
-  "license": "UNLICENSED",
+  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "argos": "argos upload test/visual/screenshots/chrome --token $ARGOS_TOKEN || true",
     "build": "yarn build-styling",

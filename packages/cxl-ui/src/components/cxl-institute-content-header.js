@@ -26,7 +26,7 @@ class CXLInstituteContentHeaderElement extends LitElement {
       </div>
 
       <div class="header-title">
-        <h3><slot></slot></h3>
+        <h1><slot></slot></h1>
       </div>
 
       <div class="header-button">

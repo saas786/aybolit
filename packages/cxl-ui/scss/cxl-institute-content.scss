@@ -39,9 +39,12 @@
   left: -250px;
 }
 
-.wrapper {
+.wrap {
   height: auto;
+  max-width: none;
   overflow: auto;
+  padding: 0;
+  width: 100%;
 }
 
 [part="content"] {
