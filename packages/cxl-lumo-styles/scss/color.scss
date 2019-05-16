@@ -10,3 +10,11 @@ html,
   --lumo-primary-color-50pct: hsla(8, 100%, 39%, 0.5);
   --lumo-contrast-90pct: hsla(214, 40%, 16%, 0.94);
 }
+
+a {
+  color: var(--lumo-contrast-90pct);
+
+  &:hover {
+    color: var(--lumo-primary-color);
+  }
+}

@@ -2120,6 +2120,18 @@
     "@types/unist" "*"
     "@types/vfile-message" "*"
 
+"@vaadin/vaadin-accordion@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@vaadin/vaadin-accordion/-/vaadin-accordion-1.0.0.tgz#9fda392d65352585de0333b6986bf989845f201b"
+  integrity sha512-tYiOlQxWbhkln/zE49W+zgjHiUV7Hb8zGcn6CSwjpIKGdcTmzGswjBDhcLRrt/WFgBDlgK6vfQfXNivy9eDcxw==
+  dependencies:
+    "@polymer/polymer" "^3.0.0"
+    "@vaadin/vaadin-details" "^1.0.0"
+    "@vaadin/vaadin-element-mixin" "^2.0.0"
+    "@vaadin/vaadin-lumo-styles" "^1.4.1"
+    "@vaadin/vaadin-material-styles" "^1.2.0"
+    "@vaadin/vaadin-themable-mixin" "^1.2.0"
+
 "@vaadin/vaadin-button@^2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@vaadin/vaadin-button/-/vaadin-button-2.1.5.tgz#cb28302a2a2180894da1cbd7f63cdb0239c6042e"
@@ -2139,7 +2151,7 @@
   dependencies:
     "@polymer/polymer" "^3.0.0"
 
-"@vaadin/vaadin-details@^1.0.1":
+"@vaadin/vaadin-details@^1.0.0", "@vaadin/vaadin-details@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@vaadin/vaadin-details/-/vaadin-details-1.0.1.tgz#716b75d0fad2347a8e888a95c34f80202ce7e0ad"
   integrity sha512-Kt3ul/qOUapFhLtejfOtW7lr0qitcQwQTLifsMRuJf6leVsS2Bh/eliFfGL9YuZJpCOByQCrmT8MSB+70pUUYA==

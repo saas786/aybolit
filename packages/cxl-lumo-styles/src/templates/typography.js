@@ -5,10 +5,7 @@ const $template = document.createElement('template');
 
 $template.innerHTML = `
 <custom-style>
-  <style include="lumo-typography"></style>
-</custom-style>
-<custom-style>
-  <style>${lumoTypography}</style>
+  <style include="lumo-typography">${lumoTypography}</style>
 </custom-style>`;
 
 document.head.appendChild($template.content);
