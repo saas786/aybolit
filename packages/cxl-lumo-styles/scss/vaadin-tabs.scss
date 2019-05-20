@@ -37,16 +37,18 @@
     }
   }
 
-  ::slotted(vaadin-tab:not([theme="cxl-icon-nav-item-button"]):hover) {
-    background: var(--lumo-primary-color);
-  }
-
   ::slotted(vaadin-tab[selected])::before {
     display: none;
   }
 
   ::slotted(vaadin-tab:not([theme="cxl-icon-nav-item-button"])[selected]) {
-    background: var(--lumo-primary-color);
+    background: var(--lumo-shade-5pct);
+  }
+
+  @include mq($until: tablet) {
+    ::slotted(vaadin-tab:first-child) {
+      display: none;
+    }
   }
 }
 

@@ -1,6 +1,7 @@
 // Import the LitElement base class and html helper function
 import { LitElement, html } from 'lit-element';
 import { ifDefined } from 'lit-html/directives/if-defined';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 import '@vaadin/vaadin-item';
 import cxlThemeStyles from '../styles/cxl-theme-css.js';
 import cxlIconNavItemStyles from '../styles/cxl-icon-nav-item-css.js';
@@ -11,7 +12,7 @@ class CXLIconNavItemElement extends LitElement {
       href: {
         type: String
       },
-      icon: {
+      title: {
         type: String
       }
     };
@@ -24,9 +25,27 @@ class CXLIconNavItemElement extends LitElement {
   render() {
     return html`
       <a href=${ifDefined(this.href)}>
-        <iron-icon class="icon size-l" icon="${this.innerHTML}"></iron-icon>
+        ${this.navItemContent}
+        ${this.title
+          ? html`
+              <span>${this.title}</span>
+            `
+          : ''}
       </a>
     `;
+  }
+
+  get navItemContent() {
+    const vaadinTab = this.parentNode;
+
+    switch (true) {
+      case vaadinTab.className.indexOf('--type-html') > 0:
+        return unsafeHTML(this.innerHTML);
+      default:
+        return unsafeHTML(`
+          <iron-icon class="icon size-l" icon="${this.innerHTML}"></iron-icon>
+        `);
+    }
   }
 }
 
