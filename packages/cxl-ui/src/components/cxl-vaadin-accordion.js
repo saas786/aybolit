@@ -4,7 +4,6 @@ class CXLVaadinAccordion extends AccordionElement {
   _updateOpened(e) {
     const target = this._filterItems(e.composedPath())[0];
     const idx = this.items.indexOf(target);
-    console.log(target, idx);
     if (e.detail.value) {
       if (target.disabled || idx === -1) {
         return;

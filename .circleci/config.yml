@@ -54,27 +54,6 @@ jobs:
           name: Run tests in browsers
           command: yarn test
 
-  test_visual:
-    <<: *defaults
-
-    docker:
-      - image: circleci/node:10.15-browsers
-      - image: selenium/standalone-chrome:3.141.59
-
-    steps:
-      - checkout
-      - install_js
-
-      - run:
-          name: Build
-          command: yarn build
-
-      - run:
-          name: Run visual tests
-          command: |
-            DOCKER_TEST_URL=http://$(ip addr show lo | grep "inet\b" | awk '{print $2}' | cut -d/ -f1):3090 yarn test:visual
-            yarn argos
-
   dist:
     <<: *defaults
 
@@ -101,9 +80,6 @@ workflows:
       - test_browser:
           requires:
             - checkout
-      - test_visual:
-          requires:
-            - test_browser
       - dist:
           requires:
             - checkout
