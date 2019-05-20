@@ -6,85 +6,135 @@ import '@conversionxl/cxl-institute';
 
 storiesOf('Layouts', module)
   .addDecorator(withKnobs)
-  .add('cxl-institute-layout', () => {
+  .add('cxl-institute-layout (vaadin tabs nav)', () => {
     return html`
-      <cxl-institute-layout>
-        <vaadin-list-box theme="cxl-icon-top-nav" slot="icon-nav-top">
-          <cxl-icon-nav-item href="#" icon="cxl:nav-trainings"></cxl-icon-nav-item>
-          <cxl-icon-nav-item href="#" icon="cxl:nav-roadmap"></cxl-icon-nav-item>
-          <cxl-icon-nav-item href="#" icon="cxl:nav-discover"></cxl-icon-nav-item>
-        </vaadin-list-box>
 
-        <vaadin-list-box theme="cxl-icon-bottom-nav" slot="icon-nav-bottom">
-          <cxl-icon-nav-item href="#" icon="lumo:user"></cxl-icon-nav-item>
-        </vaadin-list-box>
+      <cxl-institute-layout>
+        <cxl-icon-nav slot="icon-nav">
+          <vaadin-tab>
+            <cxl-icon-nav-item href="#" icon="cxl:nav-trainings"></cxl-icon-nav-item>
+          </vaadin-tab>
+          <vaadin-tab>
+            <cxl-icon-nav-item href="#" icon="cxl:nav-roadmap"></cxl-icon-nav-item>
+          </vaadin-tab>
+          <vaadin-tab>
+            <cxl-icon-nav-item href="#" icon="cxl:nav-discover"></cxl-icon-nav-item>
+          </vaadin-tab>
+          <vaadin-tab theme="cxl-icon-nav-item-bottom">
+            <cxl-icon-nav-item href="#" icon="lumo:user"></cxl-icon-nav-item>
+          </vaadin-tab>
+          <vaadin-tab theme="cxl-icon-nav-item-button" selected="true">
+            <vaadin-button theme="primary">
+              Start course
+            </vaadin-button>
+          </vaadin-tab>
+        </cxl-icon-nav>
 
         <!-- Sidebar -->
         <h3 slot="sidebar-header" part="sidebar-header">Training Manager</h3>
-        <div class="sidebar-content" slot="sidebar-content">
+        <div slot="sidebar-content">
           <strong class="extra-heading">Digital analytics minidegree program</strong>
-          <vaadin-details theme="cxl-sidebar-track" opened>
-            <div slot="summary">Google Analytics</div>
-            <div>
-              <cxl-institute-sidebar-items>
-                <cxl-institute-sidebar-item item-type="track" track-value="1:42">
-                  <!-- href class active -->
-                  <a href="trainings/analytics-fundamentals/484381">Analytics fundamentals</a>
-                </cxl-institute-sidebar-item>
-                <cxl-institute-sidebar-item item-type="track" track-value="3:14">
-                  <a href="trainings/google-analytics-for-beginners/179345"
-                    >Google Analytics for beginners</a
-                  >
-                </cxl-institute-sidebar-item>
-                <cxl-institute-sidebar-item item-type="track" track-value="3:14">
-                  <a href="trainings/conducting-an-analytics-audit/12230"
-                    >Conducting an analytics audit</a
-                  >
-                </cxl-institute-sidebar-item>
-                <cxl-institute-sidebar-item item-type="track" track-value="3:14">
-                  <a href="trainings/using-analytics-to-find-conversion-opportunities/12673"
-                    >Using analytics to find conversion opportunities</a
-                  >
-                </cxl-institute-sidebar-item>
-                <cxl-institute-sidebar-item item-type="track" track-value="3:14">
-                  <a href="trainings/intermediate-google-analytics/149924"
-                    >Intermediate Google Analytics</a
-                  >
-                </cxl-institute-sidebar-item>
-              </cxl-institute-sidebar-items>
-            </div>
-          </vaadin-details>
-          <vaadin-details theme="cxl-sidebar-track" opened>
-            <div slot="summary">Google Analytics</div>
-            <div>
-              <cxl-institute-sidebar-items>
-                <cxl-institute-sidebar-item item-type="track" track-value="1:42">
-                  <!-- href class active -->
-                  <a href="trainings/analytics-fundamentals/484381">Analytics fundamentals</a>
-                </cxl-institute-sidebar-item>
-                <cxl-institute-sidebar-item item-type="track" track-value="3:14">
-                  <a href="trainings/google-analytics-for-beginners/179345"
-                    >Google Analytics for beginners</a
-                  >
-                </cxl-institute-sidebar-item>
-                <cxl-institute-sidebar-item item-type="track" track-value="3:14">
-                  <a href="trainings/conducting-an-analytics-audit/12230"
-                    >Conducting an analytics audit</a
-                  >
-                </cxl-institute-sidebar-item>
-                <cxl-institute-sidebar-item item-type="track" track-value="3:14">
-                  <a href="trainings/using-analytics-to-find-conversion-opportunities/12673"
-                    >Using analytics to find conversion opportunities</a
-                  >
-                </cxl-institute-sidebar-item>
-                <cxl-institute-sidebar-item item-type="track" track-value="3:14">
-                  <a href="trainings/intermediate-google-analytics/149924"
-                    >Intermediate Google Analytics</a
-                  >
-                </cxl-institute-sidebar-item>
-              </cxl-institute-sidebar-items>
-            </div>
-          </vaadin-details>
+          <br><br>
+          <cxl-vaadin-accordion>
+            <vaadin-accordion-panel theme="cxl-sidebar-panel">
+              <div slot="summary">
+                <vaadin-item theme="cxl-sidebar-panel-summary">
+                  <label class="label">Track #1</label>Google Analytics
+                </vaadin-item>
+              </div>
+              <div>
+                <vaadin-accordion-panel theme="cxl-sidebar-subpanel">
+                  <div slot="summary">Analytics fundamentals</div>
+                  <div>
+                    <vaadin-list-box theme="cxl-sidebar-panel-links">
+                      <h4 class="module-header">Analytics fundamentals</h4>
+                      <a href="">Analytics fundamentals</a>
+                    </vaadin-list-box>
+                  </div>
+                </vaadin-accordion-panel>
+                <vaadin-accordion-panel theme="cxl-sidebar-subpanel">
+                  <div slot="summary">Google Analytics for beginners</div>
+                  <div>
+                    <vaadin-list-box theme="cxl-sidebar-panel-links">
+                      <h4 class="module-header">Google Analytics for beginners</h4>
+                      <a href="">Getting started with Google Analytics</a>
+                      <a href="">Who are my visitors?</a>
+                      <a href="">Where are my visitors coming from?</a>
+                      <a href="">What are the results of my visitors' actions?</a>
+                      <h4 class="module-header">Final exam</h4>
+                      <a href="">Final Exam - Google Analytics for Beginners</a>
+                    </vaadin-list-box>
+                  </div>
+                </vaadin-accordion-panel>
+              </div>
+            </vaadin-accordion-panel>
+            <vaadin-accordion-panel theme="cxl-sidebar-panel">
+              <div slot="summary">
+                <vaadin-item theme="cxl-sidebar-panel-summary">
+                  <label class="label">Track #2</label>Presenting data
+                </vaadin-item>  
+              </div>
+              <div>
+                <vaadin-accordion-panel theme="cxl-sidebar-subpanel">
+                  <div slot="summary">Data presentation &amp; visualization</div>
+                  <div>
+                    <vaadin-list-box theme="cxl-sidebar-panel-links">
+                      <h4 class="module-header">Data presentation &amp; visualization</h4>
+                      <a href="">Introduction + Conceptualize</a>
+                      <a href="">Visualize: design like Andy Warhol</a>
+                      <a href="">Visualize: data design</a>
+                      <a href="">Analytics strategy: the process for successful digital analytics</h4>
+                      <a href="">Analytics strategy: socializing analytical results for enabling business decisions</a>
+                    </vaadin-list-box>
+                  </div>
+                </vaadin-accordion-panel>
+              </div>
+            </vaadin-accordion-panel>
+
+            <vaadin-accordion-panel theme="cxl-sidebar-panel">
+              <div slot="summary">
+                <vaadin-item theme="cxl-sidebar-panel-summary">
+                  <label class="label">Track #3</label>Google Tag Manager
+                </vaadin-item>  
+              </div>
+              <div>
+                <vaadin-accordion-panel theme="cxl-sidebar-subpanel">
+                  <div slot="summary">Data presentation &amp; visualization</div>
+                  <div>
+                    <vaadin-list-box theme="cxl-sidebar-panel-links">
+                      <a href="">Introduction + Conceptualize</a>
+                      <a href="">Visualize: design like Andy Warhol</a>
+                      <a href="">Visualize: data design</a>
+                      <a href="">Analytics strategy: the process for successful digital analytics</h4>
+                      <a href="">Analytics strategy: socializing analytical results for enabling business decisions</a>
+                    </vaadin-list-box>
+                  </div>
+                </vaadin-accordion-panel>
+              </div>
+            </vaadin-accordion-panel>
+
+            <vaadin-accordion-panel theme="cxl-sidebar-panel">
+              <div slot="summary">
+                <vaadin-item theme="cxl-sidebar-panel-summary">
+                  <label class="label">Track #4</label>Attribution
+                </vaadin-item>  
+              </div>
+              <div>
+                <vaadin-accordion-panel theme="cxl-sidebar-subpanel">
+                  <div slot="summary">Data presentation &amp; visualization</div>
+                  <div>
+                    <vaadin-list-box theme="cxl-sidebar-panel-links">
+                      <a href="">Introduction + Conceptualize</a>
+                      <a href="">Visualize: design like Andy Warhol</a>
+                      <a href="">Visualize: data design</a>
+                      <a href="">Analytics strategy: the process for successful digital analytics</h4>
+                      <a href="">Analytics strategy: socializing analytical results for enabling business decisions</a>
+                    </vaadin-list-box>
+                  </div>
+                </vaadin-accordion-panel>
+              </div>
+            </vaadin-accordion-panel>
+          </cxl-vaadin-accordion>
         </div>
 
         <!-- Content -->

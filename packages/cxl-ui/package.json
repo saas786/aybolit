@@ -17,7 +17,8 @@
     "@vaadin/vaadin-accordion": "^1.0.0",
     "@vaadin/vaadin-item": "^2.1.0",
     "@vaadin/vaadin-tabs": "^2.1.2",
-    "lit-element": "^2.1.0"
+    "lit-element": "^2.1.0",
+    "lit-html": "^1.0.0"
   },
   "devDependencies": {
     "sass-mq": "^5.0.0"

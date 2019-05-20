@@ -1,5 +1,6 @@
 // Import the LitElement base class and html helper function
 import { LitElement, html } from 'lit-element';
+import { ifDefined } from 'lit-html/directives/if-defined';
 import '@vaadin/vaadin-item';
 import cxlThemeStyles from '../styles/cxl-theme-css.js';
 import cxlIconNavItemStyles from '../styles/cxl-icon-nav-item-css.js';
@@ -22,8 +23,8 @@ class CXLIconNavItemElement extends LitElement {
 
   render() {
     return html`
-      <a href="${this.icon}">
-        <iron-icon class="icon size-l" icon="${this.icon}"></iron-icon>
+      <a href=${ifDefined(this.href)}>
+        <iron-icon class="icon size-l" icon="${this.innerHTML}"></iron-icon>
       </a>
     `;
   }

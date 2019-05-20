@@ -2237,6 +2237,20 @@
     "@vaadin/vaadin-material-styles" "^1.1.0"
     "@vaadin/vaadin-themable-mixin" "^1.2.1"
 
+"@vaadin/vaadin-tabs@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@vaadin/vaadin-tabs/-/vaadin-tabs-3.0.0.tgz#cccf872fc15dc0714e4c7fff7f487cf764279552"
+  integrity sha512-LjgOugRaqxuZnRptihzcE3bFG4vhomfNvfEdx7IeyRCKN7aoBZ4Yf5qlKJ7hUrLk2lo167/6B54ndyxU5bWsNQ==
+  dependencies:
+    "@polymer/iron-resizable-behavior" "^3.0.0"
+    "@polymer/polymer" "^3.0.0"
+    "@vaadin/vaadin-element-mixin" "^2.0.0"
+    "@vaadin/vaadin-item" "^2.1.0"
+    "@vaadin/vaadin-list-mixin" "^2.1.0"
+    "@vaadin/vaadin-lumo-styles" "^1.1.0"
+    "@vaadin/vaadin-material-styles" "^1.1.0"
+    "@vaadin/vaadin-themable-mixin" "^1.2.1"
+
 "@vaadin/vaadin-themable-mixin@^1.2.0", "@vaadin/vaadin-themable-mixin@^1.2.1":
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/@vaadin/vaadin-themable-mixin/-/vaadin-themable-mixin-1.4.4.tgz#ebaf1e3726e528adac7db80367bdb9eca58e9008"

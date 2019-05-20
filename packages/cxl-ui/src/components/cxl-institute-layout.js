@@ -3,8 +3,6 @@ import { LitElement, html } from 'lit-element';
 import cxlThemeStyles from '../styles/cxl-theme-css.js';
 import cxlInstituteLayoutStyles from '../styles/cxl-institute-layout-css.js';
 
-import '@vaadin/vaadin-tabs';
-
 class CXLInstituteLayoutElement extends LitElement {
   static get properties() {
     return {};
@@ -36,8 +34,7 @@ class CXLInstituteLayoutElement extends LitElement {
       </vaadin-tabs>
 
       <nav part="icon-nav">
-        <slot name="icon-nav-top"></slot>
-        <slot name="icon-nav-bottom"></slot>
+        <slot name="icon-nav"></slot>
       </nav>
 
       <div part="sidebar">
@@ -60,7 +57,7 @@ class CXLInstituteLayoutElement extends LitElement {
 
   changeTab(tab) {
     this.shadowRoot.querySelector('[page-visible]').removeAttribute('page-visible');
-    this.shadowRoot.querySelector('[part=' + tab + ']').setAttribute('page-visible', '');
+    this.shadowRoot.querySelector(`[part=${tab}]`).setAttribute('page-visible', '');
   }
 }
 

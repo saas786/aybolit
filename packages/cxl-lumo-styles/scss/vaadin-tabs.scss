@@ -18,3 +18,38 @@
 :host([theme~="cxl-institute-layout-tabs"]) [part="tabs"] ::slotted(vaadin-tab)::after {
   width: 80%;
 }
+
+:host([theme~="cxl-icon-nav"]) {
+  display: flex;
+
+  ::slotted(vaadin-tab) {
+    padding: 0;
+  }
+
+  ::slotted(vaadin-tab[theme="cxl-icon-nav-item-button"]) {
+    margin-left: auto;
+    padding-left: var(--lumo-space-m);
+    padding-right: var(--lumo-space-m);
+    width: auto;
+
+    @include mq($from: tablet) {
+      display: none;
+    }
+  }
+
+  ::slotted(vaadin-tab:not([theme="cxl-icon-nav-item-button"]):hover) {
+    background: var(--lumo-primary-color);
+  }
+
+  ::slotted(vaadin-tab[selected])::before {
+    display: none;
+  }
+
+  ::slotted(vaadin-tab:not([theme="cxl-icon-nav-item-button"])[selected]) {
+    background: var(--lumo-primary-color);
+  }
+}
+
+:host([theme~="cxl-icon-nav"][orientation="vertical"]) {
+  height: 100%;
+}

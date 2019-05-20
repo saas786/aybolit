@@ -1,14 +1,13 @@
 @import "./utils/mq";
 
 :host {
-  height: 64px;
-  width: 33.33%;
-
   a {
     align-items: center;
     display: flex;
     height: 100%;
+    height: 64px;
     justify-content: center;
+    width: 64px;
 
     &:hover {
       background: var(--lumo-primary-color);
