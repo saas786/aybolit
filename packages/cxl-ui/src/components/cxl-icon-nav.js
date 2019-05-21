@@ -1,5 +1,6 @@
 // Import the LitElement base class and html helper function
 import { LitElement, html } from 'lit-element';
+import './cxl-icon-nav-item.js';
 import cxlThemeStyles from '../styles/cxl-theme-css.js';
 
 class CXLIconNavElement extends LitElement {
