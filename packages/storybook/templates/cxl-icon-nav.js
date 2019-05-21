@@ -5,6 +5,9 @@ export default html`
     <vaadin-tab>
       <cxl-icon-nav-item>cxl:logo</span></cxl-icon-nav-item>
     </vaadin-tab>
+    <vaadin-tab class="menu__item menu__item--search">
+      <cxl-icon-nav-item title="Search">lumo:search</cxl-icon-nav-item>
+    </vaadin-tab>
     <vaadin-tab>
       <cxl-icon-nav-item title="Training" href="#">cxl:nav-trainings</cxl-icon-nav-item>
     </vaadin-tab>

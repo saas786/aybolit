@@ -10,7 +10,7 @@ import '@vaadin/vaadin-details';
 import '@vaadin/vaadin-list-box';
 import '@vaadin/vaadin-accordion';
 import '@vaadin/vaadin-item';
-import '@vaadin/vaadin-tabs';
+import '@vaadin/vaadin-dialog';
 
 // Import custom components
 import '@conversionxl/cxl-ui/src/components/cxl-institute-layout.js';

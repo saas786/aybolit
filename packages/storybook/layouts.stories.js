@@ -13,6 +13,29 @@ storiesOf('Layouts', module)
   .add('cxl-institute-layout (vaadin tabs nav)', () => {
     return html`
       <cxl-institute-layout>
+        <vaadin-dialog theme="cxl-search-overlay">
+          <template>
+            <iron-icon class="icon size-l" icon="lumo:cross"></iron-icon>
+            <form
+              role="search"
+              method="get"
+              class="search-form"
+              action="https://conversionxl.com/institute/"
+            >
+              <label>
+                <span class="screen-reader-text">Search for:</span>
+                <input
+                  type="search"
+                  class="search-field"
+                  placeholder="Search …"
+                  value=""
+                  name="s"
+                />
+              </label>
+              <input type="submit" class="search-submit" value="Search" />
+            </form>
+          </template>
+        </vaadin-dialog>
         <!-- <cxl-icon-nav> -->
         ${cxlIconNav}
         <h3 slot="sidebar-header" part="sidebar-header">Training Manager</h3>

@@ -37,14 +37,31 @@ class CXLIconNavItemElement extends LitElement {
 
   get navItemContent() {
     const vaadinTab = this.parentNode;
+    const icon = `<iron-icon class="icon size-l" icon="${this.innerHTML}"></iron-icon>`;
 
     switch (true) {
       case vaadinTab.className.indexOf('--type-html') > 0:
         return unsafeHTML(this.innerHTML);
+      case vaadinTab.className.indexOf('--search') > 0:
+        {
+          const searchDialog = document.querySelector('vaadin-dialog[theme="cxl-search-overlay"]');
+
+          vaadinTab.addEventListener('click', function() {
+            searchDialog.opened = true;
+
+            const searchDialogOverlay = document.querySelector(
+              'vaadin-dialog-overlay[theme="cxl-search-overlay"]'
+            );
+            const closeButton = searchDialogOverlay.querySelector('iron-icon[icon="lumo:cross"]');
+
+            closeButton.addEventListener('click', function() {
+              searchDialog.opened = false;
+            });
+          });
+        }
+        return unsafeHTML(icon);
       default:
-        return unsafeHTML(`
-          <iron-icon class="icon size-l" icon="${this.innerHTML}"></iron-icon>
-        `);
+        return unsafeHTML(icon);
     }
   }
 }

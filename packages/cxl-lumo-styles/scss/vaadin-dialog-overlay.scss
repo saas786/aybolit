@@ -1,0 +1,31 @@
+@import "@conversionxl/cxl-ui/scss/utils/mq";
+
+:host([theme~="cxl-search-overlay"]) {
+  [part="backdrop"] {
+    background-color: var(--lumo-shade-40pct);
+  }
+
+  [part="overlay"],
+  [part="content"] {
+    box-sizing: border-box;
+    min-width: 100%;
+    width: 100%;
+  }
+
+  ::slotted(iron-icon) {
+    color: var(--lumo-shade-50pct);
+    cursor: pointer;
+    float: right;
+  }
+
+  ::slotted(iron-icon:hover) {
+    color: var(--lumo-shade-80pct);
+  }
+
+  @include mq($from: tablet) {
+    [part="overlay"] {
+      min-width: 40em;
+      width: auto;
+    }
+  }
+}
