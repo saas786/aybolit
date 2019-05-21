@@ -6,4 +6,8 @@
     font-weight: 600;
     text-transform: uppercase;
   }
+
+  ::slotted(h4) {
+    font-size: var(--lumo-font-size-m);
+  }
 }
