@@ -1,0 +1,21 @@
+@import "../utils/mixins";
+
+cxl-course-progress-widget {
+  @include cxl-institute-progress-widget-titles;
+
+  vaadin-tabs[theme~="cxl-course"] {
+    $font-size: var(--lumo-font-size-s);
+
+    .entry__title {
+      font-size: $font-size;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .module__title {
+      color: var(--lumo-shade-50pct);
+      font-size: $font-size;
+      text-transform: uppercase;
+    }
+  }
+}
