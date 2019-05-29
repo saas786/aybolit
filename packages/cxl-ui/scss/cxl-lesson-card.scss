@@ -18,15 +18,14 @@
 
     .lesson-thumbnail {
       align-self: center;
+      background-size: cover;
+      background-position: center;
       border-radius: var(--lumo-border-radius-round);
       grid-area: entry__header-lesson-thumbnail;
       height: calc( 1.5 * var(--lumo-card-thumbnail-size) );
-      width: calc( 1.5 * var(--lumo-card-thumbnail-size) );
       margin: 0 calc( 2 * var(--lumo-margin) ) 0 0;
-      -webkit-background-size: cover;
-      background-size: cover;
-      background-position: center;
       vertical-align: middle;
+      width: calc( 1.5 * var(--lumo-card-thumbnail-size) );
     }
 
     ::slotted([slot=entry-title-highlighted]) {
@@ -52,10 +51,6 @@
       grid-area: entry__header-lesson-specs;
       margin: 0;
     }
-
-    ::slotted(h2) {
-      font-size: var(--lumo-font-size-m);
-    }
   }
 
   .content {
@@ -70,11 +65,6 @@
     height: auto;
     width: auto;
 
-    @at-root #{&}([in-container]) {
-      height: auto;
-      width: 250px;
-    }
-
     header {
       display: block;
 
@@ -87,9 +77,5 @@
         display: inline-block;
       }
     }
-  }
-
-  @at-root #{&}([in-container]) {
-    height: 300px;
   }
 }

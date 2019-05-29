@@ -32,14 +32,16 @@
   }
 
   .entry__footer {
+    font-size: small;
+
     ::slotted(.entry__header-user-name) {
       align-self: end;
       font-weight: bold;
-      display: block;
+      margin: 0;
     }
 
     ::slotted(.entry__header-user-company) {
-      display: block;
+      margin: 0;
     }
   }
 

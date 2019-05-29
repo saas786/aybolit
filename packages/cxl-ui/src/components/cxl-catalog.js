@@ -13,15 +13,7 @@ export class CXLCatalog extends LitElement {
 
   render() {
     return html`
-      <header class="entry__header">
-        <slot name="entry__header"></slot>
-      </header>
-      <div class="entry__content">
-        <slot name="entry__content"></slot>
-      </div>
-      <footer class="entry__footer">
-        <slot name="entry__footer"></slot>
-      </footer>
+      <slot></slot>
     `;
   }
 
