@@ -239,6 +239,10 @@
   }
 }
 
+.simplebar-track.simplebar-horizontal {
+  left: calc(var(--lumo-space-m));
+}
+
 .simplebar-wrapper {
   margin-bottom: 20px !important;
 }

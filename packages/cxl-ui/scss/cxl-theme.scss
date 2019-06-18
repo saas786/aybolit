@@ -88,6 +88,10 @@ h5 {
   padding-right: calc(var(--lumo-space-m));
   width: 100%;
 
+  .wrap {
+    padding: 0;
+  }
+
   &.no-padding {
     padding: 0;
   }
@@ -100,7 +104,11 @@ h5 {
     max-width: 1280px;
 
     &.shrunk {
-      max-width: 720px;
+      max-width: 650px;
+
+      &.left {
+        margin-left: 0;
+      }
     }
   }
 }

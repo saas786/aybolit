@@ -566,4 +566,328 @@ storiesOf('Templates', module)
         </footer>
       </cxl-marketing-layout>
     `;
+  })
+  .add('Course - 1', () => {
+    return html`
+      <cxl-marketing-layout>
+        <cxl-marketing-hero
+          background-image="https://conversionxl.com/wp-content/uploads/2018/10/peep-transparent-1.png"
+          background-color="#F5F5F5"
+        >
+          ${topnav} ${getHeroContent('sales')} ${bottomnav}
+        </cxl-marketing-hero>
+
+        <section class="padding">
+          <div class="wrap text-center shrunk">
+            <h3>We work with some of the best companies in the world</h3>
+            <cxl-partner-logos>
+              <img
+                height="50"
+                src="https://conversionxl.com/institute/wp-content/uploads/2018/10/google-3.png"
+              />
+              <img
+                height="50"
+                src="https://conversionxl.com/institute/wp-content/uploads/2018/10/cisco-1.png"
+              />
+              <img
+                height="50"
+                src="https://conversionxl.com/institute/wp-content/uploads/2019/03/hpe-2.png"
+              />
+              <img
+                height="50"
+                src="https://conversionxl.com/institute/wp-content/uploads/2019/03/homedepot-3.png"
+              />
+              <img
+                height="50"
+                src="https://conversionxl.com/institute/wp-content/uploads/2019/03/quicken-1.png"
+              />
+            </cxl-partner-logos>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap text-center shrunk">
+            <h3>
+              Get a proven and hands-on UX framework to make more money with your website &amp;
+              landing pages.
+            </h3>
+            <br /><br />
+            <ul>
+              <li>
+                <p>
+                  User research tools and techniques to uncover usability and UX problems on any
+                  site
+                </p>
+              </li>
+              <li>
+                <p>
+                  Implement a proven, repeatable process that will result in more revenue per
+                  visitor.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Extract the highest value insights from Google Analytics, heat maps, user
+                  recordings and form analytics.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Extract the highest value insights from Google Analytics, heat maps, user
+                  recordings and form analytics.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <br /><br />
+
+          <cxl-card-grid columns="2">
+            <cxl-testimonial-card theme="no-shadow">
+              <div
+                slot="thumbnail"
+                part="thumbnail"
+                style="background-image: url('https://conversionxli.warmpress.com/wp-content/uploads/_conversionxli/2018/11/Natalie-Jamieson-CXL-Institute-Graduate.jpeg');"
+              ></div>
+              <img
+                slot="header-right"
+                src="https://conversionxli.warmpress.com/wp-content/uploads/_conversionxli/2018/05/google-logo-new.png"
+              />
+              <p slot="content">
+                "Our flagship training program. Learn conversion research, start using a systematic
+                way to get more wins and bigger wins through optimization and testing. Our flagship
+                training program."
+              </p>
+              <strong slot="footer">Chris Kershaw</strong>
+              <span slot="footer">Managing Director - Sweden, at Trollweb Solutions</span>
+            </cxl-testimonial-card>
+            <cxl-testimonial-card theme="no-shadow">
+              <div
+                slot="thumbnail"
+                part="thumbnail"
+                style="background-image: url('https://conversionxli.warmpress.com/wp-content/uploads/_conversionxli/2018/11/Natalie-Jamieson-CXL-Institute-Graduate.jpeg');"
+              ></div>
+              <img
+                slot="header-right"
+                src="https://conversionxli.warmpress.com/wp-content/uploads/_conversionxli/2018/05/google-logo-new.png"
+              />
+              <p slot="content">
+                "Our flagship training program. Learn conversion research, start using a systematic
+                way to get more wins and bigger wins through optimization and testing. Our flagship
+                training program."
+              </p>
+              <strong slot="footer">Chris Kershaw</strong>
+              <span slot="footer">Managing Director - Sweden, at Trollweb Solutions</span>
+            </cxl-testimonial-card>
+          </cxl-card-grid>
+        </section>
+
+        <section class="padding">
+          <div class="wrap shrunk">
+            <h3 class="text-center">This course is right for your if...</h3>
+            <br />
+            <p>
+              You believe that your site or landing pages can be improved. A lot. But you’re not
+              sure where to start.
+            </p>
+
+            <p>
+              You have the ambition to grow your online business or those of your clients. You
+              understand Rome wasn’t built in a day. So you’re looking for a strategy and repeatable
+              process to improve any website or landing page step-by-step.
+            </p>
+
+            <p>
+              You’re a business owner, webmaster, designer, marketeer, … who believes that online
+              marketing shouldn’t be based on gut feeling and opinions. But you’re not sure how to
+              gather those facts.
+            </p>
+
+            <p>
+              You realize that tools are important but are never the solution as such. You want to
+              learn to get the most out of them. And even more important: how to connect the dots.
+            </p>
+
+            <p>
+              You understand that usability &amp; conversion optimization are crucial to survive
+              online. But you’re overwhelmed with all the information you can find online. So you’re
+              looking for a hands-on training that’s build around the idea that the proof of the
+              pudding is in the eating.
+            </p>
+          </div>
+        </section>
+
+        <section class="padding">
+          <div class="wrap shrunk">
+            <h3 class="text-center">Lessons in this course:</h3>
+            <br />
+            <cxl-card-grid columns="1">
+              ${cards.lesson} ${cards.lesson} ${cards.lesson} ${cards.lesson} ${cards.lesson}
+            </cxl-card-grid>
+          </div>
+        </section>
+
+        <section class="padding">
+          <div class="wrap shrunk">
+            <h3 class="text-center">What you’ll walk away with afterwards</h3>
+            <br />
+            <p>
+              The right mindset to be really (and I mean really-really) customer-centric. From now
+              on you’ll be able to sell how people want to buy. Instead of selling the way you want
+              to sell, as you’re doing now.
+            </p>
+
+            <p>
+              A proven process and methodology that allows you to identify the weak spots of any
+              website or landing page.
+            </p>
+
+            <p>
+              An in-depth knowledge of how to get useful insights out of the most important (and
+              affordable) user research tools and methods available. Without spending ages staring
+              at boring graphs and numbers.
+            </p>
+
+            <p>
+              An incredible amount of tips, tricks and guidelines to convert your visitors into
+              customers. Yes, believe me: it’s incredible. See what I did there?
+            </p>
+
+            <p>
+              The knowledge &amp; confidence to improve your website and landing pages, even when
+              you don’t have enough visitors to do a/b testing.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap text-center shrunk">
+            <h3>Enroll to the CXL Institute All-Access Plan. You will get:</h3>
+            <br />
+            <ul>
+              <li>
+                <p>
+                  Every Past and Future Course from Our Catalog
+                </p>
+              </li>
+              <li>
+                <p>
+                  4 Minidegree programs: Conversion Optimization, Digital Analytics, Growth
+                  Marketing and Digital Psychology
+                </p>
+              </li>
+              <li>
+                <p>
+                  CXL Live & Elite Camp Conference Recordings
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        ${footer}
+      </cxl-marketing-layout>
+    `;
+  })
+  .add('All-access - 1', () => {
+    return html`
+      <cxl-marketing-layout>
+        <cxl-marketing-hero
+          background-image="https://conversionxl.com/wp-content/uploads/2018/10/peep-transparent-1.png"
+          background-color="#F5F5F5"
+        >
+          ${topnav} ${getHeroContent('sales')} ${bottomnav}
+        </cxl-marketing-hero>
+
+        <section>
+          <div class="wrap text-center shrunk">
+            <br />
+            <cxl-partner-logos>
+              <img
+                height="50"
+                src="https://conversionxl.com/institute/wp-content/uploads/2018/10/google-3.png"
+              />
+              <img
+                height="50"
+                src="https://conversionxl.com/institute/wp-content/uploads/2018/10/cisco-1.png"
+              />
+              <img
+                height="50"
+                src="https://conversionxl.com/institute/wp-content/uploads/2019/03/hpe-2.png"
+              />
+              <img
+                height="50"
+                src="https://conversionxl.com/institute/wp-content/uploads/2019/03/homedepot-3.png"
+              />
+              <img
+                height="50"
+                src="https://conversionxl.com/institute/wp-content/uploads/2019/03/quicken-1.png"
+              />
+            </cxl-partner-logos>
+          </div>
+        </section>
+
+        <section class="padding-bottom">
+          <div class="wrap">
+            <div class="wrap shrunk left">
+              <h3>Practitioner-taught courses to train your team on all things data-driven</h3>
+
+              <br />
+              <p>
+                The half-life of digital marketing know-how is about 2.5 years. Everything changes
+                rapidly. If you’re not continuously learning, you’ll become ineffective trying to
+                employ outdated tactics.
+              </p>
+
+              <p>
+                CXL Institute brings you in-depth certification training programs and online courses
+                by world-class practitioners. New courses added every 2 weeks.
+              </p>
+
+              <p>All of our instructors are hand-picked and carefully vetted – the very best.</p>
+            </div>
+          </div>
+          <cxl-card-grid flow="horizontal">
+            ${cards.testimonial} ${cards.testimonial} ${cards.testimonial} ${cards.testimonial}
+            ${cards.testimonial} ${cards.testimonial} ${cards.testimonial}
+          </cxl-card-grid>
+        </section>
+
+        <section class="padding-bottom">
+          <div class="wrap">
+            <div class="wrap shrunk left">
+              <h3>You get to learn from renowned practitioners in the field</h3>
+              <br />
+              <p>
+                We seek out the best in class practitioners, and get them to teach what they know.
+                Accelerate your professional growth with people who’ve been there and done that.
+              </p>
+            </div>
+          </div>
+          <cxl-card-grid flow="horizontal">
+            ${cards.course} ${cards.course} ${cards.course} ${cards.course} ${cards.course}
+            ${cards.course} ${cards.course}
+          </cxl-card-grid>
+        </section>
+
+        <section class="padding-bottom">
+          <div class="wrap">
+            <div class="wrap shrunk left">
+              <h3>Certification Training Programs You’ll Get Access to</h3>
+              <br />
+              <p>
+                Step-by-step easy to follow demonstrations. All included with your subscription or
+                available à la carte.
+              </p>
+            </div>
+          </div>
+          <cxl-card-grid flow="horizontal">
+            ${cards.training} ${cards.training} ${cards.training} ${cards.training}
+            ${cards.training} ${cards.training} ${cards.training}
+          </cxl-card-grid>
+        </section>
+
+        ${footer}
+      </cxl-marketing-layout>
+    `;
   });
