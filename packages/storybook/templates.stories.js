@@ -890,4 +890,47 @@ storiesOf('Templates', module)
         ${footer}
       </cxl-marketing-layout>
     `;
+  })
+  .add('Catalog - 1', () => {
+    return html`
+      <cxl-marketing-layout>
+        <cxl-marketing-hero
+          background-image="https://conversionxl.com/wp-content/uploads/2018/10/peep-transparent-1.png"
+          background-color="#F5F5F5"
+          hero-style="catalog"
+          theme="cxl-hero-style-catalog"
+        >
+          ${topnav} ${getHeroContent('catalog')}
+          <form
+            role="search"
+            method="get"
+            class="catalog-search-form"
+            action="https://conversionxl.com/institute/"
+            slot="catalog-search"
+          >
+            <input
+              type="search"
+              class="search-field"
+              placeholder="Search for training"
+              value=""
+              name="s"
+            />
+          </form>
+        </cxl-marketing-hero>
+
+        <section class="padding">
+          <div class="wrap">
+            <h3><strong>28</strong> courses available</h3>
+            <br />
+          </div>
+          <cxl-card-grid>
+            ${cards.course} ${cards.course} ${cards.course} ${cards.course} ${cards.course}
+            ${cards.course} ${cards.course} ${cards.course} ${cards.course} ${cards.course}
+            ${cards.course} ${cards.course}
+          </cxl-card-grid>
+        </section>
+
+        ${footer}
+      </cxl-marketing-layout>
+    `;
   });
