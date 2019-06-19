@@ -43,5 +43,17 @@
     ::slotted(*) {
       margin-right: var(--lumo-space-l);
     }
+
+    ::slotted(cxl-testimonial-card) {
+      min-width: 350px;
+    }
+  }
+
+  @include mq($from: tablet) {
+    .grid {
+      ::slotted(cxl-testimonial-card) {
+        min-width: 550px;
+      }
+    }
   }
 }

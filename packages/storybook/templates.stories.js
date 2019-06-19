@@ -292,10 +292,10 @@ storiesOf('Templates', module)
           </cxl-marketing-nav>
 
           <vaadin-item theme="cxl-hero-content">
-            <h1>Optimization <strong>success</strong> stories</h1>
+            <h1><strong class="badge">Case studies</strong>We help businesses grow online.</h1>
             <p>
-              Get a proven and hand-on UX framework to make more money with your website &amp;
-              landing pages.
+              Hear how we’ve helped brands like Adore Beauty, (insert two more brands) boost online
+              profits.
             </p>
           </vaadin-item>
 
@@ -327,9 +327,9 @@ storiesOf('Templates', module)
           <img slot="video" class="lazy" data-src="${video}" />
         </cxl-marketing-hero>
 
-        <section class="padding">
+        <section>
           <div class="wrap text-center shrunk">
-            <h3>We work with some of the best companies in the world</h3>
+            <br />
             <cxl-partner-logos>
               <img
                 height="50"
@@ -341,41 +341,33 @@ storiesOf('Templates', module)
                 class="lazy"
                 data-src="https://conversionxl.com/wp-content/uploads/2017/07/client-logos-2.png"
               />
-              <img
-                height="50"
-                src="https://conversionxl.com/institute/wp-content/uploads/2019/03/hpe-2.png"
-              />
-              <img
-                height="50"
-                src="https://conversionxl.com/institute/wp-content/uploads/2019/03/homedepot-3.png"
-              />
-              <img
-                height="50"
-                src="https://conversionxl.com/institute/wp-content/uploads/2019/03/quicken-1.png"
-              />
             </cxl-partner-logos>
           </div>
         </section>
 
         <section>
-          <div class="wrap text-center shrunk">
+          <div class="wrap shrunk">
+            <h3 class="text-center">Our critical expertise helps businesses:</h3>
+            <br />
             <ul>
               <li>
                 <p>
-                  User research tools and techniques to uncover usability and UX problems on any
-                  site
+                  Uncover usability and UX problems through user research including heuristic
+                  analysis, analytics, mouse tracking data analysis, user testing, interviews and
+                  surveys.
                 </p>
               </li>
               <li>
                 <p>
-                  Implement a proven, repeatable process that will result in more revenue per
-                  visitor.
+                  Drive more revenue per visitor with our proven, repeatable 5-step conversion
+                  optimization process.
                 </p>
               </li>
               <li>
                 <p>
-                  Extract the highest value insights from Google Analytics, heat maps, user
-                  recordings and form analytics.
+                  Discover where the biggest source of gains hide and where sites are leaking money
+                  by extracting insights from Google Analytics, heatmaps, user recordings and form
+                  analytics.
                 </p>
               </li>
             </ul>
@@ -384,28 +376,34 @@ storiesOf('Templates', module)
 
         <section id="testimonials" class="padding">
           <div class="text-center">
-            <h3>Making clients happy since 2012</h3>
+            <h3>Helping businesses grow online since 2012</h3>
             <br />
             <cxl-card-grid columns="2">
               <cxl-testimonial-card theme="no-shadow no-hover">
                 <img slot="header-right" class="lazy" data-src="${progressLogo}" />
                 <p slot="content">
-                  "Our flagship training program. Learn conversion research, start using a
-                  systematic way to get more wins and bigger wins through optimization and testing.
-                  Our flagship training program."
+                  “CXL has a thorough process they take customers through. Once they understand
+                  their customer’s challenges and needs, they dive into their comprehensive process
+                  which includes: heuristic analysis, analytics and mouse tracking data analysis,
+                  user session replay videos, customer and web surveys, interviews with our sales
+                  and marketing teams, as well as user testing with like customers.”
                 </p>
-                <strong slot="footer">Chris Kershaw</strong>
-                <span slot="footer">Managing Director - Sweden, at Trollweb Solutions</span>
+                <strong slot="footer">Megan Gouveia</strong>
+                <span slot="footer">Digital Marketing Manager - Progress Software</span>
               </cxl-testimonial-card>
               <cxl-testimonial-card theme="no-shadow no-hover">
                 <img slot="header-right" height="20" class="lazy" data-src="${adoreBeauty}" />
                 <p slot="content">
-                  "Our flagship training program. Learn conversion research, start using a
-                  systematic way to get more wins and bigger wins through optimization and testing.
-                  Our flagship training program."
+                  “Before working with ConversionXL, we were struggling with getting insights into
+                  what customers wanted. We needed a parter to help us get more insights into what
+                  our customers needed and to understand why tests were or weren’t working. [CXL] is
+                  an all-in-one, one-to-one conversion optimization agency and I genuinely believe
+                  we understand our customers now. They’re absolutely dedicated, absolutely focused
+                  and they come up with great ideas week over week that we would never have come up
+                  with ourselves."
                 </p>
-                <strong slot="footer">Chris Kershaw</strong>
-                <span slot="footer">Managing Director - Sweden, at Trollweb Solutions</span>
+                <strong slot="footer">Gareth Williams</strong>
+                <span slot="footer">Ecommerce Manager - Adore Beauty</span>
               </cxl-testimonial-card>
             </cxl-card-grid>
           </div>
@@ -428,8 +426,10 @@ storiesOf('Templates', module)
                 <strong>$1.5 million</strong> in annualized revenue for Native.
               </h2>
               <p>
-                Extract the highest value insights from Google Analytics, heat maps, user recordings
-                and form analytics.
+                Surveys and testing on the product page found that prospective buyers weren’t
+                responding to on page banner ads, but were open to purchasing. Placing the options
+                inline with typical cart verification functionality solved the issue and generated a
+                huge influx of revenue.
               </p>
               <br />
               <vaadin-button open-contact-dialog theme="primary cxl-button"
@@ -460,8 +460,9 @@ storiesOf('Templates', module)
                 <strong>16%</strong>.
               </h2>
               <p>
-                Extract the highest value insights from Google Analytics, heat maps, user recordings
-                and form analytics.
+                Before working with ConversionXL, Adore Beauty was struggling to get insights into
+                what mobile buyer’s wanted. CXL combined user surveys with A/B testing to redesign a
+                new customer-focused user experience or Adore Beauty.
               </p>
               <br />
               <vaadin-button open-contact-dialog theme="primary cxl-button"
@@ -493,23 +494,14 @@ storiesOf('Templates', module)
                 <strong>direct sales option</strong> on their website.
               </h2>
               <p>
-                Extract the highest value insights from Google Analytics, heat maps, user recordings
-                and form analytics.
+                CXL initiated a multi-step lead generation funnel on National Bankcard’s website as
+                well as a new CRO-focused design that allowed buyers to purchase for National
+                Bankcard’s credit card processing solution directly.
               </p>
               <br />
               <vaadin-button open-contact-dialog theme="primary cxl-button"
                 >Schedule a call</vaadin-button
               >
-              <hr />
-              <cxl-testimonial-card theme="no-header no-padding no-border">
-                <p slot="content">
-                  "Our flagship training program. Learn conversion research, start using a
-                  systematic way to get more wins and bigger wins through optimization and testing.
-                  Our flagship training program."
-                </p>
-                <strong slot="footer">Chris Kershaw</strong>
-                <span slot="footer">Managing Director - Sweden, at Trollweb Solutions</span>
-              </cxl-testimonial-card>
             </div>
           </div>
         </section>

@@ -15,7 +15,7 @@
   }
 
   .flex {
-    height: 75%;
+    height: 65%;
 
     .column {
       flex: none;
@@ -152,9 +152,10 @@
   }
 
   @include mq($from: desktop) {
-    min-height: 500px;
+    min-height: 475px;
 
     .video {
+      padding-top: var(--lumo-space-l);
       .video-image {
         ::slotted(img) {
           max-height: 350px;

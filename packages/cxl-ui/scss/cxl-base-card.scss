@@ -71,9 +71,10 @@
 
   ::slotted([slot="content"]) {
     font-family: var(--lumo-font-family) !important;
-    font-size: var(--lumo-font-size-m) !important;
+    font-size: var(--lumo-font-size-s) !important;
     line-height: var(--lumo-font-size-xl) !important;
-    margin-top: var(--lumo-space-l) !important;
+    margin-bottom: 0 !important;
+    margin-top: var(--lumo-space-s) !important;
   }
 
   @at-root #{&}(:hover) {

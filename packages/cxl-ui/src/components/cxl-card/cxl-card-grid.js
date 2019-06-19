@@ -52,7 +52,7 @@ export class CXLCardGridElement extends LitElement {
     const that = this;
 
     if (!this.flow || this.flow === 'auto') {
-      const mq = window.matchMedia('(max-width: 45em)');
+      const mq = window.matchMedia('(max-width: 60em)');
 
       if (mq.matches) {
         this.flow = 'auto';
