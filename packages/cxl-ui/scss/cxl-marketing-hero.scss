@@ -15,7 +15,7 @@
   }
 
   .flex {
-    height: 65%;
+    height: 75%;
 
     .column {
       flex: none;
@@ -152,7 +152,7 @@
   }
 
   @include mq($from: desktop) {
-    min-height: 475px;
+    min-height: 550px;
 
     .video {
       padding-top: var(--lumo-space-l);

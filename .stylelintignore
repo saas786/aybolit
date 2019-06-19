@@ -1,3 +1,4 @@
 packages/core/scss
 packages/white-label/scss
 packages/cxl-lumo-styles/scss/typography.scss
+packages/storybook/storybook-static
