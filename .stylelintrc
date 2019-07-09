@@ -18,18 +18,22 @@
       {
         "ignoreProperties": [
           "appearance",
-          "user-select"
+          "user-select",
+          "mask-image"
         ]
       }
     ],
     "selector-max-id": 1,
     "selector-no-qualifying-type": [ true, {
-      "ignore": [ "attribute" ]
+      "ignore": [ "attribute", "class" ]
     } ],
     "selector-type-no-unknown": [ true, {
       "ignore": [ "custom-elements" ]
     } ],
     "sh-waqar/declaration-use-variable": [["/color/", "font-size", "line-height", { ignoreValues: ["/padding-/", "/margin-/"] }]],
-    "selector-max-type": 4
+    "selector-max-type": 4,
+    "selector-pseudo-class-no-unknown": [true, {
+      ignorePseudoClasses: ["defined"]
+    }]
   }
 }

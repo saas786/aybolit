@@ -1,5 +1,34 @@
 @import "@conversionxl/cxl-ui/scss/utils/mq";
 
+[part="backdrop"] {
+  background-color: var(--lumo-shade-70pct);
+}
+
+[part="overlay"] {
+  overflow-x: hidden;
+}
+
+[part="content"] {
+  padding: var(--lumo-space-m);
+  position: relative;
+
+  ::slotted([part="close-btn"]) {
+    color: var(--lumo-shade-50pct);
+    cursor: pointer;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+  }
+
+  ::slotted([part="close-btn"]:hover) {
+    color: var(--lumo-shade-80pct);
+  }
+
+  @include mq($from: tablet) {
+    padding: var(--lumo-space-l);
+  }
+}
+
 :host([theme~="cxl-search-overlay"]) {
   [part="backdrop"] {
     background-color: var(--lumo-shade-40pct);
@@ -12,20 +41,38 @@
     width: 100%;
   }
 
-  ::slotted(iron-icon) {
-    color: var(--lumo-shade-50pct);
-    cursor: pointer;
-    float: right;
-  }
-
-  ::slotted(iron-icon:hover) {
-    color: var(--lumo-shade-80pct);
-  }
-
   @include mq($from: tablet) {
     [part="overlay"] {
       min-width: 40em;
       width: auto;
+    }
+  }
+}
+
+::slotted(vaadin-form-layout) {
+  margin: var(--lumo-space-m) var(--lumo-space-l);
+}
+
+:host([theme~="cxl-optin"]) {
+  [part="overlay"] {
+    max-width: 550px;
+  }
+}
+
+:host([theme~="cxl-video"]) {
+  @include mq($until: desktop) {
+    [part="overlay"] {
+      height: 100%;
+      width: 100%;
+    }
+
+    [part="content"] {
+      height: 88%;
+    }
+
+    ::slotted(iframe) {
+      height: 100%;
+      width: 100%;
     }
   }
 }

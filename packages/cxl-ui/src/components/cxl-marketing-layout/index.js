@@ -3,6 +3,7 @@ import { LitElement, html } from 'lit-element';
 import '../cxl-marketing-nav';
 import '@vaadin/vaadin-tabs';
 import cxlThemeStyles from '../../styles/cxl-theme-css.js';
+import cxlMarketingLayoutStyles from '../../styles/cxl-marketing-layout-css.js';
 
 export class CXLMarketingLayoutElement extends LitElement {
   static get properties() {
@@ -10,7 +11,7 @@ export class CXLMarketingLayoutElement extends LitElement {
   }
 
   static get styles() {
-    return [cxlThemeStyles];
+    return [cxlThemeStyles, cxlMarketingLayoutStyles];
   }
 
   render() {

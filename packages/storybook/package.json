@@ -16,7 +16,8 @@
     "@storybook/core": "^5.0.6",
     "@storybook/polymer": "^5.0.6",
     "@storybook/storybook-deployer": "^2.8.1",
-    "lit-html": "^1.0.0"
+    "lit-html": "^1.0.0",
+    "vanilla-lazyload": "^12.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

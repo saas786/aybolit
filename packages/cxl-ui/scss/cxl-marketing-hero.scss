@@ -28,8 +28,10 @@
   }
 
   [part="hero-content"] {
+    display: flex;
     padding-bottom: calc(var(--lumo-space-xl) * 3);
     padding-right: 35%;
+    padding-top: calc(var(--lumo-space-xxl) * 3);
     position: relative;
   }
 
@@ -81,7 +83,7 @@
       background-position: center top 10%;
       background-repeat: no-repeat;
       background-size: 1000px;
-      padding-right: 600px;
+      padding-right: 750px;
     }
   }
 }
@@ -159,6 +161,9 @@
 
     .video {
       .video-image {
+        ::slotted(img) {
+          max-height: 350px;
+        }
         &::before {
           font-size: calc(var(--lumo-font-size-xxl) * 2.15);
           height: calc(var(--lumo-space-xl) * 2.5);

@@ -1,6 +1,7 @@
 // Import the LitElement base class and html helper function
 import { LitElement, html } from 'lit-element';
 import { render } from 'lit-html';
+import Player from '@vimeo/player';
 import './theme.js';
 import cxlThemeStyles from '../../styles/cxl-theme-css.js';
 import cxlMarketingHeroStyles from '../../styles/cxl-marketing-hero-css.js';
@@ -61,7 +62,7 @@ class CXLMarketingHeroElement extends LitElement {
 
                 <vaadin-dialog
                   id="video"
-                  theme="video"
+                  theme="cxl-video"
                   ?opened="${this.videoOpened}"
                   @opened-changed="${this._onOpenedChanged}"
                   .renderer="${this._boundDialogRenderer}"
@@ -70,9 +71,11 @@ class CXLMarketingHeroElement extends LitElement {
               `
             : ''}
         </div>
+
         <slot name="bottomnav"></slot>
         <slot name="catalog-search"></slot>
       </div>
+
       ${this.heroStyle === 'waves'
         ? html`
             <svg class="waves" xmlns="http://www.w3.org/2000/svg">
@@ -87,9 +90,9 @@ class CXLMarketingHeroElement extends LitElement {
   }
 
   firstUpdated() {
-    this.shadowRoot.querySelector('.wrap .bgimage').style.backgroundImage = `url(${
-      this.backgroundImage
-    })`;
+    this.shadowRoot.querySelector(
+      '.wrap .bgimage'
+    ).style.backgroundImage = `url(${this.backgroundImage})`;
     this.style.backgroundColor = this.backgroundColor;
 
     if (this.heroStyle === 'waves') {
@@ -111,11 +114,31 @@ class CXLMarketingHeroElement extends LitElement {
     this.videoOpened = true;
   }
 
+  closeVideo() {
+    this.videoOpened = false;
+  }
+
   dialogRenderer(root) {
+    const that = this;
+    setTimeout(function() {
+      const iframe = document.querySelector('iframe');
+      const player = new Player(iframe);
+      player.play();
+
+      document
+        .querySelector('vaadin-dialog-overlay [part="close-btn"]')
+        .addEventListener('click', () => {
+          that.closeVideo();
+        });
+    }, 100);
     render(
       html`
+        <a href="#" part="close-btn"
+          ><iron-icon class="icon size-l" icon="lumo:cross"></iron-icon
+        ></a>
         <iframe
           src="${this.video}"
+          allow="autoplay"
           width="800"
           height="440"
           frameborder="0"

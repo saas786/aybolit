@@ -1,11 +1,13 @@
 @import "../../utils/mq";
 
-:host([theme~="cxl-marketing-nav-tab"][orientation="horizontal"]:first-child) {
+:host([theme~="cxl-marketing-nav-tab"][orientation="horizontal"]:first-of-type) {
   padding-left: 0;
 }
 
 :host([theme~="cxl-marketing-nav-tab"]) {
   align-self: center;
+  color: var(--lumo-contrast-90pct);
+
   &::after,
   &::before {
     display: none;
@@ -22,8 +24,14 @@
   }
 }
 
-:host([theme~="cxl-marketing-nav-tab"]:hover) {
+:host([theme~="cxl-marketing-nav-tab"][orientation="horizontal"]:hover) {
+  color: var(--lumo-primary-color);
+
   ::slotted(vaadin-context-menu)::before {
+    color: var(--lumo-primary-color);
+  }
+
+  ::slotted(vaadin-context-menu)::after {
     color: var(--lumo-primary-color);
   }
 }
@@ -62,8 +70,16 @@
     }
   }
 
+  ::slotted(vaadin-button) {
+    padding: 0 calc(var(--lumo-button-size) / 3);
+  }
+
   @include mq($from: tablet) {
     display: flex;
+
+    ::slotted(vaadin-button) {
+      padding: 0 calc(var(--lumo-button-size) / 2);
+    }
   }
 
   ::slotted(vaadin-button[theme~="cxl-transparent"]) {
@@ -102,7 +118,7 @@
     color: var(--lumo-base-color) !important; // stylelint-disable declaration-no-important
     font-size: var(--lumo-font-size-l);
     justify-content: left;
-    padding: var(--lumo-space-m) var(--lumo-space-l);
+    padding: var(--lumo-space-s) var(--lumo-space-l);
   }
 
   ::slotted(vaadin-context-menu) {
@@ -112,7 +128,7 @@
 
   ::slotted(vaadin-context-menu)::after {
     color: var(--lumo-base-color);
-    top: 16px;
+    top: 9px;
   }
 
   ::slotted(vaadin-button[theme~="cxl-button"]) {
@@ -123,7 +139,7 @@
   }
 }
 
-:host([theme~="cxl-marketing-nav-tab"][orientation="vertical"]:first-child) {
+:host([theme~="cxl-marketing-nav-tab"][orientation="vertical"]:first-of-type) {
   margin-top: calc(var(--lumo-space-l) * 2);
 }
 

@@ -27,7 +27,7 @@
   }
 
   @include mq($until: tablet) {
-    ::slotted(vaadin-tab:first-child) {
+    ::slotted(vaadin-tab:first-of-type) {
       display: none;
     }
   }

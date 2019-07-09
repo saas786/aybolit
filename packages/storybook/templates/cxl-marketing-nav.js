@@ -7,26 +7,13 @@ const topnav = html`
     </a>
     <vaadin-tabs>
       <vaadin-tab theme="cxl-marketing-nav-tab cxl-from-tablet">
-        <a href="">
-          Pricing
+        <a href="https://conversionxl.com/institute/">
+          Institute
         </a>
       </vaadin-tab>
-      <vaadin-tab theme="cxl-marketing-nav-tab cxl-from-tablet cxl-nav-dropdown">
-        <vaadin-context-menu open-on="click" theme="cxl-nav-dropdown">
-          <a href="" style="display: flex; align-items: center;">Blog</a>
-          <template>
-            <vaadin-list-box theme="cxl-nav-dropdown">
-              <a href="">Blog 1</a>
-              <a href="">Blog 2</a>
-              <a href="">Blog 3</a>
-              <a href="">Blog 4</a>
-            </vaadin-list-box>
-          </template>
-        </vaadin-context-menu>
-      </vaadin-tab>
       <vaadin-tab theme="cxl-marketing-nav-tab cxl-from-tablet">
-        <a href="">
-          About
+        <a href="https://conversionxl.com/blog/">
+          Blog
         </a>
       </vaadin-tab>
       <vaadin-tab theme="cxl-marketing-nav-tab cxl-from-tablet cxl-nav-dropdown">
@@ -34,22 +21,26 @@ const topnav = html`
           <a href="" style="display: flex; align-items: center;">Agency</a>
           <template>
             <vaadin-list-box theme="cxl-nav-dropdown">
-              <a href="">Agency 1</a>
-              <a href="">Agency 2</a>
-              <a href="">Agency 3</a>
-              <a href="">Agency 4</a>
+              <a href="https://conversionxl.com/agency/conversion-optimization-services/"
+                >Conversion Optimization</a
+              >
+              <a href="https://conversionxl.com/agency/conversion-design/">Web Design That Sells</a>
+              <a href="https://conversionxl.com/agency/cro-research/">CRO Research & Audits</a>
+              <a href="https://conversionxl.com/agency/analytics-implementation-services/"
+                >Analytics Implementation</a
+              >
             </vaadin-list-box>
           </template>
         </vaadin-context-menu>
       </vaadin-tab>
       <vaadin-tab theme="cxl-marketing-nav-tab cxl-from-tablet">
-        <a href="">
+        <a href="https://conversionxl.com/institute/login/">
           Login
         </a>
       </vaadin-tab>
       <vaadin-tab theme="cxl-marketing-nav-tab cxl-from-tablet">
         <vaadin-button theme="cxl-button small contrast" role="button">
-          <a href="">Sign up now</a>
+          <a href="info@conversionxl.agency">Get in touch</a>
         </vaadin-button>
       </vaadin-tab>
       <vaadin-tab theme="cxl-marketing-nav-tab cxl-mobile-icon">
@@ -71,27 +62,32 @@ const bottomnav = html`
     <vaadin-tabs>
       <vaadin-tab theme="cxl-marketing-nav-tab">
         <vaadin-button theme="primary cxl-button margin-right"
-          ><a href="">Start free trial</a></vaadin-button
+          ><a href="">Download case studies</a></vaadin-button
         >
       </vaadin-tab>
       <vaadin-tab theme="cxl-marketing-nav-tab">
         <vaadin-button theme="primary cxl-button cxl-transparent"
-          ><a href="">Get syllabus</a></vaadin-button
+          ><a href="">Get in touch</a></vaadin-button
         >
       </vaadin-tab>
       <vaadin-tab theme="cxl-marketing-nav-tab cxl-from-tablet">
         <a href="">
-          Testimonials
+          Video testimonials
         </a>
       </vaadin-tab>
       <vaadin-tab theme="cxl-marketing-nav-tab cxl-from-tablet">
         <a href="">
-          Instructor
+          Case studies
         </a>
       </vaadin-tab>
       <vaadin-tab theme="cxl-marketing-nav-tab cxl-from-tablet">
         <a href="">
-          Curriculum
+          Services
+        </a>
+      </vaadin-tab>
+      <vaadin-tab theme="cxl-marketing-nav-tab cxl-from-tablet">
+        <a href="">
+          Pricing
         </a>
       </vaadin-tab>
     </vaadin-tabs>

@@ -1,5 +1,6 @@
 @import "@conversionxl/cxl-ui/scss/utils/mq";
 @import "@conversionxl/cxl-ui/scss/cxl-theme";
+@import "ladda/css/ladda";
 
 html,
 body {
@@ -21,7 +22,7 @@ section {
 
   ul {
     list-style: none;
-    margin: 0 var(--lumo-space-xl);
+    margin: 0;
     padding: 0;
     text-align: left;
     li {
@@ -39,6 +40,7 @@ section {
     }
 
     @include mq($from: tablet) {
+      margin: 0 var(--lumo-space-xl);
       padding-left: 40px;
     }
   }
@@ -46,9 +48,6 @@ section {
   .column {
     br {
       display: none;
-    }
-    hr {
-      margin: 30px 0;
     }
     h2 {
       font-size: calc(var(--lumo-font-size-xl) * 1.3);
@@ -60,6 +59,7 @@ section {
         box-shadow: none;
         display: block;
         float: none !important; // stylelint-disable-line declaration-no-important
+        height: 30px;
         width: auto;
       }
     }
@@ -85,6 +85,10 @@ section {
     }
 
     .column {
+      &.push-right {
+        order: 1;
+      }
+
       br {
         display: block;
       }
@@ -97,35 +101,80 @@ section {
       img {
         width: 90%;
       }
+    }
+  }
+}
+
+footer {
+  background-color: var(--lumo-shade);
+  color: var(--lumo-base-color);
+  padding: var(--lumo-space-m) 0;
+
+  a {
+    color: var(--lumo-base-color);
+    font-size: calc(var(--lumo-font-size-s));
+
+    &:hover {
+      color: var(--lumo-base-color);
+    }
+  }
+
+  .menu {
+    &__items {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__item {
+      display: inline-flex;
+      padding-left: var(--lumo-space-s);
+      padding-right: var(--lumo-space-s);
+      position: relative;
+
+      &::after {
+        border-right: 1px solid #fff;
+        content: "";
+        height: 13px;
+        position: absolute;
+        right: 0;
+        top: 7px;
+        width: 1px;
+      }
+
+      &:first-of-type,
       &:last-child {
-        img {
-          float: right;
+        &::after {
+          display: none;
         }
       }
-      &:first-child {
-        img {
-          float: left;
-        }
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
       }
     }
   }
 }
 
-// cxl-marketing-nav {
-//   vaadin-tabs {
-//     vaadin-button {
-//       a {
-//         color: #fff;
-//       }
-//     }
-//     @include mq($until: tablet) {
+vaadin-tab {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
 
-//       vaadin-context-menu {
-//         padding-left: 11px;
-//         a {
-//           color: #fff;
-//         }
-//       }
-//     }
-//   }
-// }
+cxl-marketing-nav[fixed] {
+  vaadin-button[theme~="cxl-transparent"] {
+    background-color: transparent; // stylelint-disable-line sh-waqar/declaration-use-variable
+    border: 1px solid var(--lumo-primary-color);
+
+    a {
+      color: var(--lumo-primary-color);
+    }
+  }
+}
