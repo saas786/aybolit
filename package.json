@@ -17,7 +17,7 @@
     "test": "karma start",
     "test:visual": "rimraf tmp && BABeEL_ENV=visual webpack --config test/visual/webpack.config.js && rimraf test/visual/screenshots/chrome/* && vrtest run --config test/visual/vrtest.config.js --record",
     "watch": "node scripts/watcher.js",
-    "build-storybook": "yarn build-styling && yarn --cwd packages/storybook build-storybook -c .storybook"
+    "build-storybook": "yarn build-styling && yarn --cwd packages/storybook build-storybook -c .storybook && git add -A && git commit -a -m 'storybook: new build' && git push --force origin storybook"
   },
   "workspaces": [
     "packages/*"

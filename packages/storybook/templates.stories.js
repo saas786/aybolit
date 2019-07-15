@@ -294,8 +294,8 @@ storiesOf('Templates', module)
           <vaadin-item theme="cxl-hero-content">
             <h1><strong class="badge">Case studies</strong>We help businesses grow online.</h1>
             <p>
-              Hear how we’ve helped brands like Adore Beauty, (insert two more brands) boost online
-              profits.
+              Hear how we’ve helped brands like Adore Beauty, Native &amp; National Bankcard boost
+              online profits.
             </p>
           </vaadin-item>
 
