@@ -324,6 +324,9 @@ storiesOf('Templates', module)
             </vaadin-tabs>
           </cxl-marketing-nav>
 
+          <strong slot="video-micro-text"
+            >See why CXL is the top agency for data-driven growth</strong
+          >
           <img slot="video" class="lazy" data-src="${video}" />
         </cxl-marketing-hero>
 

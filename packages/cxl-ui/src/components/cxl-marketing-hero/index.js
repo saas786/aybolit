@@ -55,6 +55,7 @@ class CXLMarketingHeroElement extends LitElement {
           ${this.heroStyle === 'video'
             ? html`
                 <div class="video column">
+                  <strong><slot name="video-micro-text"></slot></strong>
                   <div class="video-image">
                     <slot name="video"></slot>
                   </div>

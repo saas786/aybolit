@@ -75,11 +75,6 @@ module.exports = {
           ],
           tagAssetsWithKey: false, // don’t append a suffix to the file name
           esModule: true // marks the bundle used with <script type="module">
-        },
-        es5: {
-          browsers: ['ie 11'],
-          tagAssetsWithKey: true, // append a suffix to the file name
-          noModule: true // marks the bundle included without `type="module"`
         }
       }
     }),

@@ -6,3 +6,4 @@ packages/**/dist
 coverage
 tmp
 test/visual/screenshots
+.DS_Store
