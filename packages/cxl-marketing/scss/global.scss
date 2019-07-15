@@ -2,11 +2,6 @@
 @import "@conversionxl/cxl-ui/scss/cxl-theme";
 @import "ladda/css/ladda";
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 section {
   &.padding {
     padding: var(--lumo-space-xl) 0;
