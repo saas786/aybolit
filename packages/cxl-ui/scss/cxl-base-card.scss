@@ -77,15 +77,15 @@
     margin-top: var(--lumo-space-s) !important;
   }
 
-  @at-root #{&}(:hover) {
-    border-color: var(--lumo-primary-color);
-    box-shadow: none;
-  }
-
   @include mq($from: tablet) {
     margin-bottom: var(--lumo-space-l);
     // max-width: 50%;
   }
+}
+
+:host(:not([theme~="no-hover"]):hover) {
+  border-color: var(--lumo-primary-color);
+  box-shadow: none;
 }
 
 :host([theme~="no-padding"]) {
@@ -112,6 +112,5 @@
 }
 
 :host([theme~="no-hover"]:hover) {
-  border-color: var(--lumo-contrast-30pct);
   cursor: auto;
 }

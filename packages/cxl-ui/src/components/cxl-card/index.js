@@ -5,3 +5,4 @@ export { CXLLessonCard } from './cxl-lesson-card.js';
 export { CXLMinidegreeCard } from './cxl-minidegree-card.js';
 export { CXLTestimonialCard } from './cxl-testimonial-card.js';
 export { CXLTrainingCard } from './cxl-training-card.js';
+export { CXLStatsCard } from './cxl-stats-card.js';
