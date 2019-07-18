@@ -20,10 +20,5 @@ $mq-breakpoints: (
 // (when $mq-responsive is set to 'false').
 $mq-static-breakpoint: desktop;
 
-// If you want to display the currently active breakpoint in the top
-// right corner of your site during development, add the breakpoints
-// to this list, ordered by width. For example: (mobile, tablet, desktop).
-$mq-show-breakpoints: (mobile, mobilelandscape, tablet, desktop, wide);
-
 // With eyeglass:
 @import "sass-mq";
