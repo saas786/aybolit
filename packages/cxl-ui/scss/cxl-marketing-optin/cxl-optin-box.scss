@@ -1,0 +1,53 @@
+@import "../utils/mq";
+
+[part="optin"] {
+  border-radius: var(--lumo-border-radius-s);
+}
+
+[part="background"] {
+  display: none;
+}
+
+[part="content"] {
+  display: flex;
+  flex-direction: column;
+  padding: var(--lumo-space-m);
+  padding-bottom: var(--lumo-space-l);
+  padding-top: 0;
+}
+
+@include mq($from: tablet) {
+  [part="optin"] {
+    display: flex;
+  }
+
+  [part="content"] {
+    padding-top: 0;
+    width: 50%;
+  }
+
+  [part="background"] {
+    background-position: bottom 0 left 121%;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    border-bottom-left-radius: var(--lumo-border-radius-s);
+    border-top-left-radius: var(--lumo-border-radius-s);
+    display: flex;
+    width: 50%;
+  }
+}
+
+@include mq($from: desktop) {
+  [part="content"] {
+    margin-left: auto;
+    padding-left: var(--lumo-space-xl);
+    padding-right: var(--lumo-space-xl);
+    width: 38%;
+  }
+
+  [part="background"] {
+    background-position: bottom left;
+    background-size: contain;
+    margin-right: var(--lumo-space-l);
+  }
+}

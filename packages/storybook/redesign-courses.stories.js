@@ -12,9 +12,9 @@ import karl from './static/karl.png';
 
 /* eslint-disable */
 
-storiesOf('Course pages', module)
+storiesOf('Redesign: Courses', module)
   .addDecorator(withKnobs)
-  .add('Main page', () => {
+  .add('Default', () => {
     const lazyLoadInstance = new LazyLoad({
       elements_selector: '.lazy'
     });
@@ -145,14 +145,34 @@ storiesOf('Course pages', module)
             <h3 class="text-center">We train some of the best companies in the world</h3>
             <cxl-partner-logos>
               <img
-                height="50"
+                height="60"
                 class="lazy"
-                data-src="https://conversionxl.com/wp-content/uploads/2017/07/client-logos-1.png"
+                data-src="https://cxl.nyc3.cdn.digitaloceanspaces.com/static/client-logos/padding/codecademy.svg"
               />
               <img
-                height="50"
+                height="60"
                 class="lazy"
-                data-src="https://conversionxl.com/wp-content/uploads/2017/07/client-logos-2.png"
+                data-src="https://cxl.nyc3.cdn.digitaloceanspaces.com/static/client-logos/padding/kaspersky-lab.svg"
+              />
+              <img
+                height="60"
+                class="lazy"
+                data-src="https://cxl.nyc3.cdn.digitaloceanspaces.com/static/client-logos/padding/Bank_of_Canada_Logo.svg"
+              />
+              <img
+                height="60"
+                class="lazy"
+                data-src="https://cxl.nyc3.cdn.digitaloceanspaces.com/static/client-logos/padding/Alamy_Ltd_logo-01.png"
+              />
+              <img
+                height="60"
+                class="lazy"
+                data-src="https://cxl.nyc3.cdn.digitaloceanspaces.com/static/client-logos/padding/adp.svg"
+              />
+              <img
+                height="60"
+                class="lazy"
+                data-src="https://cxl.nyc3.cdn.digitaloceanspaces.com/static/client-logos/padding/social-finance-inc-sofi.svg"
               />
             </cxl-partner-logos>
           </div>

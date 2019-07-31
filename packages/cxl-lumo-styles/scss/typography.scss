@@ -13,3 +13,7 @@ p {
 hr {
   margin: var(--lumo-space-l) 0;
 }
+
+h3 {
+  font-size: calc(var(--lumo-font-size-xl) * 1.3);
+}

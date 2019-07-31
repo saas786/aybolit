@@ -25,3 +25,8 @@
 :host([theme~="margin-left"]) {
   margin-left: var(--lumo-space-m);
 }
+
+:host([theme~="block"]) {
+  display: block;
+  width: 100%;
+}

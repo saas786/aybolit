@@ -1,23 +1,30 @@
 @import "./utils/mq";
 
 :host {
-  grid-column-gap: 10px;
-  grid-row-gap: 15px;
-  grid-template-columns: 100px 50px 100px;
-  grid-template-rows: 80px auto 80px;
-  padding: var(--lumo-space-m) 0;
-
-  ::slotted(*) {
-    padding: 0;
-  }
-
-  @include mq($from: tablet) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  [part="logos"] {
+    padding: var(--lumo-space-m) 0;
 
     ::slotted(*) {
-      padding: 0 var(--lumo-space-l);
+      padding: 0;
+    }
+
+    @include mq($until: tablet) {
+      text-align: center;
+
+      ::slotted(.logo) {
+        height: 30px;
+        padding: 10px;
+      }
+    }
+
+    @include mq($from: desktop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      ::slotted(*) {
+        padding: 0 var(--lumo-space-l);
+      }
     }
   }
 }

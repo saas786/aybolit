@@ -102,6 +102,7 @@
   @include mq($from: tablet) {
     [part="bottomnav"] {
       background-color: transparent; // stylelint-disable sh-waqar/declaration-use-variable
+      border: none;
       box-shadow: none;
       position: relative;
     }

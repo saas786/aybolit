@@ -1,4 +1,5 @@
 [part="input-field"] {
+  background: var(--lumo-base-color);
   background-color: transparent; // stylelint-disable-line sh-waqar/declaration-use-variable
   border: 1px solid var(--lumo-shade-20pct);
 }
@@ -19,6 +20,7 @@
 
 :host([invalid]) {
   [part="input-field"] {
+    background: var(--lumo-base-color);
     background-color: transparent; // stylelint-disable-line sh-waqar/declaration-use-variable
     border: 1px solid var(--lumo-error-color-50pct);
   }
@@ -34,4 +36,8 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   box-shadow: 0 0 0 30px var(--lumo-base-color) inset !important; /* stylelint-disable-line declaration-no-important */
   color: var(--lumo-body-text-color);
+}
+
+:host([theme~="block"]) {
+  width: 100%;
 }
