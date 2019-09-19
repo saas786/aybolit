@@ -1,5 +1,6 @@
 {
   "name": "cxl-workspace",
+  "version": "0.1.0",
   "private": true,
   "author": "CXL",
   "license": "SEE LICENSE IN LICENSE",
