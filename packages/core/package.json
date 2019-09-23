@@ -1,6 +1,6 @@
 {
   "name": "@aybolit/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Serhii Kulykov <serguey.kulikov@gmail.com>",
   "license": "MIT",
   "main": "src/index.js",
@@ -17,7 +17,7 @@
     "lit-html": "^1.0.0"
   },
   "devDependencies": {
-    "@aybolit/test-helpers": "^0.1.0",
+    "@aybolit/test-helpers": "^0.1.1",
     "@open-wc/testing-helpers": "^0.8.6",
     "@pika/pack": "^0.3.0",
     "@pika/plugin-build-web": "^0.3.0",
