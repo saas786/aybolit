@@ -1,7 +1,7 @@
 {
   "name": "@aybolit/test-helpers",
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Serhii Kulykov <serguey.kulikov@gmail.com>",
   "license": "MIT",
   "main": "index.js",
