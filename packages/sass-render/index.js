@@ -22,6 +22,16 @@ async function sassToCss(sassFile) {
 
 const templateFile = path.join(__dirname, './sass-template.tmpl');
 
+function ensureDirectoryExistence(filePath) {
+  const dirname = path.dirname(filePath);
+
+  if (!fs.existsSync(dirname)) {
+    ensureDirectoryExistence(dirname);
+
+    fs.mkdirSync(dirname);
+  }
+}
+
 async function sassRender(sourceFile) {
   const template = await readFile(templateFile, 'utf-8');
   const match = delimiter.exec(template);
@@ -32,6 +42,7 @@ async function sassRender(sourceFile) {
   const replacement = await sassToCss(sourceFile);
   const newContent = template.replace(delimiter, replacement);
   const outputFile = sourceFile.replace('.scss', '-css.js').replace('scss', 'src/styles');
+  ensureDirectoryExistence(outputFile);
   return writeFile(outputFile, newContent, 'utf-8');
 }
 

@@ -47,7 +47,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dist": "pack build",
-    "postinstall": "mkdir src/styles/cxl-marketing-optin && yarn build-styling",
+    "postinstall": "yarn build-styling",
     "build-styling": "node ../sass-render/bin/sass-render.js -s scss/**/*.scss"
   }
 }
