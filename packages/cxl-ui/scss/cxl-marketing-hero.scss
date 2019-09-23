@@ -5,6 +5,7 @@
   display: flex;
   height: auto;
   min-height: 575px;
+  overflow: hidden;
   padding-top: var(--lumo-space-m);
   position: relative;
 
@@ -188,10 +189,20 @@
       position: absolute;
       width: 100%;
     }
+
+    .flex {
+      height: auto;
+      margin-bottom: var(--lumo-font-size-xxl);
+      margin-top: calc(var(--lumo-font-size-xxl) * 2.15);
+    }
   }
 
   @include mq($from: tablet, $until: desktop) {
-    min-height: 850px;
+    min-height: 650px;
+    .waves {
+      left: -90%;
+      width: 200%;
+    }
   }
 
   @include mq($from: desktop) {

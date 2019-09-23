@@ -1,0 +1,24 @@
+:host([theme~="cxl-faq"]) {
+  [part="toggle"]::before {
+    color: var(--lumo-primary-color);
+    content: var(--lumo-icons-plus);
+  }
+
+  [part="summary"] {
+    cursor: pointer;
+  }
+
+  ::slotted(p) {
+    margin-left: calc(var(--lumo-space-m) * 1.2);
+  }
+}
+
+:host([theme~="cxl-faq"][opened]) {
+  [part="toggle"] {
+    transform: rotate(0deg);
+  }
+
+  [part="toggle"]::before {
+    content: var(--lumo-icons-minus);
+  }
+}

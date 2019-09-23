@@ -9,3 +9,5 @@ import './templates/vaadin-button.js';
 import './templates/vaadin-text-field.js';
 import './templates/vaadin-text-area.js';
 import './templates/vaadin-form-layout.js';
+import './templates/vaadin-details.js';
+import './templates/vaadin-checkbox.js';

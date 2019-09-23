@@ -4,7 +4,12 @@ import cxlPartnerLogosStyles from '../styles/cxl-partner-logos-css.js';
 
 export class CXLPartnerLogosElement extends LitElement {
   static get properties() {
-    return {};
+    return {
+      backgroundColor: {
+        type: String,
+        attribute: 'background-color'
+      }
+    };
   }
 
   static get styles() {
@@ -13,8 +18,16 @@ export class CXLPartnerLogosElement extends LitElement {
 
   render() {
     return html`
-      <slot></slot>
+      <div part="logos">
+        <slot></slot>
+      </div>
     `;
+  }
+
+  firstUpdated() {
+    if (this.backgroundColor) {
+      this.shadowRoot.querySelector('[part="logos"]').style.backgroundColor = this.backgroundColor;
+    }
   }
 }
 

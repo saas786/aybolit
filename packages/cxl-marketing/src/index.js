@@ -10,6 +10,7 @@ import '@conversionxl/cxl-ui/src/components/cxl-marketing-hero';
 import '@conversionxl/cxl-ui/src/components/cxl-card';
 import '@conversionxl/cxl-ui/src/components/cxl-partner-logos';
 import '@conversionxl/cxl-ui/src/components/cxl-iron-form';
+import '@conversionxl/cxl-ui/src/components/cxl-marketing-optin';
 
 // Third-party components.
 import '@vaadin/vaadin-button';
