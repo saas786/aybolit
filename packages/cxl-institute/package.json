@@ -1,6 +1,6 @@
 {
   "name": "@conversionxl/cxl-institute",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "CXL <leho@conversionxl.com>",
   "license": "SEE LICENSE IN LICENSE",
   "main": "src/index.js",
@@ -10,6 +10,7 @@
     "directory": "packages/cxl-institute"
   },
   "dependencies": {
+    "@conversionxl/sass-render": "0.1.3",
     "@conversionxl/cxl-lumo-styles": "^0.1.2",
     "@conversionxl/cxl-ui": "^0.1.2",
     "@pika/pack": "^0.3.0",
@@ -37,6 +38,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "pack build"
+    "dist": "pack build",
+    "postinstall": "yarn build-styling",
+    "build-styling": "node ../sass-render/bin/sass-render.js -s scss/**/*.scss"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@aybolit/white-label",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Serhii Kulykov <serguey.kulikov@gmail.com>",
   "license": "MIT",
   "main": "src/index.js",
@@ -13,6 +13,7 @@
     "directory": "packages/white-label"
   },
   "dependencies": {
+    "@conversionxl/sass-render": "0.1.3",
     "@aybolit/core": "^0.1.2"
   },
   "devDependencies": {
@@ -35,6 +36,8 @@
     ]
   },
   "scripts": {
-    "dist": "pack build"
+    "dist": "pack build",
+    "postinstall": "yarn build-styling",
+    "build-styling": "node ../sass-render/bin/sass-render.js -s scss/**/*.scss"
   }
 }
