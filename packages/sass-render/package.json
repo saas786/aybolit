@@ -1,7 +1,6 @@
 {
-  "name": "@aybolit/sass-render",
-  "private": true,
-  "version": "0.1.2",
+  "name": "@conversionxl/sass-render",
+  "version": "0.1.5",
   "author": "Serhii Kulykov <serguey.kulikov@gmail.com>",
   "license": "MIT",
   "dependencies": {

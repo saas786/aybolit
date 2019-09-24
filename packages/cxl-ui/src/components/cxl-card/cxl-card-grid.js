@@ -1,7 +1,8 @@
 import { LitElement, html } from 'lit-element';
-import SimpleBar from 'simplebar/dist/simplebar';
 import cxlThemeStyles from '../../styles/cxl-theme-css.js';
 import cxlCardGridStyles from '../../styles/cxl-card-grid-css.js';
+// import SimpleBar from 'simplebar/dist/simplebar';
+const SimpleBar = require('simplebar/dist/simplebar');
 
 export class CXLCardGridElement extends LitElement {
   static get properties() {

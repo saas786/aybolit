@@ -1,6 +1,6 @@
 {
   "name": "@conversionxl/cxl-ui",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "author": "CXL <leho@conversionxl.com>",
   "license": "SEE LICENSE IN LICENSE",
   "main": "src/index.js",
@@ -10,6 +10,7 @@
     "directory": "packages/cxl-ui"
   },
   "dependencies": {
+    "@conversionxl/sass-render": "0.1.5",
     "@pika/pack": "^0.3.0",
     "@pika/plugin-build-web": "^0.3.0",
     "@pika/plugin-bundle-web": "^0.3.0",
@@ -25,7 +26,7 @@
     "ladda": "^2.0.1",
     "lit-element": "^2.1.0",
     "lit-html": "^1.1.0",
-    "simplebar": "^4.1.0"
+    "simplebar": "^4.2.0"
   },
   "devDependencies": {
     "sass-mq": "^5.0.0"

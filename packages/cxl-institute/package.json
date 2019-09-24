@@ -1,6 +1,6 @@
 {
   "name": "@conversionxl/cxl-institute",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "author": "CXL <leho@conversionxl.com>",
   "license": "SEE LICENSE IN LICENSE",
   "main": "src/index.js",
@@ -10,8 +10,9 @@
     "directory": "packages/cxl-institute"
   },
   "dependencies": {
-    "@conversionxl/cxl-lumo-styles": "^0.1.2",
-    "@conversionxl/cxl-ui": "^0.1.2",
+    "@conversionxl/sass-render": "0.1.5",
+    "@conversionxl/cxl-lumo-styles": "^0.1.5",
+    "@conversionxl/cxl-ui": "^0.1.5",
     "@pika/pack": "^0.3.0",
     "@pika/plugin-build-web": "^0.3.0",
     "@pika/plugin-bundle-web": "^0.3.0",
