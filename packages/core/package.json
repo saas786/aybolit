@@ -1,6 +1,6 @@
 {
   "name": "@aybolit/core",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Serhii Kulykov <serguey.kulikov@gmail.com>",
   "license": "MIT",
   "main": "src/index.js",
@@ -13,12 +13,12 @@
     "directory": "packages/core"
   },
   "dependencies": {
-    "@conversionxl/sass-render": "0.1.4",
+    "@conversionxl/sass-render": "0.1.5",
     "lit-element": "^2.0.1",
     "lit-html": "^1.0.0"
   },
   "devDependencies": {
-    "@aybolit/test-helpers": "^0.1.4",
+    "@aybolit/test-helpers": "^0.1.5",
     "@open-wc/testing-helpers": "^0.8.6",
     "@pika/pack": "^0.3.0",
     "@pika/plugin-build-web": "^0.3.0",
@@ -39,8 +39,6 @@
     ]
   },
   "scripts": {
-    "dist": "pack build",
-    "postinstall": "npm run build-styling",
-    "build-styling": "node ../sass-render/bin/sass-render.js -s scss/**/*.scss"
+    "dist": "pack build"
   }
 }

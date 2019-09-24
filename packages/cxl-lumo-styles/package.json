@@ -1,6 +1,6 @@
 {
   "name": "@conversionxl/cxl-lumo-styles",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "CXL <leho@conversionxl.com>",
   "license": "SEE LICENSE IN LICENSE.md",
   "main": "src/index.js",
@@ -10,14 +10,12 @@
     "directory": "packages/cxl-lumo-styles"
   },
   "dependencies": {
-    "@conversionxl/sass-render": "0.1.4",
+    "@conversionxl/sass-render": "0.1.5",
     "@vaadin/vaadin-lumo-styles": "^1.5.0",
     "@polymer/iron-icon": "^3.0.1",
     "@polymer/iron-iconset-svg": "^3.0.1",
     "sass-mq": "^5.0.0"
   },
   "scripts": {
-    "postinstall": "npm run build-styling",
-    "build-styling": "node ../sass-render/bin/sass-render.js -s scss/**/*.scss"
   }
 }
