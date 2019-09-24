@@ -1,6 +1,6 @@
 {
   "name": "@conversionxl/sass-render",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Serhii Kulykov <serguey.kulikov@gmail.com>",
   "license": "MIT",
   "dependencies": {
