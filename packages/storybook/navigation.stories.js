@@ -1,6 +1,7 @@
 import { html } from 'lit-html';
 import { useEffect } from '@storybook/client-api';
 import '@conversionxl/cxl-ui/src/components/cxl-marketing-nav.js';
+import '@conversionxl/cxl-ui/src/components/cxl-institute-pricing-table.js';
 import { Headroom } from '@conversionxl/cxl-ui';
 import contextMenuItems from './navigation.data.json';
 
@@ -204,6 +205,7 @@ export const CxlMarketingNav = () => {
         </p>
         <p><a href="https://cxl.com">Another link</a> for good measure.</p>
         <hr>
+        <cxl-institute-pricing-table></cxl-institute-pricing-table>
       </div>
     </main>
   `;
