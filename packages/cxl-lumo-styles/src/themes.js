@@ -2,6 +2,7 @@ import { registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js
 import cxlAccordionCardStyles from './styles/themes/cxl-accordion-card-css.js';
 import cxlVaadinAccordionStyles from './styles/themes/vaadin-accordion-css.js';
 import cxlVaadinAccordionPanelStyles from './styles/themes/vaadin-accordion-panel-css.js';
+import cxlVaadinButtonStyles from './styles/themes/vaadin-button-css.js';
 import cxlVaadinContextMenuItemStyles from './styles/themes/vaadin-context-menu-item-css.js';
 import cxlVaadinContextMenuListBoxStyles from './styles/themes/vaadin-context-menu-list-box-css.js';
 import cxlVaadinNotificationCardStyles from './styles/themes/vaadin-notification-card-css.js';
@@ -19,6 +20,9 @@ registerStyles('vaadin-accordion', cxlVaadinAccordionStyles, {
 });
 registerStyles('vaadin-accordion-panel', cxlVaadinAccordionPanelStyles, {
   moduleId: 'cxl-vaadin-accordion-panel-styles',
+});
+registerStyles('vaadin-button', cxlVaadinButtonStyles, {
+  moduleId: 'cxl-vaadin-button-styles',
 });
 registerStyles('vaadin-context-menu-item', cxlVaadinContextMenuItemStyles, {
   moduleId: 'cxl-vaadin-context-menu-item-styles',
