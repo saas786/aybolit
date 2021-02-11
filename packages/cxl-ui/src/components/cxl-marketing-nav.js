@@ -47,6 +47,11 @@ export class CXLMarketingNavElement extends LitElement {
 
   render() {
     return html`
+      <style>
+        .description {
+          max-width: 128px !important;
+        }
+      </style>
       <vaadin-tabs
         id="menu-shadow-items"
         class="menu-items"
@@ -275,18 +280,27 @@ export class CXLMarketingNavElement extends LitElement {
         );
 
         // Populate.
-        contextMenu.items = this._createContextMenuItems(menuItem.children);
-
-        if (menuItem.description) {
-          const el = document.createElement('vaadin-context-menu-item');
-          el.classList.add('description');
-          render(html` ${unsafeHTML(menuItem.description)} `, el);
-          contextMenu.items = [
-            ...contextMenu.items,
-            { component: document.createElement('hr') },
-            { component: el },
-          ];
-        }
+        const contextMenuItems = this._createContextMenuItems(menuItem.children);
+        contextMenu.addEventListener('opened-changed', () => {
+          contextMenu.items = contextMenuItems;
+          const listBox = document.querySelector('vaadin-context-menu-list-box');
+          setTimeout(() => {
+            const { width } = getComputedStyle(listBox);
+            if (menuItem.description) {
+              const el = document.createElement('vaadin-context-menu-item');
+              el.style.minWidth = '256px';
+              el.style.maxWidth = width;
+              el.classList.add('description');
+              render(html` ${unsafeHTML(menuItem.description)} `, el);
+              contextMenu.items = [
+                ...contextMenuItems,
+                { component: document.createElement('hr') },
+                { component: el },
+              ];
+              contextMenu.render();
+            }
+          }, 0);
+        });
 
         // Prevent close on upstream events: clicks, keydown, etc
         contextMenu.addEventListener('item-selected', (e) => {
