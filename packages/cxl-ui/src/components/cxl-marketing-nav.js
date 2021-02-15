@@ -281,26 +281,47 @@ export class CXLMarketingNavElement extends LitElement {
 
         // Populate.
         const contextMenuItems = this._createContextMenuItems(menuItem.children);
-        contextMenu.addEventListener('opened-changed', () => {
+        contextMenu.items = contextMenuItems;
+
+        const setDescription = async () => {
           contextMenu.items = contextMenuItems;
-          const listBox = document.querySelector('vaadin-context-menu-list-box');
+          contextMenu.render();
+
+          const description = document.createElement('vaadin-context-menu-item');
+          render(html`${unsafeHTML(menuItem.description)}`, description);
+
           setTimeout(() => {
-            const { width } = getComputedStyle(listBox);
-            if (menuItem.description) {
-              const el = document.createElement('vaadin-context-menu-item');
-              el.style.minWidth = '256px';
-              el.style.maxWidth = width;
-              el.classList.add('description');
-              render(html` ${unsafeHTML(menuItem.description)} `, el);
-              contextMenu.items = [
-                ...contextMenuItems,
-                { component: document.createElement('hr') },
-                { component: el },
-              ];
-              contextMenu.render();
-            }
+            description.style.maxWidth = getComputedStyle(
+              document.querySelector('vaadin-context-menu-list-box')
+            ).width;
+
+            contextMenu.items = [
+              ...contextMenuItems,
+              { component: document.createElement('hr') },
+              { component: description },
+            ];
+            contextMenu.render();
           }, 0);
-        });
+        };
+
+        if (menuItem.description) {
+          contextMenu.addEventListener('opened-changed', () => {
+            if (!document.querySelector('vaadin-context-menu-list-box')) return;
+            setDescription();
+          });
+
+          const observe = (mediaQueryString, callback) => {
+            const observer = window.matchMedia(mediaQueryString);
+            const matches = (mediaQueryList) => callback(mediaQueryList.matches);
+            matches(observer);
+            observer.addEventListener('change', matches);
+          };
+
+          observe('(min-width: 420px) and (min-height: 420px)', () => {
+            if (!document.querySelector('vaadin-context-menu-list-box')) return;
+            setDescription();
+          });
+        }
 
         // Prevent close on upstream events: clicks, keydown, etc
         contextMenu.addEventListener('item-selected', (e) => {
