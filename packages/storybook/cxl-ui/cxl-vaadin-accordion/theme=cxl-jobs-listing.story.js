@@ -2,37 +2,36 @@ import { html } from 'lit-html';
 import '@conversionxl/cxl-ui/src/components/cxl-vaadin-accordion.js';
 
 export const CXLVaadinAccordionJobsListing = () => html`
-  <cxl-app-layout class="cxl-app-layout" id="container" layout="1c-w" scroll="document" wide="">
+  <cxl-app-layout id="container" class="cxl-app-layout" wide="" layout="1c-w" scroll="document">
     <cxl-marketing-nav
-      class="menu menu--primary headroom headroom--not-bottom headroom--top headroom--pinned"
+      class="menu menu--primary headroom headroom--top headroom--not-bottom"
       slot="header"
-      style="top: 32px;"
       wide=""
     >
       <template id="cxl-marketing-nav-search-form-template">
         <vaadin-context-menu-item class="menu-item-search">
           <form
-            action="https://jobs.cxl.co/"
-            class="search-form"
             id="search-form"
-            method="get"
             role="search"
+            method="get"
+            class="search-form"
+            action="https://jobs.cxl.co/"
           >
             <label for="search-input">Search CXL Jobs:</label>
             <input
-              class="search-field"
               id="search-input"
-              name="s"
-              placeholder="Search …"
               type="search"
+              class="search-field"
+              placeholder="Search …"
               value=""
+              name="s"
             />
             <vaadin-button
-              aria-label="Search"
-              class="search-submit"
-              onclick="document.getElementById('search-form').submit();"
-              theme="icon"
               type="submit"
+              class="search-submit"
+              aria-label="Search"
+              theme="icon"
+              onclick="document.getElementById('search-form').submit();"
             >
               <iron-icon icon="lumo:angle-right"></iron-icon>
             </vaadin-button>
@@ -41,91 +40,95 @@ export const CXLVaadinAccordionJobsListing = () => html`
       </template>
 
       <vaadin-tabs
-        aria-orientation="horizontal"
-        class="menu-items"
         id="menu-global-items"
+        class="menu-items"
+        theme="cxl-marketing-nav"
+        selected="0"
         orientation="horizontal"
         role="tablist"
-        selected="0"
-        theme="cxl-marketing-nav"
+        aria-orientation="horizontal"
         wide="true"
       >
         <vaadin-tab
-          aria-selected="true"
-          class="menu-item-wide menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-120 menu__item menu__item--current menu-item-wide"
-          id="menu-item-120"
-          orientation="horizontal"
-          role="tab"
-          selected=""
-          tabindex="0"
           theme="cxl-marketing-nav"
-          ><a aria-current="page" href="https://jobs.cxl.co">
+          id="menu-item-120"
+          class="menu-item-wide menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-120 menu__item menu__item--current menu-item-wide"
+          aria-selected="true"
+          role="tab"
+          orientation="horizontal"
+          tabindex="0"
+          selected=""
+          ><a href="https://jobs.cxl.co" aria-current="page" class="menu__link">
             <iron-icon
               icon="cxl:logo"
               style="width: var(--lumo-icon-size-l, 48px);"
             ></iron-icon> </a
         ></vaadin-tab>
         <vaadin-tab
-          aria-selected="false"
-          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-121 menu__item "
+          theme="cxl-marketing-nav"
           id="menu-item-121"
-          orientation="horizontal"
+          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-121 menu__item "
+          aria-selected="false"
           role="tab"
+          orientation="horizontal"
           tabindex="-1"
-          theme="cxl-marketing-nav"
-          ><a href="https://cxl.com/institute/">Institute</a></vaadin-tab
+          ><a href="https://cxl.com/institute/" class="menu__link">Institute</a></vaadin-tab
         >
         <vaadin-tab
-          aria-selected="false"
-          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-122 menu__item "
+          theme="cxl-marketing-nav"
           id="menu-item-122"
-          orientation="horizontal"
+          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-122 menu__item "
+          aria-selected="false"
           role="tab"
+          orientation="horizontal"
           tabindex="-1"
-          theme="cxl-marketing-nav"
-          ><a href="https://cxl.com/agency/">Conversion optimization services</a></vaadin-tab
+          ><a href="https://cxl.com/agency/" class="menu__link"
+            >Conversion optimization services</a
+          ></vaadin-tab
         >
         <vaadin-tab
-          aria-selected="false"
-          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-123 menu__item "
+          theme="cxl-marketing-nav"
           id="menu-item-123"
-          orientation="horizontal"
+          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-123 menu__item "
+          aria-selected="false"
           role="tab"
+          orientation="horizontal"
           tabindex="-1"
-          theme="cxl-marketing-nav"
-          ><a href="https://cxl.com/agency/case-studies/">Agency case studies</a></vaadin-tab
+          ><a href="https://cxl.com/agency/case-studies/" class="menu__link"
+            >Agency case studies</a
+          ></vaadin-tab
         >
         <vaadin-tab
-          aria-selected="false"
-          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124 menu__item "
+          theme="cxl-marketing-nav"
           id="menu-item-124"
-          orientation="horizontal"
+          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124 menu__item "
+          aria-selected="false"
           role="tab"
+          orientation="horizontal"
           tabindex="-1"
-          theme="cxl-marketing-nav"
-          ><a href="https://cxl.com/blog/">Blog</a></vaadin-tab
+          ><a href="https://cxl.com/blog/" class="menu__link">Blog</a></vaadin-tab
         >
         <vaadin-tab
-          aria-selected="false"
-          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-125 menu__item "
-          id="menu-item-125"
-          orientation="horizontal"
-          role="tab"
-          tabindex="-1"
           theme="cxl-marketing-nav"
-          ><a href="https://cxl.com/live/"
+          id="menu-item-125"
+          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-125 menu__item "
+          aria-selected="false"
+          role="tab"
+          orientation="horizontal"
+          tabindex="-1"
+          ><a href="https://cxl.com/live/" class="menu__link"
             >CXL Live 2020
             <iron-icon icon="cxl:live" style="color: var(--lumo-primary-color)"></iron-icon> </a
         ></vaadin-tab>
         <vaadin-tab
-          aria-selected="false"
-          class="menu-item-split-nav menu-item-wide menu-item-search menu-item menu-item-type-custom menu-item-object-custom menu-item-126 menu__item menu-item-split-nav menu-item-wide menu-item-search"
-          id="menu-item-126"
-          orientation="horizontal"
-          role="tab"
-          tabindex="-1"
           theme="cxl-marketing-nav"
-          ><a
+          id="menu-item-126"
+          class="menu-item-split-nav menu-item-wide menu-item-search menu-item menu-item-type-custom menu-item-object-custom menu-item-126 menu__item menu-item-split-nav menu-item-wide menu-item-search"
+          aria-selected="false"
+          role="tab"
+          orientation="horizontal"
+          tabindex="-1"
+          ><a class="menu__link"
             >Search
             <iron-icon icon="lumo:search"></iron-icon> </a
         ></vaadin-tab>
@@ -186,46 +189,50 @@ export const CXLVaadinAccordionJobsListing = () => html`
         ];
       </script>
       <vaadin-tabs
-        aria-orientation="horizontal"
-        class="menu-items"
         id="menu-primary-items"
+        class="menu-items"
+        theme="cxl-marketing-nav"
+        selected="0"
         orientation="horizontal"
         role="tablist"
-        selected="0"
-        theme="cxl-marketing-nav"
+        aria-orientation="horizontal"
         wide="true"
       >
         <vaadin-tab
-          aria-selected="true"
-          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-117 menu__item menu__item--current "
+          theme="cxl-marketing-nav"
           id="menu-item-117"
-          orientation="horizontal"
+          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-117 menu__item menu__item--current "
+          aria-selected="true"
           role="tab"
-          selected=""
+          orientation="horizontal"
           tabindex="0"
-          theme="cxl-marketing-nav"
-          ><a aria-current="page" href="https://jobs.cxl.co/">Jobs list</a></vaadin-tab
+          selected=""
+          ><a href="https://jobs.cxl.co/" aria-current="page" class="menu__link"
+            >Find a job</a
+          ></vaadin-tab
         >
         <vaadin-tab
-          aria-selected="false"
-          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119 menu__item "
+          theme="cxl-marketing-nav"
           id="menu-item-119"
-          orientation="horizontal"
+          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119 menu__item "
+          aria-selected="false"
           role="tab"
+          orientation="horizontal"
           tabindex="-1"
-          theme="cxl-marketing-nav"
-          ><a href="https://jobs.cxl.co/post-a-job/">Post a Job</a></vaadin-tab
+          ><a href="https://jobs.cxl.co/post-a-job/" class="menu__link">Post a Job</a></vaadin-tab
         >
         <vaadin-tab
-          aria-selected="false"
-          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118 menu__item "
-          id="menu-item-118"
-          orientation="horizontal"
-          role="tab"
-          tabindex="-1"
           theme="cxl-marketing-nav"
-          ><a href="https://jobs.cxl.co/employer-dashboard/">Employer Dashboard</a></vaadin-tab
-        >
+          id="menu-item-118"
+          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118 menu__item "
+          aria-selected="false"
+          role="tab"
+          orientation="horizontal"
+          tabindex="-1"
+          ><a href="https://jobs.cxl.co/employer-dashboard/" class="menu__link"
+            >Employer Dashboard</a
+          >
+        </vaadin-tab>
       </vaadin-tabs>
       <script>
         window.CXL = window.CXL || {};
@@ -233,7 +240,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
         window.CXL.contextMenuItems['primary'] = [
           {
             depth: 0,
-            text: 'Jobs list',
+            text: 'Find a job',
             component: 'a',
             href: 'https:\\/\\/jobs.cxl.co\\/',
             id: 117,
@@ -260,78 +267,81 @@ export const CXLVaadinAccordionJobsListing = () => html`
     ><!-- #menu-primary -->
 
     <div class="app-content max-w-full overflow-hidden my-0 mx-auto pt-12">
-      <main class="app-main mx-auto mb-12 text-lg leading-loose" id="main">
-        <article class="entry post-6 page type-page status-publish hentry" id="post-6">
+      <main id="main" class="app-main mx-auto mb-12 text-lg leading-loose">
+        <article
+          class="entry entry--6 entry--type-page entry--status-publish entry--author-leho-k"
+          id="post-6"
+        >
           <header class="entry__header mb-8 text-center">
-            <h1 class="entry__title md:max-w-4xl mx-8 sm:mx-auto my-0">Jobs list</h1>
+            <h1 class="entry__title md:max-w-4xl mx-8 sm:mx-auto my-0">Find a job</h1>
           </header>
 
           <div class="entry__content o-content-width flow-root">
+            <p class="has-text-align-center">Browse the top digital marketing jobs in the world.</p>
+
             <div class="gv-grid gv-widgets-header">
               <div class="gv-grid-col-1-1 gv-left">
                 <form
-                  action="https://jobs.cxl.co/"
                   class="gv-widget-search gv-search-horizontal"
-                  data-viewid="102"
                   method="get"
+                  action="https://jobs.cxl.co/"
+                  data-viewid="102"
                 >
                   <div class="gv-search-box gv-search-field-text gv-search-field-search_all">
                     <div class="gv-search">
                       <label for="gv_search_102">Search Entries:</label>
-                      <p><input id="gv_search_102" name="gv_search" type="search" value="" /></p>
+                      <p><input type="search" name="gv_search" id="gv_search_102" value="" /></p>
                     </div>
                   </div>
                   <div class="gv-search-box gv-search-field-select">
                     <label for="search-box-filter_41_6">Country</label>
                     <p>
-                      <select id="search-box-filter_41_6" name="filter_41_6">
-                        <option selected="selected" value="">—</option>
-                        <option value="Latvia">Latvia</option>
-                        <option value="Estonia">Estonia</option>
-                        <option value="Poland">Poland</option>
-                        <option value="United Kingdom">United Kingdom</option>
+                      <select name="filter_41_6" id="search-box-filter_41_6">
+                        <option value="" selected="selected">—</option>
                         <option value="Lithuania">Lithuania</option>
                         <option value="United States">United States</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Spain">Spain</option>
                       </select>
                     </p>
                   </div>
                   <div class="gv-search-box gv-search-field-select">
                     <label for="search-box-filter_7">Employment type</label>
                     <p>
-                      <select id="search-box-filter_7" name="filter_7">
-                        <option selected="selected" value="">—</option>
-                        <option value="Full-time">Full-time</option>
+                      <select name="filter_7" id="search-box-filter_7">
+                        <option value="" selected="selected">—</option>
                         <option value="Full-time remote">Full-time remote</option>
                         <option value="Contractor">Contractor</option>
+                        <option value="Full-time">Full-time</option>
                       </select>
                     </p>
                   </div>
                   <div class="gv-search-box gv-search-box-submit">
                     <vaadin-button
-                      onclick="window.location.href='/'"
-                      role="button"
-                      style="cursor: pointer;"
-                      tabindex="0"
                       theme="button outlined gv-search-clear"
+                      onclick="window.location.href='/'"
+                      style="cursor: pointer;"
+                      role="button"
+                      tabindex="0"
                       >Clear filters
                     </vaadin-button>
-                    <input name="mode" type="hidden" value="all" />
+                    <input type="hidden" name="mode" value="all" />
                     <vaadin-button
+                      type="submit"
+                      theme="button primary"
                       onclick="document.querySelector('form[data-viewid=&quot;102&quot;]').submit()"
-                      role="button"
                       style="cursor: pointer;"
                       tabindex="0"
-                      theme="button primary"
-                      type="submit"
+                      role="button"
                     >
-                      <iron-icon icon="lumo:angle-right" slot="suffix"></iron-icon>
+                      <iron-icon slot="suffix" icon="lumo:angle-right"></iron-icon>
                       Search
                     </vaadin-button>
                   </div>
                 </form>
               </div>
               <div class="gv-grid-col-1-2 gv-left">
-                <div class="gv-widget-pagination "><p>Displaying 1 - 7 of 7</p></div>
+                <div class="gv-widget-pagination "><p>Displaying 1 - 5 of 5</p></div>
               </div>
               <div class="gv-grid-col-1-2 gv-right"></div>
             </div>
@@ -339,53 +349,45 @@ export const CXLVaadinAccordionJobsListing = () => html`
             <div
               class="gv-list-container gv-list-view gv-list-multiple-container gv-container gv-container-102"
             >
-              <cxl-vaadin-accordion opened="0" theme="cxl-jobs-listing">
-                <div class="gv-list-view" id="gv_list_12">
-                  <vaadin-accordion-panel tabindex="0" theme="cxl-jobs-listing reverse">
+              <cxl-vaadin-accordion theme="cxl-jobs-listing" opened="0">
+                <div id="gv_list_20" class="gv-list-view">
+                  <vaadin-accordion-panel theme="cxl-jobs-listing reverse" tabindex="0">
                     <div slot="summary">
                       <div class="gv-list-view-title">
-                        <h3 class="cxl-job-company-logo gv-field-1-26">
-                          <img
-                            alt="Company logo"
-                            class="gv-image gv-field-id-26"
-                            src="https://jobs.cxl.co/index.php?gf-download=2021%2F02%2F1c9a94d6cf75838cf6.png&amp;form-id=1&amp;field-id=26&amp;hash=2f8dd0df2879d708e4f959ae8804d0e57135ad07bec041d44ae1a09257d740bc"
-                            width="250"
-                          />
-                        </h3>
-                        <div class="cxl-job-role gv-field-1-5" id="gv-field-1-5">
-                          <span class="gv-field-label">RemoteOK</span>
+                        <div id="gv-field-1-5" class="cxl-job-role gv-field-1-5">
+                          <span class="gv-field-label">App Anie</span>
                           <p>
                             <a
-                              href="https://jobs.cxl.co/entry/12/"
+                              href="https://jobs.cxl.co/entry/20/"
                               rel="noopener noreferrer"
                               target="_blank"
-                              >software tester</a
+                              >Senior Backend Engineer</a
                             >
                           </p>
                         </div>
-                        <div class="cxl-job-location gv-field-1-41" id="gv-field-1-41">
-                          <p>klaipeda<br />Lithuania</p>
+                        <div id="gv-field-1-41" class="cxl-job-location gv-field-1-41">
+                          <p>Remote<br />Spain</p>
                         </div>
-                        <div class="cxl-job-type gv-field-1-7" id="gv-field-1-7">
+                        <div id="gv-field-1-7" class="cxl-job-type gv-field-1-7">
                           <p>Full-time</p>
                         </div>
                         <div
-                          class="cxl-job-date-updated gv-field-1-date_created"
                           id="gv-field-1-date_created"
+                          class="cxl-job-date-updated hidden md_block gv-field-1-date_created"
                         >
-                          <p>2 weeks ago</p>
+                          <p>4 hours ago</p>
                         </div>
                         <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
                           id="gv-field-1-custom"
+                          class="cxl-apply-for-job-container hidden md_block gv-field-1-custom"
                         >
                           <p>
                             <vaadin-button
-                              onclick="window.location.href='www.google.com'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
                               theme="primary cxl-apply-for-job"
+                              onclick="window.location.href='https://stackoverflow.com/jobs/503910/senior-backend-engineer-data-acquisition-app-annie?utm_source=remoteok.io&amp;ref=remoteok.io'"
+                              style="cursor: pointer;"
+                              role="button"
+                              tabindex="0"
                             >
                               Apply now
                             </vaadin-button>
@@ -396,69 +398,434 @@ export const CXLVaadinAccordionJobsListing = () => html`
                     <!-- slot="summary" -->
                     <div class="gv-grid gv-list-view-content">
                       <div class="gv-grid-col-2-3 gv-list-view-content-description">
-                        <div class="cxl-job-description gv-field-1-11" id="gv-field-1-11">
-                          <h2 id="tldr">TLDR</h2>
-                          <p>&nbsp;</p>
-                          <h1 id="whatyoushouldknowaboutourcompanywpmedia">
-                            What You Should Know About Our Company: WP Media
-                          </h1>
+                        <div id="gv-field-1-11" class="cxl-job-description gv-field-1-11">
                           <p>
-                            Founded in 2014 in the beautiful Lyon, France,&nbsp;<a
-                              href="http://wp-media.me/"
-                              >WP Media</a
-                            >&nbsp;is an equal opportunity employer with a distributed team of +35
-                            teammates living around the world.
+                            In this role as a Staff Backend Engineer, you will be responsible for
+                            maintaining and improving the systems that help App Annie collect data
+                            at scale for its Intelligence products. You will be in charge of
+                            managing a wide variety of data sources, dealing with terabytes of data
+                            on a daily basis, and will play a key role in exploring opportunities
+                            for market data driven innovations at App Annie.
+                          </p>
+                          <p>What can you tell your friends?</p>
+                          <p>
+                            “I’m responsible for designing and maintaining large scale systems that
+                            collect data. Together with my team, we provide the foundation for App
+                            Annie’s mobile market insights.“
+                          </p>
+                          <p>How will you be doing this?</p>
+                          <ul>
+                            <li>
+                              Understanding end-to-end product delivery, from early idea to a
+                              maintainable and scalable product
+                            </li>
+                            <li>
+                              Collaborating with a global team of backend engineers, data scientists
+                              and product managers to ensure a smooth running data operation
+                            </li>
+                            <li>
+                              Partnering with product managers and data scientists to explore new
+                              ways to add value to our products
+                            </li>
+                            <li>
+                              Designing, specifying and driving improvements to our systems by
+                              always asking yourself: how can we do this simpler, faster and more
+                              efficient?
+                            </li>
+                            <li>
+                              Developing a sixth sense for technical debt, operational risk and data
+                              quality
+                            </li>
+                            <li>
+                              Estimating, planning and executing projects together with the team
+                            </li>
+                            <li>
+                              Documenting and sharing knowledge across the team and your fellow
+                              engineers around the globe
+                            </li>
+                          </ul>
+                          <p>What do you bring to the team?</p>
+                          <ul>
+                            <li>
+                              BS/MS in a Computer Science related field or equivalent experience
+                            </li>
+                            <li>5+ years of relevant work experience</li>
+                            <li>A team player attitude and solid communication skills</li>
+                            <li>Proficient in Python</li>
+                            <li>Experience with the AWS ecosystem (ECS and Kinesis is a plus)</li>
+                            <li>Experience with SQL and RDBMS</li>
+                            <li>Experience with Docker</li>
+                            <li>Experience in building and evolving RESTful API systems</li>
+                            <li>Experience with Apache Storm and Kafka is a big plus</li>
+                          </ul>
+                          <p>What do we offer?</p>
+                          <ul>
+                            <li>Competitive salary and perks</li>
+                            <li>Paid leave, so long as you promise to come back!</li>
+                            <li>
+                              Lots of responsibility + room for you to experiment and grow with the
+                              company
+                            </li>
+                            <li>
+                              An international team of talented and engaged people from different
+                              cultural backgrounds and locations (Utrecht, Beijing, San Francisco
+                              &amp; more!)
+                            </li>
+                            <li>
+                              You can be located in Netherlands, Germany or the UK and work either
+                              remotely or from the office -we offer full flexibility!
+                            </li>
+                            <li>
+                              Wellbeing allowance for any activity that matters to your wellbeing;
+                              (online) gym classes, fitness equipment, mindfulness apps or even
+                              childcare support!
+                            </li>
+                            <li>
+                              Home Internet allowance to help cover a secure, stable internet
+                              connection
+                            </li>
+                            <li>
+                              WFH Equipment Allowance to ensure you have the best set up in your
+                              home office
+                            </li>
+                            <li>
+                              Unlimited access to online learning platform Udemy to help you develop
+                              your skills
+                            </li>
+                            <li>
+                              Virtual initiatives and events to keep you connected with your
+                              colleagues
+                            </li>
+                          </ul>
+                          <p>Ok, a bit more about us</p>
+                          <p>
+                            App Annie is the industry’s most trusted mobile data and analytics
+                            platform. The company created the mobile app data market and has been
+                            fueling world-class, mobile-first businesses since 2010. App Annie’s
+                            mission is to power B2C companies’ mobile transformation and enable
+                            clients to deliver winning consumer experiences. More than 1,000
+                            enterprise clients and 1 million registered users across the globe and
+                            spanning all industries rely on App Annie as the gold standard to
+                            revolutionize their mobile business. The company is headquartered in San
+                            Francisco with 11 offices worldwide.
                           </p>
                           <p>
-                            <img
-                              alt="team"
-                              src="https://lh5.googleusercontent.com/mnGfvJu-RQt2Z3cL8WRaxtuuH3Fu1xZc9hLoceC5Toj6Qp4zzoo38BPDc9JgMZi8maEp2sRmGOjHcUc58Jrdup8ECEqCnoOYmpNKzOaNPW3Oyxz94E8AMyixp4ObeWgomOct1jWI"
-                            />
+                            *PLEASE NOTE THAT WE WILL ONLY CONSIDER CANDIDATES LOCATED IN THE
+                            NETHERLANDS, UK OR GERMANY. WE HAVE OFFICES IN THESE COUNTRIES AND ARE
+                            ALSO OPEN FOR REMOTE WORKING
+                          </p>
+                        </div>
+                        <div
+                          id="gv-field-1-custom"
+                          class="cxl-apply-for-job-container gv-field-1-custom"
+                        >
+                          <p>
+                            <vaadin-button
+                              theme="primary cxl-apply-for-job"
+                              onclick="window.location.href='https://stackoverflow.com/jobs/503910/senior-backend-engineer-data-acquisition-app-annie?utm_source=remoteok.io&amp;ref=remoteok.io'"
+                              style="cursor: pointer;"
+                              role="button"
+                              tabindex="0"
+                            >
+                              Apply now
+                            </vaadin-button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="gv-grid gv-list-view-footer">
+                      <div class="gv-grid-col-1-2 gv-left">
+                        <div
+                          id="gv-field-1-edit_link"
+                          class="cxl-job-edit-entry gv-field-1-edit_link"
+                        >
+                          <a href="https://jobs.cxl.co/entry/20/?edit=8c4e3b91a0&amp;gvid=102"
+                            >Edit Entry</a
+                          >
+                        </div>
+                      </div>
+
+                      <div class="gv-grid-col-1-2 gv-right">
+                        <div id="gv-field-1-52" class="cxl-job-expiry-date gv-field-1-52">
+                          <span class="gv-field-label">Expires in</span>4 weeks
+                        </div>
+                        <div id="gv-field-1-entry_link" class="gv-field-1-entry_link">
+                          <a href="https://jobs.cxl.co/entry/20/">
+                            <iron-icon
+                              icon="lumo:arrow-right"
+                              style="width: var(--lumo-icon-size-xl, 48px);"
+                            ></iron-icon>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </vaadin-accordion-panel>
+                </div>
+
+                <div id="gv_list_17" class="gv-list-view">
+                  <vaadin-accordion-panel theme="cxl-jobs-listing reverse" tabindex="0">
+                    <div slot="summary">
+                      <div class="gv-list-view-title">
+                        <h3 class="cxl-job-company-logo gv-field-1-26">
+                          <img
+                            src="https://jobs.cxl.co/index.php?gf-download=2021%2F02%2F368px-Google_2015_logo.svg3.png&amp;form-id=1&amp;field-id=26&amp;hash=c5b2f00f628a3b340fa0d2355d593fea69f6a74687b8c526ddbc54444201b166"
+                            width="250"
+                            alt="Company logo"
+                            class="gv-image gv-field-id-26"
+                          />
+                        </h3>
+                        <div id="gv-field-1-5" class="cxl-job-role gv-field-1-5">
+                          <span class="gv-field-label">warsaw</span>
+                          <p>
+                            <a
+                              href="https://jobs.cxl.co/entry/17/"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              >marketing and marketing and marketing</a
+                            >
+                          </p>
+                        </div>
+                        <div id="gv-field-1-41" class="cxl-job-location gv-field-1-41">
+                          <p>warsaw, capital of Poland<br />Poland</p>
+                        </div>
+                        <div id="gv-field-1-7" class="cxl-job-type gv-field-1-7">
+                          <p>Full-time</p>
+                        </div>
+                        <div
+                          id="gv-field-1-date_created"
+                          class="cxl-job-date-updated hidden md_block gv-field-1-date_created"
+                        >
+                          <p>4 days ago</p>
+                        </div>
+                        <div
+                          id="gv-field-1-custom"
+                          class="cxl-apply-for-job-container hidden md_block gv-field-1-custom"
+                        >
+                          <p>
+                            <vaadin-button
+                              theme="primary cxl-apply-for-job"
+                              onclick="window.location.href='www.google.com'"
+                              style="cursor: pointer;"
+                              role="button"
+                              tabindex="0"
+                            >
+                              Apply now
+                            </vaadin-button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- slot="summary" -->
+                    <div class="gv-grid gv-list-view-content">
+                      <div class="gv-grid-col-2-3 gv-list-view-content-description">
+                        <div id="gv-field-1-11" class="cxl-job-description gv-field-1-11">
+                          <p>
+                            SUMMARY<br />
+                            We are Pixellu, a software company on a mission to simplify professional
+                            photographers’ lives. We are seeking a world-class Lead Product Designer
+                            to head our product design. You’ll be working directly with the VP of
+                            Product &amp; CEO to develop a product vision and execute on that vision
+                            with the help of UX/UI, Product Owners/Managers, and Engineering.
+                          </p>
+                          <p>
+                            This is not a “sit in the office and plan” role. This is a role where
+                            you will be with the exec team one day, and in the trenches the next.
+                            Expect to roll up your sleeves and be in the weeds, doing the work.<br />
+                            🚀 ABOUT PIXELLU<br />
+                            At Pixellu, we know professional photographers are frustrated with all
+                            of the tedious work required to run a successful photography business.
+                            Many get so overwhelmed, they end up quitting on their dream of having a
+                            photography career. That is why we create easy-to-use, time-saving
+                            software that simplify photographers’ lives, so that they can spend less
+                            time in front of the computer and get back to doing what they love.
+                          </p>
+                          <p>
+                            Pixellu was co-founded in 2010 by two wedding photographers. Faced with
+                            the challenges of long hours and endless tasks, we began asking
+                            ourselves, “How can we save valuable time, make more money, and get our
+                            lives back?” Our answer was technology. We started Pixellu with the idea
+                            that we could make money by providing an honest service that helped
+                            photographers save time and live more fulfilling lives. We believed
+                            that, by focusing on a great product and great service, we could build a
+                            business that not only does good, but also does well.
+                          </p>
+                          <p>
+                            Today, we are a team of 30 team members spread across 10 countries,
+                            serving tens of thousands of photographers in over 100 countries.
+                          </p>
+                          <p>
+                            Learn more about us and why you’ll love working at Pixellu here:
+                            https://vimeo.com/405889874<br />
+                            😎 YOUR ROLE<br />
+                            Pixellu currently has three products - SmartAlbums, SmartSlides, and
+                            Galleries. We are looking to not only improve existing products but also
+                            introduce new products that will further simplify our customers’ lives.
+                          </p>
+                          <p>
+                            The primary role of the VP of Product is product strategy. You, as the
+                            Lead Product Designer, would be second-in-command and responsible for
+                            execution. Your job will be to: Research: Conduct user research and
+                            testing. Plan: Help shape the product strategy and vision. Drive product
+                            roadmaps &amp; set feature priorities. Prototype: Define the user
+                            experience, interactions, and user interface through user flows,
+                            information architecture, sketches and wireframes, and visual design.
+                            Build functional prototypes to validate and test your designs. Design:
+                            Design simple, elegant, data-driven, user-centric experiences that
+                            delight users. Lead: Lead our small team of UX/UI designers.<br />
+                            📗 REQUIREMENTS<br />
+                            Aside from the standard job description, here is what we most value in a
+                            candidate: Obsession with simplicity and intuitive design Mastery and
+                            application of space, iconography, illustration, and UX laws Thorough
+                            knowledge of the latest trends in UX People &amp; communication skills
+                            Data-driven decision making 4+ years of experience in product design<br />
+                            🏖️ BENEFITS<br />
+                            Work from anywhere Flex time; aside from "required online hours" of
+                            8-11am Pacific Time, work hours are fully flexible Competitive salary
+                            based on experience level and your local cost of living considerations
+                            Quarterly profit-sharing bonuses based on seniority and role Paid
+                            parental leave 20 annual days off, with the ability to make up missed
+                            days on weekends<br />
+                            Location<br />
+                            🌏 Worldwide
+                          </p>
+                        </div>
+                        <div
+                          id="gv-field-1-custom"
+                          class="cxl-apply-for-job-container gv-field-1-custom"
+                        >
+                          <p>
+                            <vaadin-button
+                              theme="primary cxl-apply-for-job"
+                              onclick="window.location.href='www.google.com'"
+                              style="cursor: pointer;"
+                              role="button"
+                              tabindex="0"
+                            >
+                              Apply now
+                            </vaadin-button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="gv-grid gv-list-view-footer">
+                      <div class="gv-grid-col-1-2 gv-left">
+                        <div
+                          id="gv-field-1-edit_link"
+                          class="cxl-job-edit-entry gv-field-1-edit_link"
+                        >
+                          <a href="https://jobs.cxl.co/entry/17/?edit=d5587fe52c&amp;gvid=102"
+                            >Edit Entry</a
+                          >
+                        </div>
+                      </div>
+
+                      <div class="gv-grid-col-1-2 gv-right">
+                        <div id="gv-field-1-52" class="cxl-job-expiry-date gv-field-1-52">
+                          <span class="gv-field-label">Expires in</span>4 weeks
+                        </div>
+                        <div id="gv-field-1-entry_link" class="gv-field-1-entry_link">
+                          <a href="https://jobs.cxl.co/entry/17/">
+                            <iron-icon
+                              icon="lumo:arrow-right"
+                              style="width: var(--lumo-icon-size-xl, 48px);"
+                            ></iron-icon>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </vaadin-accordion-panel>
+                </div>
+
+                <div id="gv_list_12" class="gv-list-view">
+                  <vaadin-accordion-panel theme="cxl-jobs-listing reverse" tabindex="0">
+                    <div slot="summary">
+                      <div class="gv-list-view-title">
+                        <h3 class="cxl-job-company-logo gv-field-1-26">
+                          <img
+                            src="https://jobs.cxl.co/index.php?gf-download=2021%2F02%2F1c9a94d6cf75838cf6.png&amp;form-id=1&amp;field-id=26&amp;hash=2f8dd0df2879d708e4f959ae8804d0e57135ad07bec041d44ae1a09257d740bc"
+                            width="250"
+                            alt="Company logo"
+                            class="gv-image gv-field-id-26"
+                          />
+                        </h3>
+                        <div id="gv-field-1-5" class="cxl-job-role gv-field-1-5">
+                          <span class="gv-field-label">RemoteOK</span>
+                          <p>
+                            <a
+                              href="https://jobs.cxl.co/entry/12/"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              >software tester</a
+                            >
+                          </p>
+                        </div>
+                        <div id="gv-field-1-41" class="cxl-job-location gv-field-1-41">
+                          <p>klaipeda<br />Lithuania</p>
+                        </div>
+                        <div id="gv-field-1-7" class="cxl-job-type gv-field-1-7">
+                          <p>Full-time</p>
+                        </div>
+                        <div
+                          id="gv-field-1-date_created"
+                          class="cxl-job-date-updated hidden md_block gv-field-1-date_created"
+                        >
+                          <p>3 weeks ago</p>
+                        </div>
+                        <div
+                          id="gv-field-1-custom"
+                          class="cxl-apply-for-job-container hidden md_block gv-field-1-custom"
+                        >
+                          <p>
+                            <vaadin-button
+                              theme="primary cxl-apply-for-job"
+                              onclick="window.location.href='http://www.google.com'"
+                              style="cursor: pointer;"
+                              role="button"
+                              tabindex="0"
+                            >
+                              Apply now
+                            </vaadin-button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- slot="summary" -->
+                    <div class="gv-grid gv-list-view-content">
+                      <div class="gv-grid-col-2-3 gv-list-view-content-description">
+                        <div id="gv-field-1-11" class="cxl-job-description gv-field-1-11">
+                          <p>
+                            TLDR<br />
+                            &nbsp;<br />
+                            What You Should Know About Our Company: WP Media<br />
+                            Founded in 2014 in the beautiful Lyon, France,&nbsp;WP Media&nbsp;is an
+                            equal opportunity employer with a distributed team of +35 teammates
+                            living around the world.
                           </p>
                           <p>
                             Our plugin makes sites go at the speed of light in just a few clicks. We
                             love to make our customers’ lives easier, which is why WP Rocket applies
-                            key best web performance practices right upon activation.
-                          </p>
-                          <h1 id="dowesharethesamevalues">Do We Share the Same Values?</h1>
-                          <p>
+                            key best web performance practices right upon activation.<br />
+                            Do We Share the Same Values?<br />
                             It's a great opportunity if you love open source, dev tools, systems
-                            programming. Join our well-funded remote-first&nbsp;<a
-                              href="http://dvc.org/"
-                              >DVC</a
-                            >&nbsp;team to build developer tools to see how your code is used by
-                            thousands of developers every day! If you don't mind Python.
+                            programming. Join our well-funded remote-first&nbsp;DVC&nbsp;team to
+                            build developer tools to see how your code is used by thousands of
+                            developers every day! If you don't mind Python.
                           </p>
                           <hr />
-                          <h2 id="aboutus">About us</h2>
                           <p>
+                            About us<br />
                             We are the company behind very popular open-source tools for ML
-                            workflow-&nbsp;<a href="https://dvc.org/">DVC</a>&nbsp;and&nbsp;<a
-                              href="https://cml.dev/"
-                              >CML</a
-                            >. We're a well-funded, remote-first team on a missing to solve the
-                            complexity of managing datasets, ML infrastructure, ML models lifecycle
-                            management.
+                            workflow-&nbsp;DVC&nbsp;and&nbsp;CML. We're a well-funded, remote-first
+                            team on a missing to solve the complexity of managing datasets, ML
+                            infrastructure, ML models lifecycle management.
                           </p>
                           <p><strong>Learn more:</strong></p>
                           <ul>
-                            <li>
-                              Check out our&nbsp;<a href="https://github.com/iterative/dvc"
-                                >GitHub</a
-                              >
-                            </li>
-                            <li>
-                              Check out the&nbsp;<a href="https://dvc.org/">Website</a
-                              >&nbsp;and&nbsp;<a href="https://dvc.org/doc">Docs</a>
-                            </li>
-                            <li>
-                              Finally, take a look at our&nbsp;<a href="https://dvc.org/blog"
-                                >Blog</a
-                              >&nbsp;and&nbsp;<a
-                                href="https://www.youtube.com/channel/UC37rp97Go-xIX3aNFVHhXfQ"
-                                >YouTube</a
-                              >
-                            </li>
+                            <li>Check out our&nbsp;GitHub</li>
+                            <li>Check out the&nbsp;Website&nbsp;and&nbsp;Docs</li>
+                            <li>Finally, take a look at our&nbsp;Blog&nbsp;and&nbsp;YouTube</li>
                           </ul>
                           <p><strong>What we offer:</strong></p>
                           <ul>
@@ -476,20 +843,17 @@ export const CXLVaadinAccordionJobsListing = () => html`
                             </li>
                             <li>
                               Engineering team is involved into product discussions and planning. We
-                              do it openly via&nbsp;<a href="https://github.com/iterative/dvc"
-                                >Github</a
-                              >&nbsp;or&nbsp;<a href="http://dvc.org/chat">Discord chat</a>.
+                              do it openly via&nbsp;Github&nbsp;or&nbsp;Discord chat.
                             </li>
                             <li>
                               Besides building the product we participate in conferences (PyCon,
                               PyData, O'Reilly AI, etc). We encourage and support the team in giving
-                              talks, writing&nbsp;<a href="https://dvc.org/blog">blog-posts</a>, and
-                              other activities.
+                              talks, writing&nbsp;blog-posts, and other activities.
                             </li>
                             <li>Well-defined process that we all participate in improving.</li>
                           </ul>
-                          <h2 id="aboutyou">About you</h2>
                           <p>
+                            About you<br />
                             -&nbsp;<strong>Strong Python knowledge</strong>&nbsp;and excellent
                             coding culture (standards, unit test, docs, etc) are required.
                             Alternatively very strong experience with languages like Go, C + some
@@ -512,10 +876,10 @@ export const CXLVaadinAccordionJobsListing = () => html`
                             -&nbsp;<strong>DVC core team</strong>&nbsp;is 4 engineers, you will one
                             of the earliest employees and we expect you to&nbsp;<strong
                               >drive major parts of the product</strong
-                            >
+                            ><br />
+                            Location<br />
+                            🌏 Worldwide
                           </p>
-                          <h1 id="location">Location</h1>
-                          <p>🌏 Worldwide</p>
                           <p>
                             <strong
                               >Please note that this is a joke, no such position exists and it does
@@ -529,16 +893,16 @@ export const CXLVaadinAccordionJobsListing = () => html`
                           </p>
                         </div>
                         <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
                           id="gv-field-1-custom"
+                          class="cxl-apply-for-job-container gv-field-1-custom"
                         >
                           <p>
                             <vaadin-button
-                              onclick="window.location.href='www.google.com'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
                               theme="primary cxl-apply-for-job"
+                              onclick="window.location.href='http://www.google.com'"
+                              style="cursor: pointer;"
+                              role="button"
+                              tabindex="0"
                             >
                               Apply now
                             </vaadin-button>
@@ -550,20 +914,20 @@ export const CXLVaadinAccordionJobsListing = () => html`
                     <div class="gv-grid gv-list-view-footer">
                       <div class="gv-grid-col-1-2 gv-left">
                         <div
-                          class="cxl-job-edit-entry gv-field-1-edit_link"
                           id="gv-field-1-edit_link"
+                          class="cxl-job-edit-entry gv-field-1-edit_link"
                         >
-                          <a href="https://jobs.cxl.co/entry/12/?edit=8061da5b53&amp;gvid=102"
+                          <a href="https://jobs.cxl.co/entry/12/?edit=008b0738e0&amp;gvid=102"
                             >Edit Entry</a
                           >
                         </div>
                       </div>
 
                       <div class="gv-grid-col-1-2 gv-right">
-                        <div class="cxl-job-expiry-date gv-field-1-52" id="gv-field-1-52">
-                          <span class="gv-field-label">Expires in</span>2 weeks
+                        <div id="gv-field-1-52" class="cxl-job-expiry-date gv-field-1-52">
+                          <span class="gv-field-label">Expires in</span>1 week
                         </div>
-                        <div class="gv-field-1-entry_link" id="gv-field-1-entry_link">
+                        <div id="gv-field-1-entry_link" class="gv-field-1-entry_link">
                           <a href="https://jobs.cxl.co/entry/12/">
                             <iron-icon
                               icon="lumo:arrow-right"
@@ -576,19 +940,19 @@ export const CXLVaadinAccordionJobsListing = () => html`
                   </vaadin-accordion-panel>
                 </div>
 
-                <div class="gv-list-view" id="gv_list_10">
-                  <vaadin-accordion-panel tabindex="0" theme="cxl-jobs-listing reverse">
+                <div id="gv_list_10" class="gv-list-view">
+                  <vaadin-accordion-panel theme="cxl-jobs-listing reverse" tabindex="0">
                     <div slot="summary">
                       <div class="gv-list-view-title">
                         <h3 class="cxl-job-company-logo gv-field-1-26">
                           <img
-                            alt="Company logo"
-                            class="gv-image gv-field-id-26"
                             src="https://jobs.cxl.co/index.php?gf-download=2021%2F02%2Flogo.png&amp;form-id=1&amp;field-id=26&amp;hash=6241cf213b72648f4d474d5c5984c553889e3cabba1a4d17b16b7a869b4bfb72"
                             width="250"
+                            alt="Company logo"
+                            class="gv-image gv-field-id-26"
                           />
                         </h3>
-                        <div class="cxl-job-role gv-field-1-5" id="gv-field-1-5">
+                        <div id="gv-field-1-5" class="cxl-job-role gv-field-1-5">
                           <span class="gv-field-label">The World</span>
                           <p>
                             <a
@@ -599,29 +963,29 @@ export const CXLVaadinAccordionJobsListing = () => html`
                             >
                           </p>
                         </div>
-                        <div class="cxl-job-location gv-field-1-41" id="gv-field-1-41">
+                        <div id="gv-field-1-41" class="cxl-job-location gv-field-1-41">
                           <p>Austin, Texas<br />United States</p>
                         </div>
-                        <div class="cxl-job-type gv-field-1-7" id="gv-field-1-7">
+                        <div id="gv-field-1-7" class="cxl-job-type gv-field-1-7">
                           <p>Contractor</p>
                         </div>
                         <div
-                          class="cxl-job-date-updated gv-field-1-date_created"
                           id="gv-field-1-date_created"
+                          class="cxl-job-date-updated hidden md_block gv-field-1-date_created"
                         >
-                          <p>2 weeks ago</p>
+                          <p>3 weeks ago</p>
                         </div>
                         <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
                           id="gv-field-1-custom"
+                          class="cxl-apply-for-job-container hidden md_block gv-field-1-custom"
                         >
                           <p>
                             <vaadin-button
-                              onclick="window.location.href='www.google.com'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
                               theme="primary cxl-apply-for-job"
+                              onclick="window.location.href='www.google.com'"
+                              style="cursor: pointer;"
+                              role="button"
+                              tabindex="0"
                             >
                               Apply now
                             </vaadin-button>
@@ -632,7 +996,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
                     <!-- slot="summary" -->
                     <div class="gv-grid gv-list-view-content">
                       <div class="gv-grid-col-2-3 gv-list-view-content-description">
-                        <div class="cxl-job-description gv-field-1-11" id="gv-field-1-11">
+                        <div id="gv-field-1-11" class="cxl-job-description gv-field-1-11">
                           <p>
                             We are a remote startup (headquartered in Canada) building a smart,
                             curious, and driven team that’s making software to help sales reps sell
@@ -770,28 +1134,25 @@ export const CXLVaadinAccordionJobsListing = () => html`
                             <li>Fridays off every July and August (enjoy the summer! ☀️)</li>
                             <li>
                               Benefits (health, dental, etc) through our company HSA (for people
-                              living in Canada)<a
-                                href="http://www.text.com"
-                                rel="noopener"
-                                target="_blank"
-                                >Test</a
-                              >
+                              living in Canada)Test
                             </li>
                           </ul>
-                          <h1 id="salary">Salary</h1>
-                          <p>$90,000 — $120,000</p>
+                          <p>
+                            Salary<br />
+                            $90,000 — $120,000
+                          </p>
                         </div>
                         <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
                           id="gv-field-1-custom"
+                          class="cxl-apply-for-job-container gv-field-1-custom"
                         >
                           <p>
                             <vaadin-button
-                              onclick="window.location.href='www.google.com'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
                               theme="primary cxl-apply-for-job"
+                              onclick="window.location.href='www.google.com'"
+                              style="cursor: pointer;"
+                              role="button"
+                              tabindex="0"
                             >
                               Apply now
                             </vaadin-button>
@@ -803,20 +1164,20 @@ export const CXLVaadinAccordionJobsListing = () => html`
                     <div class="gv-grid gv-list-view-footer">
                       <div class="gv-grid-col-1-2 gv-left">
                         <div
-                          class="cxl-job-edit-entry gv-field-1-edit_link"
                           id="gv-field-1-edit_link"
+                          class="cxl-job-edit-entry gv-field-1-edit_link"
                         >
-                          <a href="https://jobs.cxl.co/entry/10/?edit=1b8387e330&amp;gvid=102"
+                          <a href="https://jobs.cxl.co/entry/10/?edit=a8878f75bf&amp;gvid=102"
                             >Edit Entry</a
                           >
                         </div>
                       </div>
 
                       <div class="gv-grid-col-1-2 gv-right">
-                        <div class="cxl-job-expiry-date gv-field-1-52" id="gv-field-1-52">
-                          <span class="gv-field-label">Expires in</span>2 weeks
+                        <div id="gv-field-1-52" class="cxl-job-expiry-date gv-field-1-52">
+                          <span class="gv-field-label">Expires in</span>7 days
                         </div>
-                        <div class="gv-field-1-entry_link" id="gv-field-1-entry_link">
+                        <div id="gv-field-1-entry_link" class="gv-field-1-entry_link">
                           <a href="https://jobs.cxl.co/entry/10/">
                             <iron-icon
                               icon="lumo:arrow-right"
@@ -829,19 +1190,19 @@ export const CXLVaadinAccordionJobsListing = () => html`
                   </vaadin-accordion-panel>
                 </div>
 
-                <div class="gv-list-view" id="gv_list_9">
-                  <vaadin-accordion-panel tabindex="0" theme="cxl-jobs-listing reverse">
+                <div id="gv_list_9" class="gv-list-view">
+                  <vaadin-accordion-panel theme="cxl-jobs-listing reverse" tabindex="0">
                     <div slot="summary">
                       <div class="gv-list-view-title">
                         <h3 class="cxl-job-company-logo gv-field-1-26">
                           <img
-                            alt="Company logo"
-                            class="gv-image gv-field-id-26"
                             src="https://jobs.cxl.co/index.php?gf-download=2021%2F02%2Foperation.png&amp;form-id=1&amp;field-id=26&amp;hash=5e88f92d8998a042cd9ad02fa2cf6b62a951ec6930a2625e4a6b6752ecb9ed71"
                             width="250"
+                            alt="Company logo"
+                            class="gv-image gv-field-id-26"
                           />
                         </h3>
-                        <div class="cxl-job-role gv-field-1-5" id="gv-field-1-5">
+                        <div id="gv-field-1-5" class="cxl-job-role gv-field-1-5">
                           <span class="gv-field-label">Operations</span>
                           <p>
                             <a
@@ -852,29 +1213,29 @@ export const CXLVaadinAccordionJobsListing = () => html`
                             >
                           </p>
                         </div>
-                        <div class="cxl-job-location gv-field-1-41" id="gv-field-1-41">
+                        <div id="gv-field-1-41" class="cxl-job-location gv-field-1-41">
                           <p>Vilnius, LT<br />Lithuania</p>
                         </div>
-                        <div class="cxl-job-type gv-field-1-7" id="gv-field-1-7">
+                        <div id="gv-field-1-7" class="cxl-job-type gv-field-1-7">
                           <p>Full-time remote</p>
                         </div>
                         <div
-                          class="cxl-job-date-updated gv-field-1-date_created"
                           id="gv-field-1-date_created"
+                          class="cxl-job-date-updated hidden md_block gv-field-1-date_created"
                         >
-                          <p>2 weeks ago</p>
+                          <p>3 weeks ago</p>
                         </div>
                         <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
                           id="gv-field-1-custom"
+                          class="cxl-apply-for-job-container hidden md_block gv-field-1-custom"
                         >
                           <p>
                             <vaadin-button
-                              onclick="window.location.href='www.google.com'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
                               theme="primary cxl-apply-for-job"
+                              onclick="window.location.href='www.google.com'"
+                              style="cursor: pointer;"
+                              role="button"
+                              tabindex="0"
                             >
                               Apply now
                             </vaadin-button>
@@ -885,7 +1246,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
                     <!-- slot="summary" -->
                     <div class="gv-grid gv-list-view-content">
                       <div class="gv-grid-col-2-3 gv-list-view-content-description">
-                        <div class="cxl-job-description gv-field-1-11" id="gv-field-1-11">
+                        <div id="gv-field-1-11" class="cxl-job-description gv-field-1-11">
                           <p>
                             About Us: We are an established rapidly growing SaaS company solving
                             complex issues for dealers to simplify their lives. We are looking for a
@@ -910,16 +1271,16 @@ export const CXLVaadinAccordionJobsListing = () => html`
                           </p>
                         </div>
                         <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
                           id="gv-field-1-custom"
+                          class="cxl-apply-for-job-container gv-field-1-custom"
                         >
                           <p>
                             <vaadin-button
-                              onclick="window.location.href='www.google.com'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
                               theme="primary cxl-apply-for-job"
+                              onclick="window.location.href='www.google.com'"
+                              style="cursor: pointer;"
+                              role="button"
+                              tabindex="0"
                             >
                               Apply now
                             </vaadin-button>
@@ -931,509 +1292,21 @@ export const CXLVaadinAccordionJobsListing = () => html`
                     <div class="gv-grid gv-list-view-footer">
                       <div class="gv-grid-col-1-2 gv-left">
                         <div
-                          class="cxl-job-edit-entry gv-field-1-edit_link"
                           id="gv-field-1-edit_link"
+                          class="cxl-job-edit-entry gv-field-1-edit_link"
                         >
-                          <a href="https://jobs.cxl.co/entry/9/?edit=29995e31a3&amp;gvid=102"
+                          <a href="https://jobs.cxl.co/entry/9/?edit=b56bdf6391&amp;gvid=102"
                             >Edit Entry</a
                           >
                         </div>
                       </div>
 
                       <div class="gv-grid-col-1-2 gv-right">
-                        <div class="cxl-job-expiry-date gv-field-1-52" id="gv-field-1-52">
-                          <span class="gv-field-label">Expires in</span>2 weeks
+                        <div id="gv-field-1-52" class="cxl-job-expiry-date gv-field-1-52">
+                          <span class="gv-field-label">Expires in</span>6 days
                         </div>
-                        <div class="gv-field-1-entry_link" id="gv-field-1-entry_link">
+                        <div id="gv-field-1-entry_link" class="gv-field-1-entry_link">
                           <a href="https://jobs.cxl.co/entry/9/">
-                            <iron-icon
-                              icon="lumo:arrow-right"
-                              style="width: var(--lumo-icon-size-xl, 48px);"
-                            ></iron-icon>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </vaadin-accordion-panel>
-                </div>
-
-                <div class="gv-list-view" id="gv_list_8">
-                  <vaadin-accordion-panel tabindex="0" theme="cxl-jobs-listing reverse">
-                    <div slot="summary">
-                      <div class="gv-list-view-title">
-                        <h3 class="cxl-job-company-logo gv-field-1-26">
-                          <img
-                            alt="Company logo"
-                            class="gv-image gv-field-id-26"
-                            src="https://jobs.cxl.co/index.php?gf-download=2021%2F01%2F368px-Google_2015_logo.svg.png&amp;form-id=1&amp;field-id=26&amp;hash=8e51092706ed0910ce209dce0c16f65b60a21c39cb9a32aaa225643757707fdf"
-                            width="250"
-                          />
-                        </h3>
-                        <div class="cxl-job-role gv-field-1-5" id="gv-field-1-5">
-                          <span class="gv-field-label">Google</span>
-                          <p>
-                            <a
-                              href="https://jobs.cxl.co/entry/8/"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              >Content marketer</a
-                            >
-                          </p>
-                        </div>
-                        <div class="cxl-job-location gv-field-1-41" id="gv-field-1-41">
-                          <p>Glasgow<br />United Kingdom</p>
-                        </div>
-                        <div class="cxl-job-type gv-field-1-7" id="gv-field-1-7">
-                          <p>Full-time remote</p>
-                        </div>
-                        <div
-                          class="cxl-job-date-updated gv-field-1-date_created"
-                          id="gv-field-1-date_created"
-                        >
-                          <p>4 weeks ago</p>
-                        </div>
-                        <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
-                          id="gv-field-1-custom"
-                        >
-                          <p>
-                            <vaadin-button
-                              onclick="window.location.href='https://grnh.se/b1e1dcd11us'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
-                              theme="primary cxl-apply-for-job"
-                            >
-                              Apply now
-                            </vaadin-button>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- slot="summary" -->
-                    <div class="gv-grid gv-list-view-content">
-                      <div class="gv-grid-col-2-3 gv-list-view-content-description">
-                        <div class="cxl-job-description gv-field-1-11" id="gv-field-1-11">
-                          <p>
-                            Pressable is a leading provider of managed WordPress hosting. We're
-                            looking for a hardworking developer to help us build the world's best
-                            WordPress hosting service.
-                          </p>
-                          <p>
-                            As a software engineer with Pressable, you will provide a phenomenal
-                            user experience, build advanced tools and integrations, and solve
-                            difficult problems with creative solutions as we grow and deliver new
-                            capabilities to our customers!
-                          </p>
-                          <p>
-                            <strong
-                              >SOME OF THE PROJECTS YOU'LL BE WORKING ON AS A MEMBER OF OUR
-                              TEAM</strong
-                            >
-                          </p>
-                          <ul>
-                            <li>
-                              A new frontend control panel to deliver a modern and polished user
-                              experience
-                            </li>
-                            <li>
-                              A new API that will enable our customers to interact with our platform
-                              in ways they never have before
-                            </li>
-                            <li>
-                              Data analytics, reporting, and visualization for both customers and
-                              internal team collaboration
-                            </li>
-                            <li>
-                              Integrations with third-party tools including GitHub and WordPress
-                            </li>
-                            <li>
-                              Collaboration with other teams including Customer Success, Marketing,
-                              and Sales to automate and improve the customer experience
-                            </li>
-                            <li>
-                              Tighter integration with our customer WordPress sites with advanced
-                              tooling and abilities from our control panel
-                            </li>
-                            <li>
-                              Daily upkeep, maintenance, monitoring of Pressable's control panel and
-                              systems
-                            </li>
-                            <li>
-                              A new event system to enable notifications, webhooks, and websocket
-                              support with ActionCable
-                            </li>
-                          </ul>
-                          <p><strong>TOOLS AND FRAMEWORKS WE USE</strong></p>
-                          <ul>
-                            <li>Ruby 2.6.6 and Ruby on Rails 6</li>
-                            <li>MySQL/MariaDB</li>
-                            <li>Vue.js and Typescript</li>
-                            <li>Docker and Docker Compose</li>
-                            <li>Elastic Stack for logging and metrics</li>
-                            <li>PHP and WordPress</li>
-                            <li>Git / GitLab / GitHub</li>
-                            <li>Sass / SCSS</li>
-                          </ul>
-                        </div>
-                        <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
-                          id="gv-field-1-custom"
-                        >
-                          <p>
-                            <vaadin-button
-                              onclick="window.location.href='https://grnh.se/b1e1dcd11us'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
-                              theme="primary cxl-apply-for-job"
-                            >
-                              Apply now
-                            </vaadin-button>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="gv-grid gv-list-view-footer">
-                      <div class="gv-grid-col-1-2 gv-left">
-                        <div
-                          class="cxl-job-edit-entry gv-field-1-edit_link"
-                          id="gv-field-1-edit_link"
-                        >
-                          <a href="https://jobs.cxl.co/entry/8/?edit=d9e0ebf8a0&amp;gvid=102"
-                            >Edit Entry</a
-                          >
-                        </div>
-                      </div>
-
-                      <div class="gv-grid-col-1-2 gv-right">
-                        <div class="cxl-job-expiry-date gv-field-1-52" id="gv-field-1-52">
-                          <span class="gv-field-label">Expires in</span>4 days
-                        </div>
-                        <div class="gv-field-1-entry_link" id="gv-field-1-entry_link">
-                          <a href="https://jobs.cxl.co/entry/8/">
-                            <iron-icon
-                              icon="lumo:arrow-right"
-                              style="width: var(--lumo-icon-size-xl, 48px);"
-                            ></iron-icon>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </vaadin-accordion-panel>
-                </div>
-
-                <div class="gv-list-view" id="gv_list_7">
-                  <vaadin-accordion-panel tabindex="0" theme="cxl-jobs-listing reverse">
-                    <div slot="summary">
-                      <div class="gv-list-view-title">
-                        <h3 class="cxl-job-company-logo gv-field-1-26">
-                          <img
-                            alt="Company logo"
-                            class="gv-image gv-field-id-26"
-                            src="https://jobs.cxl.co/index.php?gf-download=2021%2F01%2F1c9a94d6cf75838cf63.png&amp;form-id=1&amp;field-id=26&amp;hash=bef7031346a53e865b3fc52345363bbfd5aabe14fbb91c99c11b5ac59badc988"
-                            width="250"
-                          />
-                        </h3>
-                        <div class="cxl-job-role gv-field-1-5" id="gv-field-1-5">
-                          <span class="gv-field-label">Tomas &amp; Tomas</span>
-                          <p>
-                            <a
-                              href="https://jobs.cxl.co/entry/7/"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              >SEO &amp; SEO</a
-                            >
-                          </p>
-                        </div>
-                        <div class="cxl-job-location gv-field-1-41" id="gv-field-1-41">
-                          <p>Gdansk, G<br />Poland</p>
-                        </div>
-                        <div class="cxl-job-type gv-field-1-7" id="gv-field-1-7">
-                          <p>Full-time</p>
-                        </div>
-                        <div
-                          class="cxl-job-date-updated gv-field-1-date_created"
-                          id="gv-field-1-date_created"
-                        >
-                          <p>4 weeks ago</p>
-                        </div>
-                        <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
-                          id="gv-field-1-custom"
-                        >
-                          <p>
-                            <vaadin-button
-                              onclick="window.location.href='www.google.com'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
-                              theme="primary cxl-apply-for-job"
-                            >
-                              Apply now
-                            </vaadin-button>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- slot="summary" -->
-                    <div class="gv-grid gv-list-view-content">
-                      <div class="gv-grid-col-2-3 gv-list-view-content-description">
-                        <div class="cxl-job-description gv-field-1-11" id="gv-field-1-11">
-                          <p>job description</p>
-                        </div>
-                        <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
-                          id="gv-field-1-custom"
-                        >
-                          <p>
-                            <vaadin-button
-                              onclick="window.location.href='www.google.com'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
-                              theme="primary cxl-apply-for-job"
-                            >
-                              Apply now
-                            </vaadin-button>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="gv-grid gv-list-view-footer">
-                      <div class="gv-grid-col-1-2 gv-left">
-                        <div
-                          class="cxl-job-edit-entry gv-field-1-edit_link"
-                          id="gv-field-1-edit_link"
-                        >
-                          <a href="https://jobs.cxl.co/entry/7/?edit=8814a439bb&amp;gvid=102"
-                            >Edit Entry</a
-                          >
-                        </div>
-                      </div>
-
-                      <div class="gv-grid-col-1-2 gv-right">
-                        <div class="cxl-job-expiry-date gv-field-1-52" id="gv-field-1-52">
-                          <span class="gv-field-label">Expires in</span>2 days
-                        </div>
-                        <div class="gv-field-1-entry_link" id="gv-field-1-entry_link">
-                          <a href="https://jobs.cxl.co/entry/7/">
-                            <iron-icon
-                              icon="lumo:arrow-right"
-                              style="width: var(--lumo-icon-size-xl, 48px);"
-                            ></iron-icon>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </vaadin-accordion-panel>
-                </div>
-
-                <div class="gv-list-view" id="gv_list_6">
-                  <vaadin-accordion-panel tabindex="0" theme="cxl-jobs-listing reverse">
-                    <div slot="summary">
-                      <div class="gv-list-view-title">
-                        <h3 class="cxl-job-company-logo gv-field-1-26">
-                          <img
-                            alt="Company logo"
-                            class="gv-image gv-field-id-26"
-                            src="https://jobs.cxl.co/index.php?gf-download=2021%2F01%2F1c9a94d6cf75838cf62.png&amp;form-id=1&amp;field-id=26&amp;hash=f5014ecd86708e25e674b262254e2a7fb83d8bbc67dd91277fcb13f1f6e7735f"
-                            width="250"
-                          />
-                        </h3>
-                        <div class="cxl-job-role gv-field-1-5" id="gv-field-1-5">
-                          <span class="gv-field-label">billing_company</span>
-                          <p>
-                            <a
-                              href="https://jobs.cxl.co/entry/6/"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              >job role 5</a
-                            >
-                          </p>
-                        </div>
-                        <div class="cxl-job-location gv-field-1-41" id="gv-field-1-41">
-                          <p>tallinn, T<br />Estonia</p>
-                        </div>
-                        <div class="cxl-job-type gv-field-1-7" id="gv-field-1-7">
-                          <p>Full-time</p>
-                        </div>
-                        <div
-                          class="cxl-job-date-updated gv-field-1-date_created"
-                          id="gv-field-1-date_created"
-                        >
-                          <p>4 weeks ago</p>
-                        </div>
-                        <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
-                          id="gv-field-1-custom"
-                        >
-                          <p>
-                            <vaadin-button
-                              onclick="window.location.href='www.google.com'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
-                              theme="primary cxl-apply-for-job"
-                            >
-                              Apply now
-                            </vaadin-button>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- slot="summary" -->
-                    <div class="gv-grid gv-list-view-content">
-                      <div class="gv-grid-col-2-3 gv-list-view-content-description">
-                        <div class="cxl-job-description gv-field-1-11" id="gv-field-1-11">
-                          <p>description</p>
-                        </div>
-                        <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
-                          id="gv-field-1-custom"
-                        >
-                          <p>
-                            <vaadin-button
-                              onclick="window.location.href='www.google.com'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
-                              theme="primary cxl-apply-for-job"
-                            >
-                              Apply now
-                            </vaadin-button>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="gv-grid gv-list-view-footer">
-                      <div class="gv-grid-col-1-2 gv-left">
-                        <div
-                          class="cxl-job-edit-entry gv-field-1-edit_link"
-                          id="gv-field-1-edit_link"
-                        >
-                          <a href="https://jobs.cxl.co/entry/6/?edit=a7b2fc18ba&amp;gvid=102"
-                            >Edit Entry</a
-                          >
-                        </div>
-                      </div>
-
-                      <div class="gv-grid-col-1-2 gv-right">
-                        <div class="cxl-job-expiry-date gv-field-1-52" id="gv-field-1-52">
-                          <span class="gv-field-label">Expires in</span>4 days
-                        </div>
-                        <div class="gv-field-1-entry_link" id="gv-field-1-entry_link">
-                          <a href="https://jobs.cxl.co/entry/6/">
-                            <iron-icon
-                              icon="lumo:arrow-right"
-                              style="width: var(--lumo-icon-size-xl, 48px);"
-                            ></iron-icon>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </vaadin-accordion-panel>
-                </div>
-
-                <div class="gv-list-view" id="gv_list_5">
-                  <vaadin-accordion-panel tabindex="0" theme="cxl-jobs-listing reverse">
-                    <div slot="summary">
-                      <div class="gv-list-view-title">
-                        <h3 class="cxl-job-company-logo gv-field-1-26">
-                          <img
-                            alt="Company logo"
-                            class="gv-image gv-field-id-26"
-                            src="https://jobs.cxl.co/index.php?gf-download=2021%2F01%2F1c9a94d6cf75838cf6.png&amp;form-id=1&amp;field-id=26&amp;hash=f028f4574b3ca943fe902c095b57e89cb83bb1cb49bf30874c892209c313f9ef"
-                            width="250"
-                          />
-                        </h3>
-                        <div class="cxl-job-role gv-field-1-5" id="gv-field-1-5">
-                          <span class="gv-field-label">company name</span>
-                          <p>
-                            <a
-                              href="https://jobs.cxl.co/entry/5/"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              >seo</a
-                            >
-                          </p>
-                        </div>
-                        <div class="cxl-job-location gv-field-1-41" id="gv-field-1-41">
-                          <p>riga, LV<br />Latvia</p>
-                        </div>
-                        <div class="cxl-job-type gv-field-1-7" id="gv-field-1-7">
-                          <p>Full-time</p>
-                        </div>
-                        <div
-                          class="cxl-job-date-updated gv-field-1-date_created"
-                          id="gv-field-1-date_created"
-                        >
-                          <p>4 weeks ago</p>
-                        </div>
-                        <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
-                          id="gv-field-1-custom"
-                        >
-                          <p>
-                            <vaadin-button
-                              onclick="window.location.href='www.url.com'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
-                              theme="primary cxl-apply-for-job"
-                            >
-                              Apply now
-                            </vaadin-button>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- slot="summary" -->
-                    <div class="gv-grid gv-list-view-content">
-                      <div class="gv-grid-col-2-3 gv-list-view-content-description">
-                        <div class="cxl-job-description gv-field-1-11" id="gv-field-1-11">
-                          <p>description</p>
-                        </div>
-                        <div
-                          class="cxl-apply-for-job-container gv-field-1-custom"
-                          id="gv-field-1-custom"
-                        >
-                          <p>
-                            <vaadin-button
-                              onclick="window.location.href='www.url.com'"
-                              role="button"
-                              style="cursor: pointer;"
-                              tabindex="0"
-                              theme="primary cxl-apply-for-job"
-                            >
-                              Apply now
-                            </vaadin-button>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="gv-grid gv-list-view-footer">
-                      <div class="gv-grid-col-1-2 gv-left">
-                        <div
-                          class="cxl-job-edit-entry gv-field-1-edit_link"
-                          id="gv-field-1-edit_link"
-                        >
-                          <a href="https://jobs.cxl.co/entry/5/?edit=0dd9020330&amp;gvid=102"
-                            >Edit Entry</a
-                          >
-                        </div>
-                      </div>
-
-                      <div class="gv-grid-col-1-2 gv-right">
-                        <div class="cxl-job-expiry-date gv-field-1-52" id="gv-field-1-52">
-                          <span class="gv-field-label">Expires in</span>2 days
-                        </div>
-                        <div class="gv-field-1-entry_link" id="gv-field-1-entry_link">
-                          <a href="https://jobs.cxl.co/entry/5/">
                             <iron-icon
                               icon="lumo:arrow-right"
                               style="width: var(--lumo-icon-size-xl, 48px);"
@@ -1452,7 +1325,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
               <div class="gv-grid-col-1-2 gv-right"></div>
             </div>
 
-            <input class="gravityview-view-id" type="hidden" value="102" />
+            <input type="hidden" class="gravityview-view-id" value="102" />
           </div>
         </article>
       </main>
