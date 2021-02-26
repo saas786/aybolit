@@ -955,10 +955,9 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@cwmr/iron-star-rating@^3.1.4":
+"@cwmr/iron-star-rating@github:conversionxl/iron-star-rating":
   version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@cwmr/iron-star-rating/-/iron-star-rating-3.1.4.tgz#d9901ae0e7d198ae5175896b1bdfcad09a866e91"
-  integrity sha512-lpOF5r5QpQIVTq6mt9PpwtbD1srETC+xR8TmjBZXMlGwqhdXwJisyAq3/l1ae6KMrVUBMrANNq+7F8UOQIqjnw==
+  resolved "https://codeload.github.com/conversionxl/iron-star-rating/tar.gz/6e5258fb2b8ec8b30cc9b723b8a26d7bcbc2540b"
   dependencies:
     "@polymer/iron-icon" "^3.0.0"
     "@polymer/iron-icons" "^3.0.0"
@@ -3025,6 +3024,18 @@
     "@vaadin/vaadin-lumo-styles" "^1.6.1"
     "@vaadin/vaadin-material-styles" "^1.3.2"
     "@vaadin/vaadin-themable-mixin" "^1.6.1"
+
+"@vaadin/vaadin-checkbox@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@vaadin/vaadin-checkbox/-/vaadin-checkbox-3.0.0.tgz#15f63edd0c5e2d7d1c73e2b194b8cb65da95e71f"
+  integrity sha512-ZfCP34Ru6e17+y7PKKmfNd82DcmViOAFBvBMnr9MEJ8lm0K5n89yBBeAknGfjcqCHHrNI6aOmU9lK0UDhsoP1Q==
+  dependencies:
+    "@polymer/polymer" "^3.0.0"
+    "@vaadin/vaadin-control-state-mixin" "^2.2.1"
+    "@vaadin/vaadin-element-mixin" "^2.4.1"
+    "@vaadin/vaadin-lumo-styles" "^1.6.1"
+    "@vaadin/vaadin-material-styles" "^1.3.2"
+    "@vaadin/vaadin-themable-mixin" "^1.6.2"
 
 "@vaadin/vaadin-context-menu@^5.0.0-alpha2":
   version "5.0.0-alpha2"

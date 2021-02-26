@@ -1,0 +1,7 @@
+cxl-playbook-accordion {
+  .entry-header {
+    &.checked {
+      text-decoration: line-through;
+    }
+  }
+}
