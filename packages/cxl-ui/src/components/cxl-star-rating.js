@@ -8,6 +8,11 @@ import { IronStarRating } from '@cwmr/iron-star-rating';
  * it won't store the state in the `localStorage`
  */
 export class CXLStarRating extends IronStarRating {
+  constructor() {
+    super();
+    this.icon = 'vaadin:star';
+  }
+
   static get is() {
     return 'cxl-star-rating';
   }
