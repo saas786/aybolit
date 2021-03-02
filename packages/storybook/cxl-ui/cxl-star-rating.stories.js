@@ -13,7 +13,7 @@ export default {
 };
 
 export const CXLStarRating = () => html`
-  <cxl-star-rating id="rating_post_id_1234"></cxl-star-rating>
+  <cxl-star-rating style="vertical-align: text-bottom" id="rating_post_id_1234"></cxl-star-rating>
 `;
 
 CXLStarRating.storyName = 'cxl-star-rating';

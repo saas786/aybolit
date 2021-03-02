@@ -51,10 +51,11 @@ export class CXLPlaybookAccordion extends CXLVaadinAccordion {
 
       localStorage.setItem(storageId, JSON.stringify(stateItems));
 
-      this._updateCSSAndPanelStateToCheckboxesStates();
-
       this._saveCheckboxesState();
     }
+
+    // Allow CSS effects also without storage.
+    this._updateCSSAndPanelStateToCheckboxesStates();
   }
 
   _saveCheckboxesState() {
