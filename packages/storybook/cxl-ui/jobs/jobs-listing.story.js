@@ -1,10 +1,10 @@
 import { html } from 'lit-html';
 import '@conversionxl/cxl-ui/src/components/cxl-vaadin-accordion.js';
 
-export const CXLVaadinAccordionJobsListing = () => html`
+export const CXLJobsListing = () => html`
   <cxl-app-layout id="container" class="cxl-app-layout" wide="" layout="1c-w" scroll="document">
     <cxl-marketing-nav
-      class="menu menu--primary headroom headroom--top headroom--not-bottom"
+      class="menu menu--primary headroom headroom--not-bottom headroom--pinned headroom--top"
       slot="header"
       wide=""
     >
@@ -302,6 +302,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
                         <option value="United States">United States</option>
                         <option value="Poland">Poland</option>
                         <option value="Spain">Spain</option>
+                        <option value="Taiwan">Taiwan</option>
                       </select>
                     </p>
                   </div>
@@ -341,29 +342,128 @@ export const CXLVaadinAccordionJobsListing = () => html`
                 </form>
               </div>
               <div class="gv-grid-col-1-2 gv-left">
-                <div class="gv-widget-pagination "><p>Displaying 1 - 5 of 5</p></div>
+                <div class="gv-widget-pagination "><p>Displaying 1 - 3 of 6</p></div>
               </div>
-              <div class="gv-grid-col-1-2 gv-right"></div>
+              <div class="gv-grid-col-1-2 gv-right">
+                <div class="gv-widget-page-links">
+                  <span aria-current="page" class="page-numbers current">1</span>
+                  <a class="page-numbers" href="https://jobs.cxl.co?pagenum=2">2</a>
+                  <a class="next page-numbers" href="https://jobs.cxl.co?pagenum=2">Next →</a>
+                </div>
+              </div>
             </div>
 
             <div
               class="gv-list-container gv-list-view gv-list-multiple-container gv-container gv-container-102"
             >
               <cxl-vaadin-accordion theme="cxl-jobs-listing" opened="0">
+                <div id="gv_list_21" class="gv-list-view">
+                  <vaadin-accordion-panel theme="cxl-jobs-listing reverse" tabindex="0">
+                    <div slot="summary">
+                      <div class="gv-list-view-title">
+                        <h3 class="cxl-job-company-logo gv-field-1-26">
+                          <img
+                            src="https://jobs.cxl.co/index.php?gf-download=2021%2F03%2F368px-Google_2015_logo.svg.png&amp;form-id=1&amp;field-id=26&amp;hash=7eb86bba4affdfe96aaa234fe08eff636f77b176b4e2d15007ee446b7677f464"
+                            width="250"
+                            alt="Company logo"
+                            class="gv-image gv-field-id-26"
+                          />
+                        </h3>
+                        <div id="gv-field-1-5" class="cxl-job-role gv-field-1-5">
+                          <span class="gv-field-label">Test</span>
+                          <p>Role</p>
+                        </div>
+                        <div id="gv-field-1-41" class="cxl-job-location gv-field-1-41">
+                          <p>test, test<br />Taiwan</p>
+                        </div>
+                        <div id="gv-field-1-7" class="cxl-job-type gv-field-1-7">
+                          <p>Full-time</p>
+                        </div>
+                        <div
+                          id="gv-field-1-date_created"
+                          class="cxl-job-date-updated hidden md_block gv-field-1-date_created"
+                        >
+                          <p>2 days ago</p>
+                        </div>
+                        <div
+                          id="gv-field-1-custom"
+                          class="cxl-apply-for-job-container hidden gv-field-1-custom"
+                        >
+                          <p>
+                            <vaadin-button
+                              theme="primary cxl-apply-for-job"
+                              onclick="window.location.href='www.google.com'"
+                              style="cursor: pointer;"
+                              role="button"
+                              tabindex="0"
+                            >
+                              Apply now
+                            </vaadin-button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- slot="summary" -->
+                    <div class="gv-grid gv-list-view-content">
+                      <div class="gv-grid-col-2-3 gv-list-view-content-description">
+                        <div id="gv-field-1-11" class="cxl-job-description gv-field-1-11">
+                          <p>test</p>
+                        </div>
+                        <div
+                          id="gv-field-1-custom"
+                          class="cxl-apply-for-job-container gv-field-1-custom"
+                        >
+                          <p>
+                            <vaadin-button
+                              theme="primary cxl-apply-for-job"
+                              onclick="window.location.href='www.google.com'"
+                              style="cursor: pointer;"
+                              role="button"
+                              tabindex="0"
+                            >
+                              Apply now
+                            </vaadin-button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="gv-grid gv-list-view-footer">
+                      <div class="gv-grid-col-1-2 gv-left">
+                        <div
+                          id="gv-field-1-edit_link"
+                          class="cxl-job-edit-entry gv-field-1-edit_link"
+                        >
+                          <a href="https://jobs.cxl.co/entry/21/?edit=1dd1d2bf81&amp;gvid=102"
+                            >Edit Entry</a
+                          >
+                        </div>
+                      </div>
+
+                      <div class="gv-grid-col-1-2 gv-right">
+                        <div id="gv-field-1-52" class="cxl-job-expiry-date gv-field-1-52">
+                          <span class="gv-field-label">Expires in</span>4 weeks
+                        </div>
+                        <div id="gv-field-1-entry_link" class="gv-field-1-entry_link">
+                          <a href="https://jobs.cxl.co/entry/21/">
+                            <iron-icon
+                              icon="lumo:arrow-right"
+                              style="width: var(--lumo-icon-size-xl, 48px);"
+                            ></iron-icon>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </vaadin-accordion-panel>
+                </div>
+
                 <div id="gv_list_20" class="gv-list-view">
                   <vaadin-accordion-panel theme="cxl-jobs-listing reverse" tabindex="0">
                     <div slot="summary">
                       <div class="gv-list-view-title">
                         <div id="gv-field-1-5" class="cxl-job-role gv-field-1-5">
                           <span class="gv-field-label">App Anie</span>
-                          <p>
-                            <a
-                              href="https://jobs.cxl.co/entry/20/"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              >Senior Backend Engineer</a
-                            >
-                          </p>
+                          <p>Senior Backend Engineer</p>
                         </div>
                         <div id="gv-field-1-41" class="cxl-job-location gv-field-1-41">
                           <p>Remote<br />Spain</p>
@@ -375,11 +475,11 @@ export const CXLVaadinAccordionJobsListing = () => html`
                           id="gv-field-1-date_created"
                           class="cxl-job-date-updated hidden md_block gv-field-1-date_created"
                         >
-                          <p>4 hours ago</p>
+                          <p>5 days ago</p>
                         </div>
                         <div
                           id="gv-field-1-custom"
-                          class="cxl-apply-for-job-container hidden md_block gv-field-1-custom"
+                          class="cxl-apply-for-job-container hidden gv-field-1-custom"
                         >
                           <p>
                             <vaadin-button
@@ -540,7 +640,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
                           id="gv-field-1-edit_link"
                           class="cxl-job-edit-entry gv-field-1-edit_link"
                         >
-                          <a href="https://jobs.cxl.co/entry/20/?edit=8c4e3b91a0&amp;gvid=102"
+                          <a href="https://jobs.cxl.co/entry/20/?edit=60765b21b0&amp;gvid=102"
                             >Edit Entry</a
                           >
                         </div>
@@ -577,14 +677,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
                         </h3>
                         <div id="gv-field-1-5" class="cxl-job-role gv-field-1-5">
                           <span class="gv-field-label">warsaw</span>
-                          <p>
-                            <a
-                              href="https://jobs.cxl.co/entry/17/"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              >marketing and marketing and marketing</a
-                            >
-                          </p>
+                          <p>marketing and marketing and marketing</p>
                         </div>
                         <div id="gv-field-1-41" class="cxl-job-location gv-field-1-41">
                           <p>warsaw, capital of Poland<br />Poland</p>
@@ -596,11 +689,11 @@ export const CXLVaadinAccordionJobsListing = () => html`
                           id="gv-field-1-date_created"
                           class="cxl-job-date-updated hidden md_block gv-field-1-date_created"
                         >
-                          <p>4 days ago</p>
+                          <p>1 week ago</p>
                         </div>
                         <div
                           id="gv-field-1-custom"
-                          class="cxl-apply-for-job-container hidden md_block gv-field-1-custom"
+                          class="cxl-apply-for-job-container hidden gv-field-1-custom"
                         >
                           <p>
                             <vaadin-button
@@ -715,7 +808,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
                           id="gv-field-1-edit_link"
                           class="cxl-job-edit-entry gv-field-1-edit_link"
                         >
-                          <a href="https://jobs.cxl.co/entry/17/?edit=d5587fe52c&amp;gvid=102"
+                          <a href="https://jobs.cxl.co/entry/17/?edit=79c8745008&amp;gvid=102"
                             >Edit Entry</a
                           >
                         </div>
@@ -723,7 +816,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
 
                       <div class="gv-grid-col-1-2 gv-right">
                         <div id="gv-field-1-52" class="cxl-job-expiry-date gv-field-1-52">
-                          <span class="gv-field-label">Expires in</span>4 weeks
+                          <span class="gv-field-label">Expires in</span>3 weeks
                         </div>
                         <div id="gv-field-1-entry_link" class="gv-field-1-entry_link">
                           <a href="https://jobs.cxl.co/entry/17/">
@@ -752,14 +845,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
                         </h3>
                         <div id="gv-field-1-5" class="cxl-job-role gv-field-1-5">
                           <span class="gv-field-label">RemoteOK</span>
-                          <p>
-                            <a
-                              href="https://jobs.cxl.co/entry/12/"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              >software tester</a
-                            >
-                          </p>
+                          <p>software tester</p>
                         </div>
                         <div id="gv-field-1-41" class="cxl-job-location gv-field-1-41">
                           <p>klaipeda<br />Lithuania</p>
@@ -771,11 +857,11 @@ export const CXLVaadinAccordionJobsListing = () => html`
                           id="gv-field-1-date_created"
                           class="cxl-job-date-updated hidden md_block gv-field-1-date_created"
                         >
-                          <p>3 weeks ago</p>
+                          <p>4 weeks ago</p>
                         </div>
                         <div
                           id="gv-field-1-custom"
-                          class="cxl-apply-for-job-container hidden md_block gv-field-1-custom"
+                          class="cxl-apply-for-job-container hidden gv-field-1-custom"
                         >
                           <p>
                             <vaadin-button
@@ -917,7 +1003,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
                           id="gv-field-1-edit_link"
                           class="cxl-job-edit-entry gv-field-1-edit_link"
                         >
-                          <a href="https://jobs.cxl.co/entry/12/?edit=008b0738e0&amp;gvid=102"
+                          <a href="https://jobs.cxl.co/entry/12/?edit=3a404a9473&amp;gvid=102"
                             >Edit Entry</a
                           >
                         </div>
@@ -925,7 +1011,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
 
                       <div class="gv-grid-col-1-2 gv-right">
                         <div id="gv-field-1-52" class="cxl-job-expiry-date gv-field-1-52">
-                          <span class="gv-field-label">Expires in</span>1 week
+                          <span class="gv-field-label">Expires in</span>2 days
                         </div>
                         <div id="gv-field-1-entry_link" class="gv-field-1-entry_link">
                           <a href="https://jobs.cxl.co/entry/12/">
@@ -954,14 +1040,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
                         </h3>
                         <div id="gv-field-1-5" class="cxl-job-role gv-field-1-5">
                           <span class="gv-field-label">The World</span>
-                          <p>
-                            <a
-                              href="https://jobs.cxl.co/entry/10/"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              >Software engineer</a
-                            >
-                          </p>
+                          <p>Software engineer</p>
                         </div>
                         <div id="gv-field-1-41" class="cxl-job-location gv-field-1-41">
                           <p>Austin, Texas<br />United States</p>
@@ -973,11 +1052,11 @@ export const CXLVaadinAccordionJobsListing = () => html`
                           id="gv-field-1-date_created"
                           class="cxl-job-date-updated hidden md_block gv-field-1-date_created"
                         >
-                          <p>3 weeks ago</p>
+                          <p>4 weeks ago</p>
                         </div>
                         <div
                           id="gv-field-1-custom"
-                          class="cxl-apply-for-job-container hidden md_block gv-field-1-custom"
+                          class="cxl-apply-for-job-container hidden gv-field-1-custom"
                         >
                           <p>
                             <vaadin-button
@@ -1167,7 +1246,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
                           id="gv-field-1-edit_link"
                           class="cxl-job-edit-entry gv-field-1-edit_link"
                         >
-                          <a href="https://jobs.cxl.co/entry/10/?edit=a8878f75bf&amp;gvid=102"
+                          <a href="https://jobs.cxl.co/entry/10/?edit=1376ad3253&amp;gvid=102"
                             >Edit Entry</a
                           >
                         </div>
@@ -1175,7 +1254,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
 
                       <div class="gv-grid-col-1-2 gv-right">
                         <div id="gv-field-1-52" class="cxl-job-expiry-date gv-field-1-52">
-                          <span class="gv-field-label">Expires in</span>7 days
+                          <span class="gv-field-label">Expires in</span>2 days
                         </div>
                         <div id="gv-field-1-entry_link" class="gv-field-1-entry_link">
                           <a href="https://jobs.cxl.co/entry/10/">
@@ -1204,14 +1283,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
                         </h3>
                         <div id="gv-field-1-5" class="cxl-job-role gv-field-1-5">
                           <span class="gv-field-label">Operations</span>
-                          <p>
-                            <a
-                              href="https://jobs.cxl.co/entry/9/"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              >Developer</a
-                            >
-                          </p>
+                          <p>Developer</p>
                         </div>
                         <div id="gv-field-1-41" class="cxl-job-location gv-field-1-41">
                           <p>Vilnius, LT<br />Lithuania</p>
@@ -1223,11 +1295,11 @@ export const CXLVaadinAccordionJobsListing = () => html`
                           id="gv-field-1-date_created"
                           class="cxl-job-date-updated hidden md_block gv-field-1-date_created"
                         >
-                          <p>3 weeks ago</p>
+                          <p>4 weeks ago</p>
                         </div>
                         <div
                           id="gv-field-1-custom"
-                          class="cxl-apply-for-job-container hidden md_block gv-field-1-custom"
+                          class="cxl-apply-for-job-container hidden gv-field-1-custom"
                         >
                           <p>
                             <vaadin-button
@@ -1295,7 +1367,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
                           id="gv-field-1-edit_link"
                           class="cxl-job-edit-entry gv-field-1-edit_link"
                         >
-                          <a href="https://jobs.cxl.co/entry/9/?edit=b56bdf6391&amp;gvid=102"
+                          <a href="https://jobs.cxl.co/entry/9/?edit=fd845d1980&amp;gvid=102"
                             >Edit Entry</a
                           >
                         </div>
@@ -1303,7 +1375,7 @@ export const CXLVaadinAccordionJobsListing = () => html`
 
                       <div class="gv-grid-col-1-2 gv-right">
                         <div id="gv-field-1-52" class="cxl-job-expiry-date gv-field-1-52">
-                          <span class="gv-field-label">Expires in</span>6 days
+                          <span class="gv-field-label">Expires in</span>24 hours
                         </div>
                         <div id="gv-field-1-entry_link" class="gv-field-1-entry_link">
                           <a href="https://jobs.cxl.co/entry/9/">
@@ -1322,7 +1394,13 @@ export const CXLVaadinAccordionJobsListing = () => html`
             <div class="gv-grid gv-widgets-footer">
               <div class="gv-grid-col-1-1 gv-left"></div>
               <div class="gv-grid-col-1-2 gv-left"></div>
-              <div class="gv-grid-col-1-2 gv-right"></div>
+              <div class="gv-grid-col-1-2 gv-right">
+                <div class="gv-widget-page-links">
+                  <span aria-current="page" class="page-numbers current">1</span>
+                  <a class="page-numbers" href="https://jobs.cxl.co?pagenum=2">2</a>
+                  <a class="next page-numbers" href="https://jobs.cxl.co?pagenum=2">Next →</a>
+                </div>
+              </div>
             </div>
 
             <input type="hidden" class="gravityview-view-id" value="102" />

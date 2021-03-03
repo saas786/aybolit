@@ -157,7 +157,7 @@ cxl-vaadin-accordion {
       // padding-right: width of toggle icon + fields right margin
       padding-right: calc(28px + var(--lumo-space-m));
       // padding-left: logo size + spacing
-      padding-left: calc(var(--cxl-job-company-logo-size) + (var(--lumo-space-m) * 2));
+      padding-left: calc(var(--cxl-job-company-logo-size) + (var(--lumo-space-m) * 3));
 
       @media #{mq.$medium} {
         flex-flow: row wrap;
@@ -185,6 +185,7 @@ cxl-vaadin-accordion {
       p {
         margin: 0;
         font-family: inherit;
+        font-weight: inherit;
       }
     }
 
@@ -241,6 +242,7 @@ cxl-vaadin-accordion {
       order: 1;
       margin-bottom: var(--lumo-space-s);
       font-size: var(--lumo-font-size-m);
+      font-weight: 600;
 
       @media #{mq.$medium} {
         margin-bottom: 0;
@@ -251,10 +253,15 @@ cxl-vaadin-accordion {
         flex-grow: 2;
       }
 
+      a {
+        font-weight: 500;
+      }
+
       .gv-field-label {
         display: inline-block;
         margin-bottom: var(--lumo-space-xs);
         font-size: var(--lumo-font-size-s);
+        font-weight: 500;
 
         @media #{mq.$medium} {
           font-size: var(--lumo-font-size-s);
@@ -285,11 +292,11 @@ cxl-vaadin-accordion {
     }
 
     .cxl-job-type {
-      margin-bottom: var(--lumo-space-xs);
+      margin-bottom: var(--lumo-space-s);
       font-size: var(--lumo-font-size-s);
 
       @media #{mq.$medium} {
-        margin-bottom: 0;
+        margin-bottom: var(--lumo-space-s);
         font-size: var(--lumo-font-size-m);
       }
     }
@@ -302,7 +309,24 @@ cxl-vaadin-accordion {
       }
     }
 
-    .cxl-apply-for-job-container {
+    .cxl-job-approval-status {
+      margin-top: var(--lumo-space-xs);
+      margin-bottom: var(--lumo-space-xs);
+      font-size: var(--lumo-font-size-s);
+
+      @media #{mq.$medium} {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: right;
+      }
+
+      @media (min-width: 768px) and (max-width: 1023px) {
+        text-align: center;
+      }
+    }
+
+    .cxl-apply-for-job-container,
+    .cxl-job-edit {
       flex: 0 0 auto;
       width: auto;
 
@@ -311,18 +335,8 @@ cxl-vaadin-accordion {
       }
     }
 
-    .gv-list-view:nth-child(odd) {
-      vaadin-accordion-panel:not([opened]) {
-        background-color: var(--lumo-shade-5pct);
-      }
-    }
-
     .gv-field-label {
       margin-right: var(--lumo-space-xs);
-    }
-
-    .cxl-job-description {
-      columns: 2;
     }
   }
 }

@@ -174,7 +174,7 @@
 
 :host([theme~="cxl-jobs-listing"]:nth-child(odd):not([opened])) {
   [part="summary"] {
-    background-color: transparent;
+    background-color: var(--lumo-shade-5pct);
   }
 
   [part="content"] {
