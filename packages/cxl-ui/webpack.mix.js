@@ -47,11 +47,11 @@ mix.options({
   terser: {
     terserOptions: {
       output: {
-        comments: false
-      }
+        comments: false,
+      },
     },
-    extractComments: false
-  }
+    extractComments: false,
+  },
 });
 
 /*
@@ -95,18 +95,26 @@ mix.extract();
  * See: https://github.com/JeffreyWay/laravel-mix/blob/fe4c1383bd11d25862b557587c97bafd95594365/docs/quick-webpack-configuration.md
  * See: https://webpack.js.org/configuration/
  */
-mix.webpackConfig(() => {
-  return {
-    stats: 'minimal',
-    devtool: mix.inProduction() ? false : 'source-map',
-    performance: { hints: false },
-    module: {
-      rules: [
-        {
-          test: require.resolve('headroom.js'),
-          use: 'imports-loader?this=>window,define=>false,exports=>false'
-        }
-      ]
-    }
-  };
-});
+mix.webpackConfig(() => ({
+  stats: 'minimal',
+  devtool: mix.inProduction() ? false : 'source-map',
+  performance: { hints: false },
+  module: {
+    rules: [
+      {
+        test: require.resolve('headroom.js'),
+        // use: 'imports-loader?this=>window,define=>false,exports=>false'
+        use: [
+          {
+            loader: 'imports-loader',
+            options: {
+              wrapper: 'window',
+              additionalCode:
+                '/* Disable AMD for misbehaving libraries */var define = false;var exports = false;',
+            },
+          },
+        ],
+      },
+    ],
+  },
+}));
