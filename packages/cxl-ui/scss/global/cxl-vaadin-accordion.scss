@@ -339,4 +339,12 @@ cxl-vaadin-accordion {
       margin-right: var(--lumo-space-xs);
     }
   }
+
+  /* stylelint-disable-next-line selector-max-type */
+  vaadin-accordion-panel[opened] + vaadin-accordion-panel[opened] {
+    /* stylelint-disable-next-line selector-max-type */
+    &::part(summary) {
+      border-top-color: transparent;
+    }
+  }
 }
