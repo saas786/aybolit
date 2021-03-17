@@ -12,7 +12,7 @@ import cxlVaadinDialogStyles from '../styles/cxl-vaadin-dialog-css';
 import cxlVaadinDialogGlobalStyles from '../styles/global/cxl-vaadin-dialog-css';
 
 registerStyles('vaadin-dialog-overlay', cxlVaadinDialogStyles, {
-  moduleId: 'cxl-vaadin-dialog-overlay-module'
+  moduleId: 'cxl-vaadin-dialog-overlay-module',
 });
 
 /**
@@ -26,30 +26,30 @@ export class CXLVaadinDialog extends DialogElement {
       wide: {
         type: Boolean,
         notify: true,
-        reflectToAttribute: true
+        reflectToAttribute: true,
       },
 
       phone: {
         type: Boolean,
         notify: true,
-        reflectToAttribute: true
+        reflectToAttribute: true,
       },
 
       touch: {
         type: Boolean,
         notify: true,
-        reflectToAttribute: true
+        reflectToAttribute: true,
       },
 
       closeOnF4Press: {
         type: Boolean,
-        value: false
+        value: false,
       },
 
       closeButtonDelay: {
         type: Number,
         default: 0,
-        notify: true
+        notify: true,
       },
 
       /**
@@ -57,7 +57,7 @@ export class CXLVaadinDialog extends DialogElement {
        */
       stackable: {
         type: Boolean,
-        value: false
+        value: false,
       },
 
       /**
@@ -66,18 +66,18 @@ export class CXLVaadinDialog extends DialogElement {
       openSound: {
         type: String,
         value: '',
-        notify: true
+        notify: true,
       },
 
       dialogType: {
         type: String,
-        value: 'vaadin-dialog'
-      }
+        value: 'vaadin-dialog',
+      },
     };
   }
 
   static get template() {
-    // eslint-disable-next-line lit/no-legacy-template-syntax
+    /* eslint-disable lit/no-legacy-template-syntax */
     return html`
       <style>
         :host {
@@ -103,6 +103,7 @@ export class CXLVaadinDialog extends DialogElement {
         on-touch-changed="_touchChanged"
       ></vaadin-device-detector>
     `;
+    /* eslint-enable lit/no-legacy-template-syntax */
   }
 
   constructor() {
@@ -145,7 +146,7 @@ export class CXLVaadinDialog extends DialogElement {
     super.ready();
 
     registerGlobalStyles(cxlVaadinDialogGlobalStyles, {
-      moduleId: 'cxl-vaadin-dialog-global'
+      moduleId: 'cxl-vaadin-dialog-global',
     });
 
     this._initReady();
@@ -235,31 +236,31 @@ export class CXLVaadinDialog extends DialogElement {
       container: {
         active_class: 'active',
         attr: {
-          class: 'popmake'
-        }
+          class: 'popmake',
+        },
       },
       title: {
         attr: {
-          class: 'popmake-title'
-        }
+          class: 'popmake-title',
+        },
       },
       content: {
         attr: {
-          class: 'popmake-content'
-        }
+          class: 'popmake-content',
+        },
       },
       close: {
         close_speed: 0,
         attr: {
-          class: 'popmake-close'
-        }
+          class: 'popmake-close',
+        },
       },
       overlay: {
         attr: {
           id: 'popmake-overlay',
-          class: 'popmake-overlay'
-        }
-      }
+          class: 'popmake-overlay',
+        },
+      },
     };
     const settings = dialog.getAttribute('data-popmake')
       ? JSON.parse(dialog.getAttribute('data-popmake'))
@@ -350,10 +351,10 @@ export class CXLVaadinDialog extends DialogElement {
        */
       try {
         const availableOverlays = document.querySelectorAll('vaadin-dialog-overlay');
-        [...availableOverlays].forEach(dialog => {
+        [...availableOverlays].forEach((dialog) => {
           if (dialog.contains(el)) {
             const themes = dialog.theme.toString().split(' ');
-            const theme = themes.find(themeItem => themeItem.startsWith('overlay-theme-'));
+            const theme = themes.find((themeItem) => themeItem.startsWith('overlay-theme-'));
             $this = document.querySelectorAll(`vaadin-dialog-overlay[theme~="${theme}"]`);
             throw BreakException;
           }
@@ -437,7 +438,7 @@ export class CXLVaadinDialog extends DialogElement {
     this.resetZindex();
     this.initAutoClose();
 
-    this.$.overlay.addEventListener('vaadin-overlay-open', e => {
+    this.$.overlay.addEventListener('vaadin-overlay-open', (e) => {
       this.initStackable(e);
       this.closeBtnDelay(e);
       this.playSound(e);
@@ -502,7 +503,7 @@ export class CXLVaadinDialog extends DialogElement {
   initCloseBtn() {
     this.$.overlay.addEventListener(
       'click',
-      e => {
+      (e) => {
         // If the clicked element doesn't have the right selector, bail
         // if ( ! e.target.matches( '.pum-close' ) ) {
         if (!e.target.matches('[theme~="pum-close"]')) {
@@ -522,7 +523,7 @@ export class CXLVaadinDialog extends DialogElement {
   }
 
   initKeyDown() {
-    document.addEventListener('keydown', event => {
+    document.addEventListener('keydown', (event) => {
       if (!this.$.overlay._last) {
         return;
       }
@@ -531,7 +532,7 @@ export class CXLVaadinDialog extends DialogElement {
         const evt = new CustomEvent('vaadin-overlay-f4-press', {
           bubbles: true,
           cancelable: true,
-          detail: { sourceEvent: event }
+          detail: { sourceEvent: event },
         });
 
         this.$.overlay.dispatchEvent(evt);
@@ -573,7 +574,7 @@ export class CXLVaadinDialog extends DialogElement {
      */
     if (!this.stackable) {
       // Close other attached overlays, except current.
-      this._attachedInstances().forEach(el => {
+      this._attachedInstances().forEach((el) => {
         if (el !== this.$.overlay) {
           // close the overlay
           if (el.opened) {
@@ -591,7 +592,7 @@ export class CXLVaadinDialog extends DialogElement {
   // eslint-disable-next-line class-methods-use-this
   _attachedInstances() {
     return Array.from(document.body.children)
-      .filter(el => el instanceof OverlayElement && !el.hasAttribute('closing'))
+      .filter((el) => el instanceof OverlayElement && !el.hasAttribute('closing'))
       .sort((a, b) => a.__zIndex - b.__zIndex || 0);
   }
 
@@ -611,7 +612,7 @@ export class CXLVaadinDialog extends DialogElement {
     if (this.querySelector(`#${this.id}-audio-player`)) {
       this.querySelector(`#${this.id}-audio-player`)
         .play()
-        .catch(reason => {
+        .catch((reason) => {
           // eslint-disable-next-line no-console
           console.warn(`Sound was not able to play when popup opened. Reason: ${reason}`);
         });
@@ -632,7 +633,7 @@ export class CXLVaadinDialog extends DialogElement {
          * basically resets bringToFront(), which is applied to overlay, if !modeless
          * which brings dialog with overlay in front of other (modeless).
          */
-        attachedInstances.forEach(el => {
+        attachedInstances.forEach((el) => {
           el.style.removeProperty('z-index');
         });
 
@@ -640,7 +641,7 @@ export class CXLVaadinDialog extends DialogElement {
          * Modeless dialog takes priority by default, doesn't care about z-index.
          * So resetting pointer events based on z-index priority.
          */
-        attachedInstances.forEach(el => {
+        attachedInstances.forEach((el) => {
           // eslint-disable-next-line no-param-reassign
           el.shadowRoot.querySelector('[part="overlay"]').style.pointerEvents = 'none';
         });
@@ -663,7 +664,7 @@ export class CXLVaadinDialog extends DialogElement {
       return;
     }
 
-    this.$.overlay.addEventListener('vaadin-overlay-open', e => {
+    this.$.overlay.addEventListener('vaadin-overlay-open', (e) => {
       setTimeout(() => {
         this.closeDialog(e);
       }, parseInt(delay, 10));

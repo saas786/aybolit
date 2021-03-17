@@ -113,7 +113,7 @@ export class ConditionManager {
       return false;
     }
 
-    const isEmptyObj = obj => {
+    const isEmptyObj = (obj) => {
       let key;
       // eslint-disable-next-line no-restricted-syntax
       for (key in obj) {
@@ -125,9 +125,7 @@ export class ConditionManager {
       return true;
     };
 
-    const hasProp = (obj, prop) => {
-      return Object.prototype.hasOwnProperty.call(obj, prop);
-    };
+    const hasProp = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop);
 
     if (isEmptyObj(this.query_args)) {
       return false;

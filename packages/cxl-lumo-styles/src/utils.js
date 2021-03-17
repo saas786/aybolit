@@ -83,7 +83,7 @@ export const getParents = (element, selector, includeElement = false) => {
  * @return {void}
  */
 // eslint-disable-next-line consistent-return
-export const domReady = callback => {
+export const domReady = (callback) => {
   if (
     document.readyState === 'complete' || // DOMContentLoaded + Images/Styles/etc loaded, so we call directly.
     document.readyState === 'interactive' // DOMContentLoaded fires at this point, so we call directly.

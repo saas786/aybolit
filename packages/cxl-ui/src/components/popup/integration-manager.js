@@ -63,7 +63,7 @@ export class IntegrationManager {
 
     document.addEventListener(
       'gform-confirmation-loaded',
-      event => {
+      (event) => {
         const { formId } = event.detail.sourceData;
 
         // All the magic happens here.
@@ -73,7 +73,7 @@ export class IntegrationManager {
 
         this.formSubmission(form, {
           formProvider,
-          formId
+          formId,
         });
 
         /**
@@ -100,7 +100,7 @@ export class IntegrationManager {
      */
 
     domReady(() => {
-      Array.from(document.querySelectorAll('.gform_wrapper > form')).forEach(form => {
+      Array.from(document.querySelectorAll('.gform_wrapper > form')).forEach((form) => {
         const formId = form.getAttribute('id').replace('gform_', '');
         const settingsData = form.querySelector('input.gforms-pum');
         const settings = settingsData ? JSON.parse(settingsData.value) : false;
@@ -151,13 +151,11 @@ export class IntegrationManager {
       formKey: null,
       ajax: true, // Allows detecting submissions that may have already been counted.
       tracked: false,
-      ...args
+      ...args,
     };
 
     // Generate unique formKey identifier.
-    const filterNull = x => {
-      return x;
-    };
+    const filterNull = (x) => x;
 
     // eslint-disable-next-line no-param-reassign
     args.formKey =
@@ -195,8 +193,8 @@ export class IntegrationManager {
       detail: {
         // sourceEvent: event,
         form,
-        args
-      }
+        args,
+      },
     });
 
     this._vaddin_dialog.$.overlay.dispatchEvent(evt);
@@ -226,7 +224,7 @@ export class IntegrationManager {
 
       // Specific provider form with specific instance ID. ex `ninjaforms_1_1` or `calderaforms_jbakrhwkhg_1`
       // Only run this test if we are checking for specific instanceId.
-      !!formInstanceId && `${formIdentifier}_${formInstanceId}` === submittedFormArgs.formKey
+      !!formInstanceId && `${formIdentifier}_${formInstanceId}` === submittedFormArgs.formKey,
     ];
 
     // If any check is true, set the cookie.
@@ -237,7 +235,7 @@ export class IntegrationManager {
   initCloseOnSubmission(settings) {
     if (settings.close_on_form_submission) {
       // PUM.hooks.addAction('pum.integration.form.success', (form, args) => {
-      this._vaddin_dialog.$.overlay.addEventListener('pum.integration.form.success', event => {
+      this._vaddin_dialog.$.overlay.addEventListener('pum.integration.form.success', (event) => {
         // eslint-disable-next-line no-unused-vars
         const { form, args } = event.detail;
 
@@ -269,7 +267,7 @@ export class IntegrationManager {
       closedelay: 0,
       redirect_enabled: false,
       redirect: '',
-      cookie: false
+      cookie: false,
     };
 
     const setCookie = (el, settings2) => {
@@ -277,7 +275,7 @@ export class IntegrationManager {
       settings2 = {
         name: `pum-${this._vaddin_dialog.getSetting(el, 'id')}`,
         expires: '+30 days',
-        ...settings2
+        ...settings2,
       };
 
       this._vaddin_dialog._cookie_manager.setCookie(settings2);
@@ -317,7 +315,7 @@ export class IntegrationManager {
       // $parentPopup.trigger('pumFormSuccess');
       const pumFormSuccess = new CustomEvent('pumFormSuccess', {
         bubbles: true,
-        cancelable: true
+        cancelable: true,
       });
       this._vaddin_dialog.$.overlay.dispatchEvent(pumFormSuccess);
 
@@ -327,7 +325,7 @@ export class IntegrationManager {
         cookie = {
           name: `pum-${this._vaddin_dialog.getSetting($parentPopup[0], 'id')}`,
           expires: '+1 year',
-          ...settingCookie
+          ...settingCookie,
         };
 
         // Set a cookie

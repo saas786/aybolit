@@ -45,7 +45,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "pika build && npm run dev",
+    "dist": "pika build && npm run prod",
     "prod": "npx mix --mix-config=./webpack.mix.js --production",
     "dev": "npx mix --mix-config=./webpack.mix.js watch"
   },
