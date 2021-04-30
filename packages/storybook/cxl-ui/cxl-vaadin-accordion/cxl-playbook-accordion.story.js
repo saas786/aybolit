@@ -8,8 +8,8 @@ export const CXLPlaybookAccordion = () => html`
       (el) => html`
         <vaadin-accordion-panel class="playbook-step" theme="cxl-playbook-accordion reverse">
           <header class="entry-header" slot="summary">
+            <vaadin-checkbox value="${el.id}"></vaadin-checkbox>
             <h3 class="entry-title no-anchor" itemprop="headline">
-              <vaadin-checkbox value="${el.id}"></vaadin-checkbox>
               ${el.id}. ${unsafeHTML(el.title.rendered)}
             </h3>
           </header>
