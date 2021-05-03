@@ -8,7 +8,12 @@ export default {
 };
 
 // @todo localStorage data panel?
-CXLPlaybookAccordion.storyName = 'cxl-playbook-accordion';
+Object.assign(CXLPlaybookAccordion, {
+  args: {
+    FeedbackButtonLabel: 'Leave feedback',
+  },
+  storyName: 'cxl-playbook-accordion',
+});
 CXLVaadinAccordionThemeArchive.storyName = 'cxl-accordion-card';
 CXLVaadinAccordionThemeFaq.storyName = '[theme=cxl-faq]';
 CXLVaadinAccordionThemeMinidegreeTrack.storyName = '[theme=cxl-minidegree-track]';

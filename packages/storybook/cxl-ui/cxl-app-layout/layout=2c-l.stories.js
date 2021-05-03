@@ -6,7 +6,7 @@ import '@conversionxl/cxl-ui/src/components/cxl-playbook-accordion.js';
 import '@vaadin/vaadin-button';
 import { CXLMarketingNav } from '../cxl-marketing-nav.stories';
 import { CXLStarRating } from '../cxl-star-rating.stories';
-import { CXLPlaybookAccordion } from '../cxl-vaadin-accordion/cxl-playbook-accordion.story';
+import { CXLPlaybookAccordion } from '../cxl-vaadin-accordion.stories';
 
 export default {
   decorators: [withKnobs],
@@ -126,7 +126,7 @@ export const CXLAppLayout2cl = () => {
           </p>
         </div>
 
-        <footer class="entry-footer">${CXLPlaybookAccordion()}</footer>
+        <footer class="entry-footer">${CXLPlaybookAccordion(CXLPlaybookAccordion.args)}</footer>
       </article>
     </cxl-app-layout>
   `;
