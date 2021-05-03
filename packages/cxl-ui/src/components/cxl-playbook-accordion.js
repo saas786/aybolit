@@ -32,6 +32,9 @@ export class CXLPlaybookAccordion extends CXLVaadinAccordion {
     });
 
     this.addEventListener('items-changed', this._itemsChanged);
+
+    // Trigger Steps change event
+    this._dispatchUpdateEvent();
   }
 
   /**
@@ -56,6 +59,9 @@ export class CXLPlaybookAccordion extends CXLVaadinAccordion {
 
     // Allow CSS effects also without storage.
     this._updateCSSAndPanelStateToCheckboxesStates();
+
+    // Trigger Steps change event
+    this._dispatchUpdateEvent();
   }
 
   _saveCheckboxesState() {
@@ -128,5 +134,22 @@ export class CXLPlaybookAccordion extends CXLVaadinAccordion {
   _itemsChanged() {
     this._updateCheckboxesStates();
     this._setupCheckboxClicked();
+  }
+
+  /**
+   * Triggers CustomEvent when steps are first loaded or changed.
+   * @private
+   */
+  _dispatchUpdateEvent() {
+    const stateCheckboxes = JSON.parse(localStorage.getItem(this.checkboxesStorageId));
+
+    const event = new CustomEvent(`cxl-playbook-accordion-changed-${this.id}`, {
+      bubbles: true,
+      detail: {
+        stateCheckboxes,
+      },
+    });
+
+    this.dispatchEvent(event);
   }
 }

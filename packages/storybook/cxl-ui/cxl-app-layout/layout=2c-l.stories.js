@@ -110,7 +110,9 @@ export const CXLAppLayout2cl = () => {
             <span class="progress statement playbook-completion-rate"
               >Completed 4 steps of 8 in total</span
             >
-            <vaadin-progress-bar value="0.50">Completed 4 steps of 8 in total</vaadin-progress-bar>
+            <cxl-playbook-progress-bar cxl-playbook-accordion-id="playbook-3895"
+              >Completed 4 steps of 8 in total</cxl-playbook-progress-bar
+            >
             <section class="course-meta course-enrolment">
               <div class="status in-progress">In Progress</div>
             </section>
