@@ -2,8 +2,8 @@ import { html } from 'lit-html';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 import playbookStepData from './cxl-playbook-accordion.data.json';
 
-export const CXLPlaybookAccordion = ({ FeedbackButtonLabel }) => html`
-  <cxl-playbook-accordion id="playbook-3895" class="plural" opened="0">
+export const CXLPlaybookAccordion = ({ FeedbackButtonLabel, PlaybookId }) => html`
+  <cxl-playbook-accordion id="cxl-playbook-accordion-${PlaybookId}" class="plural" opened="0">
     ${playbookStepData.map(
       (el) => html`
         <vaadin-accordion-panel theme="cxl-playbook-accordion reverse" data-step-id="${el.id}">

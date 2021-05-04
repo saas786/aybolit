@@ -24,6 +24,13 @@ export class CXLPlaybookAccordion extends CXLVaadinAccordion {
     return `${attr}_checkboxes`;
   }
 
+  /**
+   * @return {Array}
+   */
+  get savedStateCheckboxes() {
+    return JSON.parse(localStorage.getItem(this.checkboxesStorageId)) || [];
+  }
+
   ready() {
     super.ready();
 
@@ -33,7 +40,7 @@ export class CXLPlaybookAccordion extends CXLVaadinAccordion {
 
     this.addEventListener('items-changed', this._itemsChanged);
 
-    // Trigger Steps change event
+    // Trigger checkbox change event.
     this._dispatchUpdateEvent();
   }
 
@@ -60,7 +67,7 @@ export class CXLPlaybookAccordion extends CXLVaadinAccordion {
     // Allow CSS effects also without storage.
     this._updateCSSAndPanelStateToCheckboxesStates();
 
-    // Trigger Steps change event
+    // Trigger checkbox change event.
     this._dispatchUpdateEvent();
   }
 
@@ -79,9 +86,10 @@ export class CXLPlaybookAccordion extends CXLVaadinAccordion {
   }
 
   _updateCheckboxesStates() {
-    const stateCheckboxes = JSON.parse(localStorage.getItem(this.checkboxesStorageId));
+    if (!this.savedStateCheckboxes.length) {
+      // Save initial state for cxl-playbook-progress-bar label display.
+      this._saveAccordionState(this.items);
 
-    if (stateCheckboxes === null) {
       return;
     }
 
@@ -89,7 +97,7 @@ export class CXLPlaybookAccordion extends CXLVaadinAccordion {
 
     checkboxes.forEach((item, key) => {
       const checkbox = checkboxes[key];
-      const isChecked = !!stateCheckboxes[key]; // autocast from null or undefined to boolean
+      const isChecked = !!this.savedStateCheckboxes[key]; // auto-cast from null or undefined to boolean.
 
       checkbox.setAttribute('aria-checked', isChecked ? 'true' : 'false');
       checkbox.checked = isChecked;
@@ -137,19 +145,15 @@ export class CXLPlaybookAccordion extends CXLVaadinAccordion {
   }
 
   /**
-   * Triggers CustomEvent when steps are first loaded or changed.
+   * Update world.
    * @private
    */
   _dispatchUpdateEvent() {
-    const stateCheckboxes = JSON.parse(localStorage.getItem(this.checkboxesStorageId));
-
-    const event = new CustomEvent(`cxl-playbook-accordion-changed-${this.id}`, {
-      bubbles: true,
-      detail: {
-        stateCheckboxes,
-      },
-    });
-
-    this.dispatchEvent(event);
+    this.dispatchEvent(
+      new CustomEvent('cxl-playbook-accordion-changed', {
+        bubbles: true,
+        detail: this.savedStateCheckboxes,
+      })
+    );
   }
 }
