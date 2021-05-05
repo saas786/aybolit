@@ -14,6 +14,7 @@ export default {
 };
 
 export const CXLAppLayout2cl = () => {
+  const playbookId = 1234;
   const hasWidgetBackground = boolean('Has widget background?', false);
 
   return html`
@@ -102,18 +103,17 @@ export const CXLAppLayout2cl = () => {
         </h5>
       </section>
 
-      <article class="entry">
+      <article id="post-${playbookId}" class="entry post-${playbookId} playbook type-playbook">
         <header class="entry-header">
           <label>Playbook</label>
           <h1 class="entry-title">Choose a traditional SaaS go-to-market strategy</h1>
           <div class="entry-byline">
-            <span class="progress statement playbook-completion-rate"
-              >Completed 4 steps of 8 in total</span
-            >
-            <vaadin-progress-bar value="0.50">Completed 4 steps of 8 in total</vaadin-progress-bar>
-            <section class="course-meta course-enrolment">
-              <div class="status in-progress">In Progress</div>
-            </section>
+            <label for="cxl-playbook-progress-bar-${playbookId}"></label>
+            <cxl-playbook-progress-bar
+              id="cxl-playbook-progress-bar-${playbookId}"
+              listen-on-closest="article"
+            ></cxl-playbook-progress-bar>
+            <!-- [listen-on-closest] fixes race condition vs article classes computation -->
           </div>
         </header>
 

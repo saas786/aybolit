@@ -11,6 +11,7 @@ export default {
 Object.assign(CXLPlaybookAccordion, {
   args: {
     FeedbackButtonLabel: 'Leave feedback',
+    PlaybookId: '1234',
   },
   storyName: 'cxl-playbook-accordion',
 });
