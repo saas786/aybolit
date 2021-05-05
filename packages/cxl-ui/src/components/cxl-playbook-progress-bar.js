@@ -3,7 +3,7 @@ import '@conversionxl/cxl-lumo-styles';
 import { ProgressBarElement } from '@vaadin/vaadin-progress-bar/src/vaadin-progress-bar';
 
 @customElement('cxl-playbook-progress-bar')
-export class CXLPlaybookProgressBar extends ProgressBarElement {
+export class CXLPlaybookProgressBarElement extends ProgressBarElement {
   static get properties() {
     return {
       labelElement: {

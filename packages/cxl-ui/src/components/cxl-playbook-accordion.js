@@ -2,13 +2,13 @@ import { customElement } from 'lit-element';
 import '@vaadin/vaadin-checkbox';
 import { registerGlobalStyles } from '@conversionxl/cxl-lumo-styles/src/utils';
 import cxlPlaybookAccordionGlobalStyles from '../styles/global/cxl-playbook-accordion-css.js';
-import { CXLVaadinAccordion } from './cxl-vaadin-accordion';
+import { CXLVaadinAccordionElement } from './cxl-vaadin-accordion';
 
 /**
  * Integrates checkboxes + their state tracking in accordion panels.
  */
 @customElement('cxl-playbook-accordion')
-export class CXLPlaybookAccordion extends CXLVaadinAccordion {
+export class CXLPlaybookAccordionElement extends CXLVaadinAccordionElement {
   /**
    * @return {NodeListOf<Element>}
    */
