@@ -24,27 +24,29 @@ export class CXLPlaybookProgressBar extends ProgressBarElement {
     };
   }
 
-  ready() {
-    super.ready();
+  /**
+   * @see https://stackoverflow.com/a/53343385/35946
+   */
+  constructor() {
+    super();
+    this._cxlPlaybookAccordionListener = this._updateProgressBar.bind(this);
+  }
 
-    this.closest(this.listenOnClosest).addEventListener(
+  connectedCallback() {
+    super.connectedCallback();
+
+    this._listenOnClosestElement = this.closest(this.listenOnClosest);
+    this._listenOnClosestElement.addEventListener(
       'cxl-playbook-accordion-changed',
-      async (event) => {
-        const savedStateCheckboxes = event.detail;
+      this._cxlPlaybookAccordionListener
+    );
+  }
 
-        const totalSteps = savedStateCheckboxes.length;
-        const completedSteps = savedStateCheckboxes.filter((checkbox) => checkbox === true).length;
-
-        this.value = completedSteps / totalSteps;
-
-        // Update label.
-        if (this.labelElement) {
-          this.labelElement.textContent = `Completed ${completedSteps} of ${totalSteps} total steps`;
-        }
-
-        // Maybe completed.
-        this._maybeUpdateTheme();
-      }
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    this._listenOnClosestElement.removeEventListener(
+      'cxl-playbook-accordion-changed',
+      this._cxlPlaybookAccordionListener
     );
   }
 
@@ -59,5 +61,22 @@ export class CXLPlaybookProgressBar extends ProgressBarElement {
     }
 
     this.setAttribute('theme', themes.join(' '));
+  }
+
+  _updateProgressBar(event) {
+    const savedStateCheckboxes = event.detail;
+
+    const totalSteps = savedStateCheckboxes.length;
+    const completedSteps = savedStateCheckboxes.filter((checkbox) => checkbox === true).length;
+
+    this.value = completedSteps / totalSteps;
+
+    // Update label.
+    if (this.labelElement) {
+      this.labelElement.textContent = `Completed ${completedSteps} of ${totalSteps} total steps`;
+    }
+
+    // Maybe completed.
+    this._maybeUpdateTheme();
   }
 }
