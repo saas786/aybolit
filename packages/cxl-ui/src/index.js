@@ -13,6 +13,7 @@ export { CXLVaadinAccordionElement } from './components/cxl-vaadin-accordion.js'
 export { CXLPlaybookProgressBarElement } from './components/cxl-playbook-progress-bar.js';
 export { CXLPlaybookAccordionElement } from './components/cxl-playbook-accordion.js';
 export { CXLAccordionCardElement } from './components/cxl-accordion-card.js';
+export { CXLSavePlaybooksElement } from './components/cxl-save-playbooks.js';
 export { CXLStarRatingElement } from './components/cxl-star-rating.js';
 
 // @todo maybe https://github.com/tc39/proposal-export-default-from
