@@ -26,6 +26,8 @@ const Template = ({
 
 export const CXLSaveFavoriteThemeDefault = Template.bind({});
 
+CXLSaveFavoriteThemeDefault.storyName = '[theme=default]'
+
 // more here: https://storybook.js.org/docs/web-components/essentials/controls#fully-custom-args
 CXLSaveFavoriteThemeDefault.args = {
   apiUrl: "https://jsonplaceholder.typicode.com/users",
